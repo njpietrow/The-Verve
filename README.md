@@ -1,2 +1,2 @@
 # The-Verve
-A clone of the Verve Coffee Roasters website.
+The Verve is an e-commerce website inspired by Verve Coffee Roasters which is headquartered in Santa Cruz.
