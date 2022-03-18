@@ -10,6 +10,7 @@ class Greeting extends React.Component{
     const {currentUser} = this.props;
     return (
       <div>
+        {/* <span>Testing -- {currentUser.email} -- Testing</span> */}
         {currentUser ? (
           <Link to="/account" className="header-content">Account /</Link>
         ) : ( 

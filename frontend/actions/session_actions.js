@@ -47,7 +47,7 @@ export const logOut = () => dispatch => {
     .then(() => dispatch(logoutCurrentUser()) )
 };
 
-export const signUp = (user) => dispatch => {
+export const register = (user) => dispatch => {
   return SessionApiUtil.signup(user)
     .then(
       user => dispatch(receiveCurrentUser(user)),
