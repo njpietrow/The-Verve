@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.header-content{
+  margin-left: 8px;
+}
+
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  width: 100%;
+  padding: 8px 14px;
+  /* width: 105vw;
+  transform: translate(-5%,-30%); */
+  /* transform: translateX(-5%); */
+}
+
+.main-content div, .main-content input {
+  margin: 10px 10px 10px 10px;
+}
+
+
+/* give margin to the main-content class. the banner will fill the screen*/
+/* maybe add margin to the header too. */

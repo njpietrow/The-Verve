@@ -1,7 +1,5 @@
 class User < ApplicationRecord
-  validates :email, 
-    presence: { message: 'can\'t be blank' }, 
-    uniqueness: {message: 'Account with this email already exists'}
+  validates :email, presence: { message: ' can\'t be blank' }, uniqueness: {message: ' already exists'}
   validates :password_digest, presence: { message: 'Password can\'t be blank' }
   validates :password, length: {minimum: 6, allow_nil: true}
   

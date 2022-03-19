@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-Bench.destroy_all
 
-User.create(username: "test", password: "password")
-User.create(username: "hello", password: "password")
+User.create(email: "test@gmail.com", password: "password")
+User.create(email: "demo@email.com", password: "password")

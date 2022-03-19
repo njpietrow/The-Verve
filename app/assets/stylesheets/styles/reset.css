@@ -1,0 +1,27 @@
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, h3, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  color: inherit;
+  text-align: start;
+  text-decoration: none;
+  vertical-align: baseline;
+  box-sizing: inherit;
+  background: none;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+}

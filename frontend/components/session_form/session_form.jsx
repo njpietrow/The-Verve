@@ -22,7 +22,18 @@ class SessionForm extends React.Component{
     return e => this.setState({[field]: e.currentTarget.value})
   }
 
-  //DISPLAY ERROR MESSAGES
+  // LIFECYCLE METHODS
+  componentDidMount(){
+    this.unlisten = this.props.history.listen(() => {
+      this.props.clearSessionErrors();
+    });
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }  
+
+  //HELPER METHODS FOR DISPLAYING INFO ON FORM
   renderErrors(){
     const {errors} = this.props
     if(!errors) return null;
@@ -37,29 +48,35 @@ class SessionForm extends React.Component{
     )
   }
 
-  // LIFECYCLE METHODS
-  componentDidMount(){
-    this.unlisten = this.props.history.listen(() => {
-      this.props.clearSessionErrors();
-    });
+  demoButton(){
+    return (
+      this.props.formType === "Register" ? (
+        null
+      ) : (
+        <button 
+          className="orange-button"
+          onClick={(e) => {
+              e.preventDefault()
+              this.props.loginDemo()
+            }
+          }
+        >
+          Login as Demo User
+        </button>
+      )
+    )
   }
-
-  componentWillUnmount() {
-    this.unlisten();
-  }  
 
   render(){
     const {formType} = this.props
     const register = (formType === "Register");
 
     return(
-      <div>
+      <div className="session-form-container">
         <h2>
           {register ? "Create an Account" : "Log In"}
         </h2>
-
         {this.renderErrors()}
-        
         <form onSubmit={this.handleSubmit}>
           <label>Email:
             <input 
@@ -78,9 +95,13 @@ class SessionForm extends React.Component{
           </label>
           <br />
           <input type="submit" value={formType}/>
+          {this.demoButton()}
         </form>
-
-        <Link to={register ? "/login" : "/register"}>
+        <br />
+        <Link 
+          to={register ? "/login" : "/register"}
+          className="orange-button"
+        >
           {register ? "Login to an Existing Account" : "Register a New Account"}
         </Link>
       </div>

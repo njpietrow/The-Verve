@@ -14,12 +14,9 @@
  *= require_self
  */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+ @import url(./styles/reset.css);
+ @import url(./styles/fonts.css);
+ @import url(./styles/layout.css); 
+ @import url(./styles/color.css); 
+ 
 
-.header-content{
-  margin-left: 8px;
-}
