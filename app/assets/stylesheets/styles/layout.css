@@ -1,7 +1,6 @@
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 
@@ -112,7 +111,8 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 
 .header-container{
-  width: 138px;
+  padding-top: 10px;
+  width: 118px;
 }
 
 nav{
