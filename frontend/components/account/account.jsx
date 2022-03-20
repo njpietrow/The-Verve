@@ -4,16 +4,32 @@ class Account extends React.Component{
   render(){
     const {logOut, currentUser} = this.props;
     return(
-      <div>
+      <div className="account-container">
         <h2>Account Information</h2>
         <div>
-          <h4>Name, Email</h4>
-          <ul>
-            <li>Name field TBD</li>
-            <li>{currentUser.email}</li>
-          </ul>
+          <div>
+            <h4 className="bold">Primary Shipping Address</h4>
+            <p>
+              Name field TBD
+              <br />
+              United States
+            </p>
+          </div>
+          <div>
+            <h4 className="bold">Name, Email</h4>
+            <p>
+              Name field TBD
+              <br />
+              {currentUser.email}
+            </p>
+            <button 
+              onClick={() => logOut()}
+              className="session-button"
+            >
+              Log out
+            </button>
+          </div>
         </div>
-        <button onClick={() => logOut()}>Log out</button>
       </div>
     )
   }

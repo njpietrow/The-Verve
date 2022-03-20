@@ -21,10 +21,70 @@ header {
   /* transform: translateX(-5%); */
 }
 
-.main-content div, .main-content input {
-  margin: 10px 10px 10px 10px;
+input[type="submit"]  {
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 0%);
+  margin: 0px 0px 20px 0px;
 }
 
+.session-button{
+  color: #fff;
+  background-color: #de6932;
+  line-height: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 400px;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 0%);
+}
+
+.session-button:hover{
+  transition: color 0.2s ease; 
+  border-color: #181819;
+  background: #181819;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+label{
+  margin-bottom: 4px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  background: #f9f6f1;
+  border: 1px solid #e7dfd2;
+  width: 400px;
+  height: 48px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.session-form-container{
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.demo-login-button{
+  border-bottom: 1px dotted #cacacc;
+}
 
 /* give margin to the main-content class. the banner will fill the screen*/
 /* maybe add margin to the header too. */

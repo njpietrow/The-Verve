@@ -13,11 +13,26 @@ class Greeting extends React.Component{
         {currentUser ? (<span> --{currentUser.email}-- </span>) : null}
         
         {currentUser ? (
-          <Link to="/account" className="header-content">Account /</Link>
+          <Link 
+            to="/account" 
+            className="header-link"
+          >
+            Account /
+          </Link>
         ) : ( 
-          <Link to="/login" className="header-content">Login /</Link>
+          <Link 
+            to="/login" 
+            className="header-link"
+          >
+            Login /
+          </Link>
         )}
-        <Link to="/cart" className="header-content">🛒 (0)</Link>
+        <Link 
+          to="/cart" 
+          className="header-link"
+        >
+          🛒 (0)
+        </Link>
       </div>
     )
   }

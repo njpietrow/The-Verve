@@ -36,15 +36,18 @@ class SessionForm extends React.Component{
   //HELPER METHODS FOR DISPLAYING INFO ON FORM
   renderErrors(){
     const {errors} = this.props
-    if(!errors) return null;
     return(
+      (errors.length === 0) ? (
+        null
+      ) : (
       <ul>
-        {errors.map((error,idx) => (
-          <li key={idx}>
-            {error}
-          </li>
-        ))}
-      </ul>
+          {errors.map((error,idx) => (
+            <li key={idx}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      )
     )
   }
 
@@ -53,8 +56,8 @@ class SessionForm extends React.Component{
       this.props.formType === "Register" ? (
         null
       ) : (
-        <button 
-          className="orange-button"
+        <a 
+          className="demo-login-button"
           onClick={(e) => {
               e.preventDefault()
               this.props.loginDemo()
@@ -62,7 +65,7 @@ class SessionForm extends React.Component{
           }
         >
           Login as Demo User
-        </button>
+        </a>
       )
     )
   }
@@ -77,30 +80,29 @@ class SessionForm extends React.Component{
           {register ? "Create an Account" : "Log In"}
         </h2>
         {this.renderErrors()}
-        <form onSubmit={this.handleSubmit}>
-          <label>Email:
-            <input 
-              type="email" 
-              onChange={this.update("email")}
-              value={this.state.email}
-            />
-          </label>
-          <br />
-          <label>Password:
-            <input 
-              type="password" 
-              onChange={this.update("password")}
-              value={this.state.password}
-            />
-          </label>
-          <br />
-          <input type="submit" value={formType}/>
+        <form onSubmit={this.handleSubmit} className="session-form">
+          <label htmlFor="email">Email</label>
+          <input 
+            type="email" 
+            name="email"
+            onChange={this.update("email")}
+            value={this.state.email}
+          />
+          <label htmlFor="password">Password</label>
+          <input 
+            type="password" 
+            onChange={this.update("password")}
+            value={this.state.password}
+          />
+          <input 
+            type="submit" 
+            className="session-button" 
+            value={formType}  
+          />
           {this.demoButton()}
         </form>
-        <br />
         <Link 
           to={register ? "/login" : "/register"}
-          className="orange-button"
         >
           {register ? "Login to an Existing Account" : "Register a New Account"}
         </Link>

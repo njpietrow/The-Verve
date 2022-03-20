@@ -21,6 +21,7 @@ const App = () => (
       <AuthRoute exact path="/register" component={RegisterFormContainer} />
       <ProtectedRoute exact path="/account" component={AccountContainer} />
     </section>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
   </div>
 );
 

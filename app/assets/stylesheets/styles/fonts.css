@@ -1,13 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;700&display=swap');
 
 body {
-  font-family: 'Oswald', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Mulish', sans-serif;
+  letter-spacing: 0.02em; 
 }
 
-.banner{
-  letter-spacing: 0.08em; 
-  font-family: 'Montserrat';
+.banner p{
+  letter-spacing: .11em; 
+  font-family: 'Monstserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: black
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+p {
+  font-weight:lighter;
+  line-height: 1.6;
+  color: #383a34;
+}
+
+.header-link{
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-right: 8px;
+}
+
+a {
+  color: #383a34;
   font-size: 14px;
-  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+a:hover{
+  transition: color 0.2s ease; 
+  color: #de6932;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #636367;
+  font-weight: 700;
+}
+
+label{
+  font-weight: 200;
 }
