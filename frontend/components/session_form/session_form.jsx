@@ -5,6 +5,8 @@ class SessionForm extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
+      first_name: "",
+      last_name: "",
       email: "",
       password: ""
     };
@@ -70,6 +72,31 @@ class SessionForm extends React.Component{
     )
   }
 
+  registrationFields(){
+    return (
+      this.props.formType === "Register" ? (
+        <>
+          <label htmlFor="firstName">First Name</label>
+          <input 
+            type="text" 
+            name="firstName"
+            onChange={this.update("first_name")}
+            value={this.state.first_name}
+          />
+          <label htmlFor="lastName">Last Name</label>
+          <input 
+            type="text" 
+            name="lastName"
+            onChange={this.update("last_name")}
+            value={this.state.last_name}
+          />
+        </>
+      ) : (
+        null
+      )
+    )
+  }
+
   render(){
     const {formType} = this.props
     const register = (formType === "Register");
@@ -81,6 +108,7 @@ class SessionForm extends React.Component{
         </h2>
         {this.renderErrors()}
         <form onSubmit={this.handleSubmit} className="session-form">
+          {this.registrationFields()}
           <label htmlFor="email">Email</label>
           <input 
             type="email" 

@@ -1,6 +1,8 @@
 import React from "react";
 
 class Account extends React.Component{
+  
+
   render(){
     const {logOut, currentUser} = this.props;
     return(
@@ -10,7 +12,7 @@ class Account extends React.Component{
           <div>
             <h4 className="bold">Primary Shipping Address</h4>
             <p>
-              Name field TBD
+              {`${currentUser.firstName}, ${currentUser.lastName}`}
               <br />
               United States
             </p>
@@ -18,7 +20,7 @@ class Account extends React.Component{
           <div>
             <h4 className="bold">Name, Email</h4>
             <p>
-              Name field TBD
+              {`${currentUser.firstName}, ${currentUser.lastName}`}
               <br />
               {currentUser.email}
             </p>

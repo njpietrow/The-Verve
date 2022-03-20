@@ -13,7 +13,7 @@ const App = () => (
     </div>
     <header>
       <h1>The Verve</h1>
-      {/* <img src="/../../../app/assets/images/og-image.png" alt="header-logo" /> */}
+      {/* <img src={require('../../app/assets/images/og-image.png')}  /> */}
       <GreetingContainer />
     </header>
     <section className="main-content">
