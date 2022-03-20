@@ -86,9 +86,19 @@ input[type="text"], input[type="password"], input[type="email"] {
   align-items: center;
 }
 
+.session-error-list{
+  height: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .account-content-container{
   display: flex;
   justify-content: center;
+  padding-top: 50px;
 }
 
 .account-info-container{
@@ -108,11 +118,14 @@ input[type="text"], input[type="password"], input[type="email"] {
 
 .search{
   padding-left: 8px;
+  padding-right: 110px;
 }
 
 .header-container{
   padding-top: 10px;
-  width: 118px;
+  width: 140px;
+  display: flex;
+  justify-content: end;
 }
 
 nav{
