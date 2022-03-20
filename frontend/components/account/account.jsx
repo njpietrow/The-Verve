@@ -8,25 +8,25 @@ class Account extends React.Component{
     return(
       <div className="account-container">
         <h2>Account Information</h2>
-        <div>
-          <div>
+        <div className="account-content-container">
+          <div className="account-info-container">
             <h4 className="bold">Primary Shipping Address</h4>
             <p>
-              {`${currentUser.firstName}, ${currentUser.lastName}`}
+              {`${currentUser.firstName} ${currentUser.lastName}`}
               <br />
               United States
             </p>
           </div>
-          <div>
+          <div className="account-info-container">
             <h4 className="bold">Name, Email</h4>
             <p>
-              {`${currentUser.firstName}, ${currentUser.lastName}`}
+              {`${currentUser.firstName} ${currentUser.lastName}`}
               <br />
               {currentUser.email}
             </p>
             <button 
               onClick={() => logOut()}
-              className="session-button"
+              className="session-button logout"
             >
               Log out
             </button>
