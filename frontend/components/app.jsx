@@ -12,10 +12,20 @@ const App = () => (
       <p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p>
     </div>
     <header>
-      <h1>The Verve</h1>
+      <div className="header-container">
+        <span className="search">🔍</span>
+      </div>
+      <a href="#"><h1>The Verve</h1></a>
       {/* <img src={require('../../app/assets/images/og-image.png')}  /> */}
       <GreetingContainer />
     </header>
+    <nav>
+      <ul>
+        <li> <a href="#"> Testing 1</a></li>
+        <li> <a href="#"> Testing 2</a></li>
+        <li> <a href="#"> Testing 3</a></li>
+      </ul>
+    </nav>
     <section className="main-content">
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/register" component={RegisterFormContainer} />

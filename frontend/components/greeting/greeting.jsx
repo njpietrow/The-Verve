@@ -9,8 +9,8 @@ class Greeting extends React.Component{
   render(){
     const {currentUser} = this.props;
     return (
-      <div>
-        {currentUser ? (<span> --{currentUser.email}-- </span>) : null}
+      <div className="header-container">
+        {/* {currentUser ? (<span>Welcome back, {currentUser.firstName} </span>) : null} */}
         
         {currentUser ? (
           <Link 

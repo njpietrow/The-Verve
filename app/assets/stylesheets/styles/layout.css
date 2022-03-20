@@ -51,7 +51,7 @@ label{
 }
 
 a {
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   cursor: pointer;
 }
 
@@ -105,6 +105,38 @@ input[type="text"], input[type="password"], input[type="email"] {
 
 .demo-login-button{
   border-bottom: 1px dotted #cacacc;
+}
+
+.search{
+  padding-left: 8px;
+}
+
+.header-container{
+  width: 138px;
+}
+
+nav{
+  min-height: 20px;
+  border-top: 1px solid #e7dfd2;
+  border-bottom: 1px solid #e7dfd2;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  line-height: 2;
+}
+
+/* temp */
+nav ul li{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
 }
 
 /* give margin to the main-content class. the banner will fill the screen*/
