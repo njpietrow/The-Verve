@@ -53,6 +53,29 @@ class SessionForm extends React.Component{
     )
   }
 
+  //fill out form visually for user and then loginDemo User
+  mockTyping(e){
+    this.setState({
+      email: "",
+      password: "",
+    });
+    const email = "demo@gmail.com";
+    const password = "password"
+    let count = 0;
+    this.demo = setInterval(() => {
+      console.log(email.length)
+      this.setState({
+        email: count<email.length ? (this.state.email.concat(email[count])) : email,
+        password: count<password.length ? (this.state.password.concat(password[count])) : password,
+      });
+      count++;
+      if (count === 20) {
+        clearInterval(this.demo);
+        this.props.loginDemo();
+      }
+    }, 80);
+  }
+
   demoButton(){
     return (
       this.props.formType === "Register" ? (
@@ -61,8 +84,8 @@ class SessionForm extends React.Component{
         <a 
           className="demo-login-button"
           onClick={(e) => {
-              e.preventDefault()
-              this.props.loginDemo()
+              e.preventDefault();
+              this.mockTyping(e);
             }
           }
         >
@@ -131,6 +154,7 @@ class SessionForm extends React.Component{
         </form>
         <Link 
           to={register ? "/login" : "/register"}
+          className="switch-form-link"
         >
           {register ? "Login to an Existing Account" : "Register a New Account"}
         </Link>

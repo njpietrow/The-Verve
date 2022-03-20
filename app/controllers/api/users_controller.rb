@@ -11,6 +11,22 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find_by_credentials(
+      params[:user][:email],
+      params[:user][:password],
+    )
+    # if credentials are valid
+    # pull out new_password
+    # try to update/save the new password
+    if @user.save
+      login!(@user)
+      render :show
+    else
+      render json: @user.errors.full_messages, status: 401
+    end
+  end
+
   private
   def user_params
     params.require(:user).permit(:email, :password, :first_name, :last_name)

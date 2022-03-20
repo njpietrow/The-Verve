@@ -29,9 +29,9 @@ class Greeting extends React.Component{
         )}
         <Link 
           to="/cart" 
-          className="header-link"
+          className="header-link cart-count"
         >
-          🛒 (0)
+          🛒 (C)
         </Link>
       </div>
     )

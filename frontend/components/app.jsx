@@ -5,6 +5,7 @@ import RegisterFormContainer from "./session_form/register_form_container";
 import AccountContainer from "./account/account_container";
 import { AuthRoute, ProtectedRoute } from "../util/route_util"
 import { Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Route } from "react-router-dom";
 
 const App = () => (
@@ -13,9 +14,7 @@ const App = () => (
       <p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p>
     </div>
     <header>
-      <div className="header-container">
-        <span className="search">🔍</span>
-      </div>
+      <Link to="/search" className="search">🔍</Link>
       <a href="#"><h1>The Verve</h1></a>
       {/* <img src={require('../../app/assets/images/og-image.png')}  /> */}
       <GreetingContainer />
