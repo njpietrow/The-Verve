@@ -16,9 +16,6 @@ header {
   height: 22px;
   width: 100%;
   padding: 8px 14px;
-  /* width: 105vw;
-  transform: translate(-5%,-30%); */
-  /* transform: translateX(-5%); */
 }
 
 input[type="submit"]  {
