@@ -1,3 +1,38 @@
+input[type="submit"]  {
+  cursor: pointer;
+  margin: 0px 0px 20px 0px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  background: #f9f6f1;
+  border: 1px solid #e7dfd2;
+  width: 400px;
+  height: 48px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.session-button{
+  color: #fff;
+  background-color: #de6932;
+  line-height: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: 400px;
+}
+
+.session-button:hover{
+  transition: color 0.2s ease; 
+  border-color: #181819;
+  background: #181819;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 .session-form-container{
   padding-top: 70px;
   display: flex;
@@ -20,4 +55,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.demo-login-button{
+  border-bottom: 1px dotted #cacacc;
+}
+
+label{
+  margin-bottom: 4px;
 }

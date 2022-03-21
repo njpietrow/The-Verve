@@ -8,6 +8,7 @@ header {
 }
 
 .banner{
+  background-color: #ffb928;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,82 +24,7 @@ header {
   padding-bottom: 10px;
 }
 
-input[type="submit"]  {
-  cursor: pointer;
-  margin: 0px 0px 20px 0px;
-}
 
-.session-button{
-  color: #fff;
-  background-color: #de6932;
-  line-height: 48px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 11px;
-  text-transform: uppercase;
-  font-weight: 500;
-  width: 400px;
-}
-
-.session-button:hover{
-  transition: color 0.2s ease; 
-  border-color: #181819;
-  background: #181819;
-  transition-property: background-color;
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-label{
-  margin-bottom: 4px;
-}
-
-a {
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-input[type="text"], input[type="password"], input[type="email"] {
-  background: #f9f6f1;
-  border: 1px solid #e7dfd2;
-  width: 400px;
-  height: 48px;
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-
-
-.account-container{
-  padding-top: 70px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-.account-content-container{
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-}
-
-.account-info-container{
-  margin-bottom: 24px;
-  width: 300px;
-  margin-left: 150px;
-}
-
-.logout{
-  margin-top: 24px;
-  width: 100%;
-}
-
-.demo-login-button{
-  border-bottom: 1px dotted #cacacc;
-}
 
 
 .header-container{

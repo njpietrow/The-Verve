@@ -1,0 +1,26 @@
+.account-container{
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-content-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.account-info-container{
+  margin-bottom: 24px;
+  width: 300px;
+  margin-left: 150px;
+}
+
+.logout{
+  margin-top: 24px;
+  width: 100%;
+}
+
+
