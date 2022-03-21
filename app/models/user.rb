@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  email           :string           not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  first_name      :string
+#  last_name       :string
+#
 class User < ApplicationRecord
   validates :email, presence: { message: ' can\'t be blank' }, uniqueness: {message: ' already exists'}
   validates :password_digest, presence: { message: 'Password can\'t be blank' }

@@ -1,4 +1,18 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: products
+#
+#  id           :bigint           not null, primary key
+#  product_name :string           not null
+#  ingredients  :string           not null
+#  bag_size     :string           not null
+#  grind        :string           not null
+#  description  :text             not null
+#  roast_level  :integer          not null
+#  farm_story   :text             not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
 
 # This model initially had no columns defined. If you add columns to the
 # model remove the '{}' from the fixture names and add the columns immediately

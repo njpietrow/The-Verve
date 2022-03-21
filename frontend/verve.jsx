@@ -5,6 +5,7 @@ import Root from "./components/root";
 
 //BEGIN TESTING
 import { register, logIn, logOut } from "./actions/session_actions";
+import { getProduct } from "./util/product_api_util";
 const user = {
   email: "testing@gmail",
   password: "password"
@@ -33,9 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   
-  window.user = user
-  window.logIn = logIn
-  window.register = register
-  window.logOut = logOut
+  window.user = user;
+  window.logIn = logIn;
+  window.register = register;
+  window.logOut = logOut;
+
+  window.getProduct = getProduct;
   //END TESTING
 });
