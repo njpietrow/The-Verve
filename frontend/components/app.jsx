@@ -14,16 +14,19 @@ const App = () => (
       <p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p>
     </div>
     <header>
-      <Link to="/search" className="search">🔍</Link>
-      <a href="#"><h1>The Verve</h1></a>
-      {/* <img src={require('../../app/assets/images/og-image.png')}  /> */}
+      <div className="search-container">
+        <Link to="/search" className="search">🔍</Link>
+      </div>
+      <a href="#"><img id="main-logo" /></a>
+      {/* <h1>The Verve</h1> */}
+      
       <GreetingContainer />
     </header>
     <nav>
       <ul>
-        <li> <a href="#"> Testing 1</a></li>
-        <li> <a href="#"> Testing 2</a></li>
-        <li> <a href="#"> Testing 3</a></li>
+        <li> <a href="#"> TESTING 1</a></li>
+        <li> <a href="#"> TESTING 2</a></li>
+        <li> <a href="#"> TESTING 3</a></li>
       </ul>
     </nav>
     <section className="main-content">

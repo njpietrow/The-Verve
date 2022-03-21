@@ -1,4 +1,4 @@
-var path = require('path'); //allows config file location to be dynamic
+let path = require('path'); //allows config file location to be dynamic
 
 module.exports = {
   entry: './frontend/verve.jsx',  //this is where webpack starts looking
@@ -17,7 +17,7 @@ module.exports = {
             presets: ['@babel/env', '@babel/react'] //which presets to run
           }
         },
-      }
+      },
     ]
   },
   devtool: 'source-map', //helps with printing the actual line numbers
