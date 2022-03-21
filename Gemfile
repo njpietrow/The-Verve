@@ -37,6 +37,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Adding jquery
 gem 'jquery-rails'
+
+# Adding aws-s3
 gem "aws-sdk-s3"
 
 group :development, :test do
