@@ -54,7 +54,7 @@ class SessionForm extends React.Component{
   }
 
   //fill out form visually for user and then loginDemo User
-  mockTyping(e){
+  mockTyping(){
     this.setState({
       email: "",
       password: "",
@@ -63,7 +63,6 @@ class SessionForm extends React.Component{
     const password = "password"
     let count = 0;
     this.demo = setInterval(() => {
-      console.log(email.length)
       this.setState({
         email: count<email.length ? (this.state.email.concat(email[count])) : email,
         password: count<password.length ? (this.state.password.concat(password[count])) : password,
@@ -85,7 +84,7 @@ class SessionForm extends React.Component{
           className="demo-login-button"
           onClick={(e) => {
               e.preventDefault();
-              this.mockTyping(e);
+              this.mockTyping();
             }
           }
         >
