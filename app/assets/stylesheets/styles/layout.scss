@@ -67,20 +67,7 @@ input[type="text"], input[type="password"], input[type="email"] {
   margin-bottom: 24px;
 }
 
-.session-form-container{
-  padding-top: 70px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 
-.session-form{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 
 .account-container{
   padding-top: 70px;
@@ -90,14 +77,7 @@ input[type="text"], input[type="password"], input[type="email"] {
   align-items: center;
 }
 
-.session-error-list{
-  height: 70px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .account-content-container{
   display: flex;
