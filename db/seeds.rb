@@ -24,5 +24,31 @@ first_product = Product.create(
   farm_story: "interesting farm story here"
 )
 
-file = open('https://the-verve-dev.s3.us-west-1.amazonaws.com/YBpnDDDZohfjZaSQnA6KtrnR')
-first_product.photo.attach(io: file, filename: 'cat.jpg')
+second_product = Product.create(
+  product_name: "coffee 2",
+  ingredients: "good ingredients",
+  bag_size: "100 OZ",
+  grind: "large",
+  description: "coffee 2 description ...",
+  roast_level: 9000,
+  farm_story: "interesting farm story here"
+)
+
+third_product = Product.create(
+  product_name: "coffee 3",
+  ingredients: "ingredients that are suspect",
+  bag_size: "20 OZ",
+  grind: "small",
+  description: "coffee 3 descriptions.....",
+  roast_level: 100,
+  farm_story: "interesting farm story here"
+)
+
+file1 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Amparonewcoffee_1280x.jpg')
+first_product.photo.attach(io: file1, filename: 'coffee1.jpg')
+
+file2 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Bedhatunewcoffee_1280x.jpg')
+second_product.photo.attach(io: file2, filename: 'coffee2.jpg')
+
+file3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Nubianewcoffee_1280x.jpg')
+third_product.photo.attach(io: file3, filename: 'coffee3.jpg')

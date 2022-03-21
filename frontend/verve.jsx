@@ -5,7 +5,7 @@ import Root from "./components/root";
 
 //BEGIN TESTING
 import { register, logIn, logOut } from "./actions/session_actions";
-import { fetchProduct } from "./actions/product_actions";
+import { fetchProduct, fetchProducts } from "./actions/product_actions";
 const user = {
   email: "testing@gmail",
   password: "password"
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.logOut = logOut;
 
   window.fetchProduct = fetchProduct;
+  window.fetchProducts = fetchProducts;
 
   
   //END TESTING
