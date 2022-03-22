@@ -62,9 +62,14 @@
   margin-top: 25px;
 }
 
+
 .product-index-path{
   font-size: 12px;
   letter-spacing: .5;
   text-transform: uppercase;
   padding-left: 12px;
+}
+
+.product-index-path:hover{
+  color: black;
 }
