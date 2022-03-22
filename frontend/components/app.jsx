@@ -11,31 +11,37 @@ import { Link } from "react-router-dom";
 
 const App = () => (
   <div className="app">
-    <div className="banner">
-      <p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p>
-    </div>
     <header>
-      <div className="search-container">
-        <Link to="/search" className="search">🔍</Link>
+      <div className="banner">
+        <p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p>
       </div>
-      <a href="#"><img id="main-logo" /></a>
-      {/* <h1>The Verve</h1> */}
-      
-      <GreetingContainer />
+      <div className="layout-header">
+        <div className="search-container">
+          <Link to="/search" className="search">🔍</Link>
+        </div>
+        <a href="#"><img id="main-logo" /></a>
+        <GreetingContainer />
+      </div>
+      <nav>
+        <ul>
+          <li> <a href="#"> TESTING 1</a></li>
+          <li> <a href="#"> TESTING 2</a></li>
+          <li> <a href="#"> TESTING 3</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li> <a href="#"> TESTING 1</a></li>
-        <li> <a href="#"> TESTING 2</a></li>
-        <li> <a href="#"> TESTING 3</a></li>
-      </ul>
-    </nav>
+ 
     <section className="main-content">
       <Route exact path="/"  component={ProductIndexContainer}/>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/register" component={RegisterFormContainer} />
       <ProtectedRoute exact path="/account" component={AccountContainer} />
     </section>
+    <footer>
+      Hello, I am the footer.
+      Styling TBD...
+      <img id="footer-logo" alt="footer logo" />
+    </footer>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </div>
 );

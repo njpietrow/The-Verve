@@ -16,7 +16,7 @@ User.create(email: "demo@email.com", password: "password", first_name: "Coffee",
 
 first_product = Product.create(
   product_name: "NUBIA LOAIZA",
-  ingredients: "plants n stuff",
+  ingredients: "plants · n · stuff",
   location: "Colombia",
   price: 21.25,
   bag_size: "12 OZ",
@@ -28,7 +28,7 @@ first_product = Product.create(
 
 second_product = Product.create(
   product_name: "AMPARO MAYA",
-  ingredients: "good ingredients",
+  ingredients: "good · ingredients",
   location: "Colombia",
   price: 22.00,
   bag_size: "100 OZ",
@@ -40,7 +40,7 @@ second_product = Product.create(
 
 third_product = Product.create(
   product_name: "BEDHATU JIBICHO",
-  ingredients: "ingredients that are suspect",
+  ingredients: "ingredients · that are · suspect",
   location: "Ethiopia",
   price: 21.25,
   bag_size: "12 OZ",
@@ -48,6 +48,18 @@ third_product = Product.create(
   description: "coffee 3 descriptions.....",
   roast_level: 100,
   farm_story: "interesting farm story here"
+)
+
+fourth_product = Product.create(
+  product_name: "MARIA BAIDE",
+  ingredients: "WHITE PLUM · NECTARINE · SPICED CHOCOLATE",
+  location: "HONDURAS",
+  price: 22.75,
+  bag_size: "12 OZ",
+  grind: "small",
+  description: "coffee 4 descriptions.....",
+  roast_level: 100,
+  farm_story: "On the side of Mount Santa Barbara overlooking Lake Yojoa, you can find Maria Baide’s small but mighty farm in Las Flores. With only 1.75 acres, Maria has created a place to wash and grow high-quality specialty coffee. She works closely with our Farmlevel partners at Benificio San Vicente, a nearby dry mill. The microclimate on the sid"
 )
 
 file1 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Amparonewcoffee_1280x.jpg')
@@ -58,3 +70,8 @@ second_product.photo.attach(io: file2, filename: 'coffee2.jpg')
 
 file3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Nubianewcoffee_1280x.jpg')
 third_product.photo.attach(io: file3, filename: 'coffee3.jpg')
+
+file4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Marianewcoffee_1280x+(1).jpg')
+fourth_product.photo.attach(io: file4, filename: 'coffee4.jpg')
+
+

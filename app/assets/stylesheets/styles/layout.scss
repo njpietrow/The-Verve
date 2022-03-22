@@ -1,4 +1,11 @@
 header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+.layout-header{
   display: flex;
   justify-content: space-between;
 }
@@ -23,9 +30,6 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-
-
 
 .header-container{
   padding-top: 10px;
