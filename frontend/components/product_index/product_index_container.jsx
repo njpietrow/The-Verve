@@ -9,7 +9,8 @@ const mSTP = ({entities}) => {
 };
 
 const mDTP = (dispatch) => ({
-  fetchProducts: () => dispatch(fetchProducts())
+  fetchProducts: () => dispatch(fetchProducts()),
+  // updateFilter: (category) => dispatch(changeFilter(category))
 });
 
 export default connect(mSTP, mDTP)(ProductIndex);

@@ -16,11 +16,20 @@ const Header = () => (
     </div>
     <nav>
       <ul>
-        <li> <Link to="/collections"> SHOP COFFEE </Link></li>
+        <li > <Link to="/collections"> SHOP COFFEE </Link></li>
         <li> <a href="#"> SHOP GEAR </a></li>
         <li> <a href="#"> LEARN MORE</a></li>
       </ul>
     </nav>
+    <div className="sub-menu-panel-container">
+      <div className="sub-menu-panel">
+        <ul className="sub-menu-panel-list">
+          <li> <Link to="/collections/all"> ALL </Link></li>
+          <li> <Link to="/collections/new"> NEW </Link></li>
+          <li> <Link to="/collections/single+origin"> SINGLE ORIGIN </Link></li>
+        </ul>
+      </div>
+    </div>
   </header>
 );
 
