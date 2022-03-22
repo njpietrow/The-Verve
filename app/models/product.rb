@@ -30,8 +30,8 @@ class Product < ApplicationRecord
     source: :category
 
   def self.match_category(category)
-    # join categories table
-    
-    Product.where("location LIKE ?", "%#{category}%")
+    Product
+      .joins(:categories)
+      .where("name LIKE ?", "%#{category}%")
   end
 end
