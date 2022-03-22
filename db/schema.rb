@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2022_03_21_002740) do
     t.text "description", null: false
     t.integer "roast_level", null: false
     t.text "farm_story", null: false
+    t.string "location", null: false
+    t.decimal "price", precision: 10, scale: 3, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

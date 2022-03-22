@@ -8,6 +8,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.text :description, null: false
       t.integer :roast_level, null: false
       t.text :farm_story, null: false
+      t.string :location, null: false
+      t.decimal :price, null: false, precision: 10, scale: 3
       t.timestamps
     end
   end

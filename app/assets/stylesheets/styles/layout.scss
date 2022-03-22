@@ -21,7 +21,7 @@ header {
   content: image_url('logo.png');
   height: 45px;
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 
@@ -66,8 +66,7 @@ nav ul li{
   margin-right: 10px;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 10px 0 10px 0;
 }
 nav ul li a{
   font-size: 16px;

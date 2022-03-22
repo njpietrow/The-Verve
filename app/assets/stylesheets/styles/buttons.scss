@@ -1,4 +1,26 @@
 a {
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   cursor: pointer;
+}
+
+.demo-login-button{
+  margin-bottom: 15px;
+}
+
+.logout{
+  margin-top: 24px;
+  width: 100%;
+}
+
+.orange{
+  color: #e65400;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.green{
+  color: #737b4c;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .09em;
 }

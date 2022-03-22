@@ -15,9 +15,11 @@ User.create(email: "test@gmail.com", password: "password", first_name: "FirstNam
 User.create(email: "demo@email.com", password: "password", first_name: "Coffee", last_name: "Delight")
 
 first_product = Product.create(
-  product_name: "coffee 1",
+  product_name: "NUBIA LOAIZA",
   ingredients: "plants n stuff",
-  bag_size: "10.5 OZ",
+  location: "Colombia",
+  price: 21.25,
+  bag_size: "12 OZ",
   grind: "medium",
   description: "This is a good coffee",
   roast_level: 1,
@@ -25,8 +27,10 @@ first_product = Product.create(
 )
 
 second_product = Product.create(
-  product_name: "coffee 2",
+  product_name: "AMPARO MAYA",
   ingredients: "good ingredients",
+  location: "Colombia",
+  price: 22.00,
   bag_size: "100 OZ",
   grind: "large",
   description: "coffee 2 description ...",
@@ -35,9 +39,11 @@ second_product = Product.create(
 )
 
 third_product = Product.create(
-  product_name: "coffee 3",
+  product_name: "BEDHATU JIBICHO",
   ingredients: "ingredients that are suspect",
-  bag_size: "20 OZ",
+  location: "Ethiopia",
+  price: 21.25,
+  bag_size: "12 OZ",
   grind: "small",
   description: "coffee 3 descriptions.....",
   roast_level: 100,
