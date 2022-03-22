@@ -1,8 +1,8 @@
-export const getProducts = (category) => (
+export const getProducts = (filters) => (
   $.ajax({
     method: 'GET',
     url: `/api/products`,
-    data: {category},
+    data: {filters},
     error: (err) => console.log(err)
   })
 );

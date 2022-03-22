@@ -12,6 +12,8 @@ class Api::ProductsController < ApplicationController
 
   private
   def category
-    params[:category]
+    if params[:filters]
+      params[:filters][:category]
+    end
   end
 end
