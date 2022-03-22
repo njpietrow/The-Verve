@@ -16,15 +16,9 @@ const Header = ({updateFilter}) => (
     </div>
     <nav>
       <ul>
-        <li>
-          <Link 
-            to="/collections"
-          > 
-            SHOP COFFEE 
-          </Link>
-        </li>
-        <li> <a href="#"> SHOP GEAR </a></li>
-        <li> <a href="#"> LEARN MORE</a></li>
+        <Link to="/collections"> SHOP COFFEE </Link>
+        <Link to="/"> SHOP GEAR </Link>
+        <Link to="/"> LEARN MORE </Link>
       </ul>
     </nav>
     <div className="sub-menu-panel-container">
