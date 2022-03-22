@@ -32,6 +32,12 @@ class Account extends React.Component{
             </button>
           </div>
         </div>
+        <br />
+        <br />
+        <div>--------------------------------------------------------------</div>
+        <div>
+          <h2>Order History</h2>
+        </div>
       </div>
     )
   }

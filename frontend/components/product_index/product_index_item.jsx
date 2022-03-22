@@ -24,7 +24,7 @@ class ProductIndexItem extends React.Component{
         {/* TODO: if product has a rating, implement stars based on avg of review rating associations */}
 
         <div>
-          <span className="green index-price">${product.price.padEnd(5,'0')} / </span>
+          <span className="green index-price">{product.price.padEnd(5,'0')} / </span>
           <Link to="/" className="orange">Add to Cart</Link>
         </div>
       </div>

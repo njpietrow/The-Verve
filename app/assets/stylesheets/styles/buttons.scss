@@ -24,3 +24,7 @@ a {
   font-size: 14px;
   letter-spacing: .09em;
 }
+
+.green::before{
+  content: "$";
+}
