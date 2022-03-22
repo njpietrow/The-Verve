@@ -6,9 +6,7 @@ import AccountContainer from "./account/account_container";
 import ProductIndexContainer from "./product_index/product_index_container";
 import Footer from "./footer/footer";
 import { AuthRoute, ProtectedRoute } from "../util/route_util"
-import { Route } from "react-router-dom";
-import { Link } from "react-router-dom";
-// import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 const App = () => (
   <div className="app">

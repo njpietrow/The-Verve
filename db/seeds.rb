@@ -9,7 +9,9 @@
 require 'open-uri'
 
 User.destroy_all
+ProductCategory.destroy_all
 Product.destroy_all
+Category.destroy_all
 
 User.create(email: "test@gmail.com", password: "password", first_name: "FirstName", last_name: "LastName")
 User.create(email: "demo@email.com", password: "password", first_name: "Coffee", last_name: "Delight")
@@ -59,7 +61,7 @@ fourth_product = Product.create(
   grind: "small",
   description: "coffee 4 descriptions.....",
   roast_level: 100,
-  farm_story: "On the side of Mount Santa Barbara overlooking Lake Yojoa, you can find Maria Baide’s small but mighty farm in Las Flores. With only 1.75 acres, Maria has created a place to wash and grow high-quality specialty coffee. She works closely with our Farmlevel partners at Benificio San Vicente, a nearby dry mill. The microclimate on the sid"
+  farm_story: "On the side of Mount Santa Barbara overlooking Lake Yojoa, you can find Maria Baide's small but mighty farm in Las Flores. With only 1.75 acres, Maria has created a place to wash and grow high-quality specialty coffee. She works closely with our Farmlevel partners at Benificio San Vicente, a nearby dry mill. The microclimate on the sid"
 )
 
 file1 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Amparonewcoffee_1280x.jpg')
@@ -73,5 +75,19 @@ third_product.photo.attach(io: file3, filename: 'coffee3.jpg')
 
 file4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Marianewcoffee_1280x+(1).jpg')
 fourth_product.photo.attach(io: file4, filename: 'coffee4.jpg')
+
+cat1 = Category.create(name: "single origin")
+cat2 = Category.create(name: "new")
+cat3 = Category.create(name: "blends")
+cat4 = Category.create(name: "instant")
+cat5 = Category.create(name: "gear")
+
+ProductCategory.create(product_id: first_product.id, category_id: cat1.id)
+ProductCategory.create(product_id: first_product.id, category_id: cat2.id)
+ProductCategory.create(product_id: second_product.id, category_id: cat1.id)
+ProductCategory.create(product_id: second_product.id, category_id: cat2.id)
+ProductCategory.create(product_id: third_product.id, category_id: cat1.id)
+ProductCategory.create(product_id: third_product.id, category_id: cat2.id)
+ProductCategory.create(product_id: fourth_product.id, category_id: cat1.id)
 
 
