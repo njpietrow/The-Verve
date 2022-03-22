@@ -3,7 +3,34 @@ footer{
   height: 400px;
 }
 
+.footer-content-container{
+  padding: 30px 30px 30px 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-image-container{
+  padding-top: 15px;
+}
+
+.footer-column-container{
+  padding-top: 20px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.one{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.two p{
+  text-align: center;
+}
+
 #footer-logo{
-  height: 40px;
-  // content: image_url('footer_logo.jpg');
+  width: 75px;
+  content: image_url('footer_logo.png');
 }

@@ -24,9 +24,9 @@ const App = () => (
       </div>
       <nav>
         <ul>
-          <li> <a href="#"> TESTING 1</a></li>
-          <li> <a href="#"> TESTING 2</a></li>
-          <li> <a href="#"> TESTING 3</a></li>
+          <li> <a href="#"> SHOP COFFEE </a></li>
+          <li> <a href="#"> SHOP GEAR </a></li>
+          <li> <a href="#"> LEARN MORE</a></li>
         </ul>
       </nav>
     </header>
@@ -38,9 +38,36 @@ const App = () => (
       <ProtectedRoute exact path="/account" component={AccountContainer} />
     </section>
     <footer>
-      Hello, I am the footer.
-      Styling TBD...
-      <img id="footer-logo" alt="footer logo" />
+      <div className="footer-content-container">
+        <div className="footer-image-container">
+          <img id="footer-logo" />
+        </div>
+        <div className="footer-column-container">
+          <div className="one">
+            <ul>
+              <li>Ul1Li1</li>
+            </ul>
+            <ul>
+              <li>Ul2Li1</li>
+            </ul>
+          </div>
+          <div className="two">
+            <p>Nice paragraph text</p>
+          </div>
+          <div className="three">
+            <div>
+              form to signup for newsletter.
+            </div>
+          </div>
+
+        </div>
+        <div className="margin-spacer">
+
+        </div>
+        <div className="footer-address-blocks">
+
+        </div>
+      </div>
     </footer>
     <noscript>You need to enable JavaScript to run this app.</noscript>
   </div>

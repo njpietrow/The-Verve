@@ -6,11 +6,16 @@ class ProductIndexItem extends React.Component{
     const {product} = this.props;
     return(
       <div className="product-index-item-container">
-        <img
-          className="product-index-img" 
-          src={product.photoUrl} 
-          alt={`${product.productName}-img`}   
-        />
+          <Link 
+            to={`/products/${product.id}`}
+            className="product-index-item-photo"
+          >
+            <img
+              className="product-index-img" 
+              src={product.photoUrl} 
+              alt={`${product.productName}-img`}   
+            />
+          </Link>
         <Link 
           to={`/products/${product.id}`}
           className="product-index-item-title"
