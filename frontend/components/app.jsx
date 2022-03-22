@@ -17,7 +17,8 @@ const App = () => (
 
     <section className="main-content">
       {/* force a re-render when visiting the same page by setting a unique key -- the current date */}
-      <Route exact path="/collections"  render={ () => <ProductIndexContainer key={Date.now()} /> }/> 
+      <Route exact path="/collections"  render={ () => <ProductIndexContainer key={Date.now()} /> }/>
+      <Route exact path="/"  render={ () => <img id="splash-photo" /> }/> 
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/register" component={RegisterFormContainer} />
       <ProtectedRoute exact path="/account" component={AccountContainer} />
