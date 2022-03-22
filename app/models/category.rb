@@ -10,8 +10,8 @@
 class Category < ApplicationRecord
   validates :name, presence: true
 
+  # association to product_categories joins table
   has_many :product_categories,
     foreign_key: :category_id,
     class_name: 'ProductCategory'
-
 end

@@ -19,16 +19,20 @@ class Product < ApplicationRecord
   validates :product_name, :ingredients, :bag_size, :grind, :description, 
     :roast_level, :farm_story, :location, :price, presence: true
 
+  # association to grab product image
   has_one_attached :photo
 
+  # helper association to link to product_categories joins table
   has_many :product_categories,
     foreign_key: :product_id,
     class_name: 'ProductCategory'
 
+  # association to get all associated categories
   has_many :categories,
     through: :product_categories,
     source: :category
 
+  # query db for products that have associated categories that match parameter.
   def self.match_category(category)
     Product
       .joins(:categories)

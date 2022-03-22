@@ -13,8 +13,8 @@ class ProductIndex extends React.Component{
       <div className="product-index-container">
         <div className="product-index-path-container" >
           <Link to="/" className="product-index-path">Home <span>&nbsp;&nbsp;/</span></Link>
-          <Link to="/" className="product-index-path">Collections <span>&nbsp;&nbsp;/</span></Link>
-          <Link to="/" className="product-index-path">All Coffee</Link>
+          <Link to="/collections" className="product-index-path">Collections <span>&nbsp;&nbsp;/</span></Link>
+          <Link to="/collections" className="product-index-path">All Coffee</Link>
         </div>
          
         <div className="product-index-content-container">

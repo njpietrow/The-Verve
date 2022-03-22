@@ -32,11 +32,25 @@ class Account extends React.Component{
             </button>
           </div>
         </div>
-        <br />
-        <br />
-        <div>--------------------------------------------------------------</div>
-        <div>
+        <div  className="row-spacer"></div>
+        <div className="order-history">
           <h2>Order History</h2>
+          <table className="table order-table">
+            <thead>
+              <tr className="table order-table-header">
+                <th>Order Date</th>
+                <th>Order Number</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Shipping Status</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+              <tr><td>You haven't placed any orders yet.</td></tr>
+              
+            </tbody>
+          </table>
         </div>
       </div>
     )
