@@ -26,7 +26,8 @@ const Header = ({updateFilter}) => (
         <ul className="sub-menu-panel-list">
           <Link to="/collections/all" onClick={() => updateFilter("category", "")}> ALL </Link>
           <Link to="/collections/new" onClick={() => updateFilter("category", "new")}> NEW </Link>
-          <Link to="/collections/single+origin" onClick={() => updateFilter("category", "single origin")}> SINGLE ORIGIN </Link>
+          <Link to="/collections/single-origin" onClick={() => updateFilter("category", "single origin")}> SINGLE ORIGIN </Link>
+          <Link to="/collections/blends" onClick={() => updateFilter("category", "blends")}> BLENDS </Link>
         </ul>
       </div>
     </div>

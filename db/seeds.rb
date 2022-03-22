@@ -64,6 +64,18 @@ fourth_product = Product.create(
   farm_story: "On the side of Mount Santa Barbara overlooking Lake Yojoa, you can find Maria Baide's small but mighty farm in Las Flores. With only 1.75 acres, Maria has created a place to wash and grow high-quality specialty coffee. She works closely with our Farmlevel partners at Benificio San Vicente, a nearby dry mill. The microclimate on the sid"
 )
 
+blend_product = Product.create(
+  product_name: "WILDER SEASONAL BLEND COFFEE SET",
+  ingredients: "CRAFT INSTANT · AND A · 12 OUNCE BAG",
+  location: "SEASONAL BLEND",
+  price: 32.00,
+  bag_size: "12 OZ.",
+  grind: "Whole Bean",
+  description: "coffee 5 descriptions.....",
+  roast_level: 3,
+  farm_story: "Returning to our menu, Wilder Blend is our first seasonal blend of the year, marking a fresh start. While our single-origin offerings are roaste"
+)
+
 file1 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Amparonewcoffee_1280x.jpg')
 first_product.photo.attach(io: file1, filename: 'coffee1.jpg')
 
@@ -75,6 +87,9 @@ third_product.photo.attach(io: file3, filename: 'coffee3.jpg')
 
 file4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Marianewcoffee_1280x+(1).jpg')
 fourth_product.photo.attach(io: file4, filename: 'coffee4.jpg')
+
+file5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblendset_2048x2048.webp')
+blend_product.photo.attach(io: file5, filename: 'blend5.jpg')
 
 cat1 = Category.create(name: "single origin")
 cat2 = Category.create(name: "new")
@@ -89,5 +104,6 @@ ProductCategory.create(product_id: second_product.id, category_id: cat2.id)
 ProductCategory.create(product_id: third_product.id, category_id: cat1.id)
 ProductCategory.create(product_id: third_product.id, category_id: cat2.id)
 ProductCategory.create(product_id: fourth_product.id, category_id: cat1.id)
+ProductCategory.create(product_id: blend_product.id, category_id: cat3.id)
 
 
