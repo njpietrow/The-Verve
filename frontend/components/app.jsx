@@ -13,7 +13,7 @@ const App = () => (
   <div className="app">
     <header>
       <div className="banner">
-        <p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p>
+        <a href="/"><p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p></a>
       </div>
       <div className="layout-header">
         <div className="search-container">

@@ -15,4 +15,8 @@
 #
 class Product < ApplicationRecord
   has_one_attached :photo
+
+  def self.match_category(category)
+    self.where()
+  end
 end
