@@ -1,7 +1,9 @@
-export const getProducts= () => (
+export const getProducts = (category) => (
   $.ajax({
     method: 'GET',
-    url: `/api/products`
+    url: `/api/products`,
+    data: {category},
+    error: (err) => console.log(err)
   })
 );
 

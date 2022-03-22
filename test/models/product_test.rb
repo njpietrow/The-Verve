@@ -10,6 +10,8 @@
 #  description  :text             not null
 #  roast_level  :integer          not null
 #  farm_story   :text             not null
+#  location     :string           not null
+#  price        :decimal(10, 3)   not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
