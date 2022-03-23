@@ -62,17 +62,13 @@ class Header extends React.Component{
           </ul>
         </nav>
         <div className="sub-menu-panel-container">
-          {this.state.visible ? (
-            <div className='sub-menu-panel'>
-              <CoffeeSubMenu 
+            <div className={this.state.visible ? 'sub-menu-panel' : 'sub-menu-panel collapsed'}>
+              <CoffeeSubMenu
+                visible={this.state.visible}
                 toggleVisible={this.toggleVisible}
                 updateFilter={updateFilter}
               />
             </div>
-          ) : (
-            null
-          )}
-          
         </div>
       </header>
     )

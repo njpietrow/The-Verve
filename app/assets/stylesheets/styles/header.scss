@@ -97,14 +97,34 @@ nav ul a{
   position: absolute;
   width: 100%;
   height: 45px;
-}
-
-.sub-menu-panel{
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   height: 45px;
+  transition:transform 0.5s ease-out;
+  transform:scaleY(1);
+  transform-origin:top;
+}
+
+.collapsed{
+  transform:scaleY(0);
+}
+
+.visible{
+  opacity: 1;
+  position: absolute;
+  overflow:hidden;
+  animation: .6s ease 0s normal both 1 fadein;
+}
+@keyframes fadein{
+  0% { opacity:0; }
+  66% { opacity:0; }
+  100% { opacity:1; }
+}
+
+.hidden{
+  opacity: 0;
 }
 
 .sub-menu-panel a{
