@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import COFFEE from "./header"
+import LEARN from "./header"
 
 class CoffeeSubMenu extends React.Component{
   constructor(props){
@@ -18,7 +18,7 @@ class CoffeeSubMenu extends React.Component{
 
   handleClick(field){
     return () => {
-      this.props.toggleVisible(COFFEE)
+      this.props.toggleVisible(LEARN)
       this.props.updateFilter("category", field)
     }
   }
@@ -27,28 +27,28 @@ class CoffeeSubMenu extends React.Component{
     return(
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
         <Link 
-          to="/collections/all" 
-          onClick={this.handleClick("")}
+          to="/pages/story" 
+          onClick={this.handleClick()}
         > 
-          ALL 
+          STORY 
         </Link>
         <Link 
-          to="/collections/new" 
-          onClick={this.handleClick("new")}
+          to="/pages/this-is-farmlevel"
+          onClick={this.handleClick()}
         > 
-          NEW 
+          FARMLEVEL 
         </Link>
         <Link 
-          to="/collections/single-origin" 
-        onClick={this.handleClick("single origin")}
+          to="/pages/nursery" 
+          onClick={this.handleClick()}
         > 
-          SINGLE ORIGIN 
+          NURSERY PROJECT 
         </Link>
         <Link 
-          to="/collections/blends" 
-          onClick={this.handleClick("blends")}
+          to="/pages/contact" 
+          onClick={this.handleClick()}
         > 
-          BLENDS 
+          CONTACT 
         </Link>
       </ul>
     )

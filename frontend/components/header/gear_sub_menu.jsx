@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import COFFEE from "./header"
+import GEAR from "./header"
 
-class CoffeeSubMenu extends React.Component{
+class GearSubMenu extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class CoffeeSubMenu extends React.Component{
 
   handleClick(field){
     return () => {
-      this.props.toggleVisible(COFFEE)
+      this.props.toggleVisible(GEAR)
       this.props.updateFilter("category", field)
     }
   }
@@ -27,32 +27,32 @@ class CoffeeSubMenu extends React.Component{
     return(
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
         <Link 
-          to="/collections/all" 
-          onClick={this.handleClick("")}
+          to="/collections/all-gear" 
+          onClick={this.handleClick("gear")}
         > 
           ALL 
         </Link>
         <Link 
-          to="/collections/new" 
-          onClick={this.handleClick("new")}
+          to="/collections/verve-merch" 
+          onClick={this.handleClick("verve merch")}
         > 
-          NEW 
+          VERVE MERCH 
         </Link>
         <Link 
-          to="/collections/single-origin" 
-        onClick={this.handleClick("single origin")}
+          to="/collections/brew-gear" 
+        onClick={this.handleClick("brew gear")}
         > 
-          SINGLE ORIGIN 
+          BREW GEAR 
         </Link>
         <Link 
-          to="/collections/blends" 
-          onClick={this.handleClick("blends")}
+          to="/collections/mugs" 
+          onClick={this.handleClick("mugs")}
         > 
-          BLENDS 
+          MUGS 
         </Link>
       </ul>
     )
   }
 };
 
-export default CoffeeSubMenu;
+export default GearSubMenu;

@@ -1,11 +1,13 @@
 import React from "react";
 import GreetingContainer from '../greeting/greeting_container'
 import CoffeeSubMenu from "./coffee_sub_menu";
+import GearSubMenu from "./gear_sub_menu";
+import LearnSubMenu from "./learn_sub_menu";
 import { Link } from "react-router-dom";
 
-const COFFEE = "coffee";
-const GEAR = "gear";
-const LEARN = "learn"
+export const COFFEE = "coffee";
+export const GEAR = "gear";
+export const LEARN = "learn"
 
 class Header extends React.Component{
   constructor(props){
@@ -18,19 +20,23 @@ class Header extends React.Component{
     this.subMenu = this.subMenu.bind(this);
   }
 
-  toggleVisible(){
-    this.setState({visible: !this.state.visible})
+  toggleVisible(field){
+    if(this.state.subMenu === field || this.state.subMenu === "none"){
+      this.setState({visible: !this.state.visible})
+    }
   }
   
   update(field){
     return () => { 
       this.setState({subMenu: field})
-      this.toggleVisible()
+      this.toggleVisible(field)
     }
   } 
 
   // use instead of always rendering the coffee sub-menu.
   subMenu(){
+    const {updateFilter} = this.props;
+
     switch(this.state.subMenu){
       case COFFEE:
         return (
@@ -41,9 +47,21 @@ class Header extends React.Component{
           />
         )
       case GEAR:
-
+        return (
+          <GearSubMenu
+            visible={this.state.visible}
+            toggleVisible={this.toggleVisible}
+            updateFilter={updateFilter}
+          />
+        )
       case LEARN:
-
+        return(
+          <LearnSubMenu
+            visible={this.state.visible}
+            toggleVisible={this.toggleVisible}
+            updateFilter={updateFilter}
+          />
+        )
       default:
         return null;
     }
@@ -52,8 +70,6 @@ class Header extends React.Component{
   }
 
   render(){
-    const {updateFilter} = this.props;
-
     return(
       <header>
         <div className="banner">
@@ -68,33 +84,14 @@ class Header extends React.Component{
         </div>
         <nav>
           <ul>
-            <a
-              // toggle the sub-menu-panel-list for coffee
-              onClick={this.update(COFFEE)} 
-            > 
-              SHOP COFFEE 
-            </a>
-            <a 
-              // toggle the sub-menu-panel-list for gear
-              onClick={this.update(GEAR)} 
-            > 
-              SHOP GEAR 
-            </a>
-            <a 
-              // toggle the sub-menu-panel-list for info pages
-              onClick={this.update(LEARN)} 
-            > 
-              LEARN MORE 
-            </a>
+            <a onClick={this.update(COFFEE)} > SHOP COFFEE </a>
+            <a onClick={this.update(GEAR)} > SHOP GEAR </a>
+            <a onClick={this.update(LEARN)} > LEARN MORE </a>
           </ul>
         </nav>
         <div className="sub-menu-panel-container">
             <div className={this.state.visible ? 'sub-menu-panel' : 'sub-menu-panel collapsed'}>
-              <CoffeeSubMenu
-                visible={this.state.visible}
-                toggleVisible={this.toggleVisible}
-                updateFilter={updateFilter}
-              />
+              {this.subMenu()}
             </div>
         </div>
       </header>
