@@ -1,4 +1,60 @@
-#splash-photo{
-  width: 100%;
+.splash-container{
+  display: flex;
+  justify-content: center;
+  min-height: 730px;
+  position: relative;
+}
+
+.splash-photo{
+  position: absolute;
+  height: 100%;
   content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/womens-history-month.png') / 'splash photo';
+}
+
+.splash-title-container{
+  position: absolute;
+  top: 20%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw;
+}
+
+.splash-title-photo{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/download.webp') / 'splash title photo';
+  // height: 200px;
+  width: 100%;
+}
+
+.splash-title-text{
+  padding: 10px 0 16px 0;
+  color: rgb(235, 232, 232);
+  text-shadow: 5px solid rgba(255, 255, 255, 0.516);
+  font-family: 'Montserrat';
+  line-height: 35px;
+  font-weight: 300;
+  font-size: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.shop-now-button{
+  color: #fff;
+  border: 2px solid  #fff;
+  text-shadow: 1px solid rgba(255, 255, 255, 0.516);
+  line-height: 48px;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 200px;
+}
+
+.shop-now-button:hover{
+  background-color: #fff;
+  color: black;
+  transition-property: background-color, color;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
