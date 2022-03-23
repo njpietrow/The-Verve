@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import GEAR from "./header"
+import {GEAR} from "./header"
 
 class GearSubMenu extends React.Component{
   constructor(props){

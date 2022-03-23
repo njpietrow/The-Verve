@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LEARN from "./header"
+import {LEARN} from "./header"
 
 class CoffeeSubMenu extends React.Component{
   constructor(props){

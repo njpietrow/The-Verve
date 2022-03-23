@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import COFFEE from "./header"
+import {COFFEE} from "./header"
 
 class CoffeeSubMenu extends React.Component{
   constructor(props){
