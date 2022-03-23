@@ -40,7 +40,6 @@ header {
 
 .search{
   padding-left: 12px;
-  // font-size: 24px;
   height: 25px;
   width: 28px;
   overflow: visible;
@@ -115,11 +114,11 @@ nav ul a{
   opacity: 1;
   position: absolute;
   overflow:hidden;
-  animation: .6s ease 0s normal both 1 fadein;
+  animation: 1s ease .3s normal both 1 fadein;
 }
 @keyframes fadein{
   0% { opacity:0; }
-  66% { opacity:0; }
+  99% { opacity:.8; }
   100% { opacity:1; }
 }
 

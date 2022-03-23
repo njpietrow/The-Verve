@@ -3,6 +3,10 @@ import GreetingContainer from '../greeting/greeting_container'
 import CoffeeSubMenu from "./coffee_sub_menu";
 import { Link } from "react-router-dom";
 
+const COFFEE = "coffee";
+const GEAR = "gear";
+const LEARN = "learn"
+
 class Header extends React.Component{
   constructor(props){
     super(props);
@@ -11,6 +15,7 @@ class Header extends React.Component{
       subMenu: "none"
     }
     this.toggleVisible = this.toggleVisible.bind(this);
+    this.subMenu = this.subMenu.bind(this);
   }
 
   toggleVisible(){
@@ -22,6 +27,28 @@ class Header extends React.Component{
       this.setState({subMenu: field})
       this.toggleVisible()
     }
+  } 
+
+  // use instead of always rendering the coffee sub-menu.
+  subMenu(){
+    switch(this.state.subMenu){
+      case COFFEE:
+        return (
+          <CoffeeSubMenu
+            visible={this.state.visible}
+            toggleVisible={this.toggleVisible}
+            updateFilter={updateFilter}
+          />
+        )
+      case GEAR:
+
+      case LEARN:
+
+      default:
+        return null;
+    }
+      
+
   }
 
   render(){
@@ -43,19 +70,19 @@ class Header extends React.Component{
           <ul>
             <a
               // toggle the sub-menu-panel-list for coffee
-              onClick={this.update("coffee")} 
+              onClick={this.update(COFFEE)} 
             > 
               SHOP COFFEE 
             </a>
             <a 
               // toggle the sub-menu-panel-list for gear
-              onClick={this.update("gear")} 
+              onClick={this.update(GEAR)} 
             > 
               SHOP GEAR 
             </a>
             <a 
               // toggle the sub-menu-panel-list for info pages
-              onClick={this.update("learn")} 
+              onClick={this.update(LEARN)} 
             > 
               LEARN MORE 
             </a>
