@@ -14,11 +14,11 @@ class Header extends React.Component{
   }
 
   toggleVisible(){
-    this.state.visible = !this.state.visible;
+    this.setState({visible: !this.state.visible})
   }
   
   update(field){
-    return e => { 
+    return () => { 
       this.setState({subMenu: field})
       this.toggleVisible()
     }
