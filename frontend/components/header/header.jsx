@@ -21,8 +21,8 @@ class Header extends React.Component{
   }
 
   toggleVisible(field){
-    if(this.state.subMenu === field || this.state.subMenu === "none"){
-      this.setState({visible: !this.state.visible})
+    if(this.state.subMenu === field || this.state.subMenu === "none" || this.state.visible == false){
+        this.setState({visible: !this.state.visible})
     }
   }
   
