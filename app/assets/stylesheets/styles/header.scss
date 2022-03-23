@@ -40,11 +40,19 @@ header {
 
 .search{
   padding-left: 12px;
-  font-size: 24px;
-  height: 20px;
+  // font-size: 24px;
+  height: 25px;
+  width: 28px;
+  overflow: visible;
   padding-top: 10px;
   margin-right: 107px;
-  display: block;
+  display: flex;
+}
+
+#search-icon{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/pngfind.com-magnifying-glass-png-no-1043692.png');
+  background-size: cover;
+  margin-top: 0.1em
 }
 
 nav{
@@ -89,10 +97,9 @@ nav ul a{
   position: absolute;
   width: 100%;
   height: 45px;
-  // visibility: hidden;
 }
 
-.sub-menu-panel-list{
+.sub-menu-panel{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,14 +107,14 @@ nav ul a{
   height: 45px;
 }
 
-.sub-menu-panel-list a{
+.sub-menu-panel a{
   color: rgb(255, 255, 255);
   margin-left: 30px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.sub-menu-panel-list a:hover{
+.sub-menu-panel a:hover{
   transition: color 0.2s ease; 
   color: #de6932;
 }

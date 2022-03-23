@@ -7,4 +7,4 @@ const mDTP = dispatch => ({
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
 })
 
-export default withRouter(connect(null, mDTP)(Header));
+export default connect(null, mDTP)(Header);
