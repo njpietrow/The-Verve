@@ -7,6 +7,11 @@ class ProductIndex extends React.Component{
     this.props.fetchProducts()
   }
 
+  // scroll window back to top after changing filters for products.
+  componentDidUpdate(){
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+  }
+
   render(){
     const {products} = this.props
     return(
