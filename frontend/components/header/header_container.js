@@ -1,6 +1,5 @@
 import { updateFilter } from "../../actions/filter_actions";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import Header from "./header";
 
 const mDTP = dispatch => ({

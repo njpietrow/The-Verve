@@ -65,8 +65,12 @@ class Header extends React.Component{
       default:
         return null;
     }
-      
+  }
 
+  //get Classname for toggle caret
+  getToggleClass(menuTitle){
+    return ((this.state.subMenu===menuTitle) && (this.state.visible)) ? 
+      'toggle-menu active ' : 'toggle-menu';
   }
 
   render(){
@@ -77,16 +81,22 @@ class Header extends React.Component{
         </div>
         <div className="layout-header">
           <div className="search-container">
-            <Link to="/search" className="search"><img id="search-icon" /></Link>
+            <Link to="/search" className="search"><i className="fa-solid fa-magnifying-glass search-icon"></i></Link>
           </div>
           <Link to="/"><img id="main-logo" /></Link>
           <GreetingContainer />
         </div>
         <nav>
           <ul>
-            <a onClick={this.update(COFFEE)} > SHOP COFFEE </a>
-            <a onClick={this.update(GEAR)} > SHOP GEAR </a>
-            <a onClick={this.update(LEARN)} > LEARN MORE </a>
+            <a onClick={this.update(COFFEE)} 
+              className={this.getToggleClass(COFFEE)}
+            > SHOP COFFEE </a>
+            <a onClick={this.update(GEAR)} 
+              className={this.getToggleClass(GEAR)}
+            > SHOP GEAR </a>
+            <a onClick={this.update(LEARN)} 
+              className={this.getToggleClass(LEARN)}
+            > LEARN MORE </a>
           </ul>
         </nav>
         <div className="sub-menu-panel-container">

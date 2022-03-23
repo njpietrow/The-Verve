@@ -3,6 +3,7 @@ header {
   top: 0;
   background-color: #fff;
   width: 100%;
+  z-index: 1;
 }
 
 .layout-header{
@@ -25,7 +26,7 @@ header {
 }
 
 #main-logo{
-  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/logo.png');
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/logo.png') / 'main logo';
   height: 45px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -40,18 +41,11 @@ header {
 
 .search{
   padding-left: 12px;
-  height: 25px;
-  width: 28px;
+  font-size: 20px;
   overflow: visible;
-  padding-top: 10px;
+  padding-top: 12px;
   margin-right: 107px;
   display: flex;
-}
-
-#search-icon{
-  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/pngfind.com-magnifying-glass-png-no-1043692.png') / 'search icon';
-  background-size: cover;
-  margin-top: 0.1em
 }
 
 nav{
@@ -110,15 +104,25 @@ nav ul a{
   transform:scaleY(0);
 }
 
+.toggle-menu:after{
+  content: "\f106";
+  font: normal normal normal 14px/1 FontAwesome;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.active:after{
+  content: "\f107";
+}
+
 .visible{
   opacity: 1;
   position: absolute;
   overflow:hidden;
-  animation: 1s ease .3s normal both 1 fadein;
+  animation: 1s ease-out 350ms normal both 1 fadein;
 }
 @keyframes fadein{
   0% { opacity:0; }
-  99% { opacity:.8; }
   100% { opacity:1; }
 }
 

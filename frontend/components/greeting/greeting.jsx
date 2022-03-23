@@ -16,23 +16,17 @@ class Greeting extends React.Component{
           <Link 
             to="/account" 
             className="header-link"
-          >
-            Account /
-          </Link>
+          > Account /</Link>
         ) : ( 
           <Link 
             to="/login" 
             className="header-link"
-          >
-            Login /
-          </Link>
+          > Login / </Link>
         )}
         <Link 
           to="/cart" 
           className="header-link cart-count"
-        >
-          🛒 (C)
-        </Link>
+        > <i className="fa-solid fa-cart-shopping"></i> (C) </Link>
       </div>
     )
   }

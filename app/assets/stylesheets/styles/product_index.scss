@@ -1,10 +1,11 @@
 .product-index-container{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
+  min-height: 80vh;
 }
 
 .product-index-content-container{
@@ -27,6 +28,23 @@
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+}
+
+// testing for skeleton loading animation
+.product-index-item-photo{
+  animation: fadeIn ease-out 2s;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.product-index-item-photo:empty:after{
+  height: 100%;
+  width: 100%;
 }
 
 .product-index-item-photo{
@@ -74,14 +92,24 @@
 
 .product-index-path{
   font-size: 12px;
-  letter-spacing: .5;
   text-transform: uppercase;
   padding-left: 12px;
   color: #636367;
   transition: color 0.2s ease;
   font-weight: 500;
+  letter-spacing: -.01em;
+  display: inline-block;
+  transform: scaleY(1.2);
+  position: relative; 
+  z-index: 0;
+  vertical-align: top;
 }
 
 .product-index-path:hover{
   color: black;
+}
+
+.last{
+  color: black;
+
 }

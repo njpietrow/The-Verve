@@ -27,7 +27,7 @@ class CoffeeSubMenu extends React.Component{
     return(
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
         <Link 
-          to="/collections/all" 
+          to="/collections/all-coffee" 
           onClick={this.handleClick("")}
         > 
           ALL 
@@ -49,6 +49,12 @@ class CoffeeSubMenu extends React.Component{
           onClick={this.handleClick("blends")}
         > 
           BLENDS 
+        </Link>
+        <Link 
+          to="/collections/instant" 
+          onClick={this.handleClick("instant")}
+        > 
+          INSTANT 
         </Link>
       </ul>
     )

@@ -50,6 +50,8 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    autoprefixer-rails (10.4.2.0)
+      execjs (~> 2)
     aws-eventstream (1.2.0)
     aws-partitions (1.568.0)
     aws-sdk-core (3.130.0)
@@ -230,6 +232,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  autoprefixer-rails
   aws-sdk-s3
   bcrypt (~> 3.1.7)
   better_errors
