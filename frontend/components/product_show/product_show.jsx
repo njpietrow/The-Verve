@@ -8,6 +8,7 @@ class ProductShow extends React.Component{
 
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
   }
 
   render(){
@@ -30,14 +31,34 @@ class ProductShow extends React.Component{
 
         <div className="product-show-content">
           <div className="product-show-content-photo">
-            I am the product photo 
-            <br />
-            I should be center aligned and probably just fill the width
+            <img src={product.photoUrl} alt="product photo" className="product-show-image" />
           </div>
-          <div className="product-show-content-body">
-            I am the product description.
-            <br />
-            Everything should be left-aligned here.
+          <div className="product-show-content-body-container">
+            <div className="product-show-content-body">
+              <h3>{product.location}</h3>
+              <h1>{product.productName}</h1>
+              <p className="product-show-item-ingredients">{product.ingredients}</p>
+              <br />
+              <p>stars</p>
+              <br />
+              <p>Price: {product.price}</p>
+              <p>Select bag size: {product.bagSize}</p>
+              
+              <p>select grind: {product.grind} </p>
+              <p>type/increment quantity: 0</p>
+              <br />
+              <button className="session-button">Add to Cart</button>
+              <br />
+              <p>{product.description}</p>
+              <br />
+              <div>
+                this is the roast level: {product.roastLevel}
+              </div>
+              <br />
+              <div>
+                {product.farmStory}
+              </div>
+            </div>
           </div>
         </div>
       </div>

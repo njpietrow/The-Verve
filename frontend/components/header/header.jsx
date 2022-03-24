@@ -50,7 +50,7 @@ class Header extends React.Component{
     }
   } 
 
-  // dynamically render sub-menu component based on subMenu state name
+  // dynamically render sub-menu component based on subMenu state
   subMenu(){
     if (this.state.subMenu === "none") return null
     const SubMenu = components[this.state.subMenu];
@@ -77,6 +77,7 @@ class Header extends React.Component{
         </div>
         <div className="layout-header">
           <div className="search-container">
+            &nbsp;
             <Link to="/search" className="search"><i className="fa-solid fa-magnifying-glass search-icon"></i></Link>
           </div>
           <Link to="/"><img id="main-logo" /></Link>
