@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
+import merge from 'lodash.merge'
 import throttle from 'lodash.throttle';
 import { loadState, saveState } from "./util/local_storage";
 
@@ -18,16 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
     prevState = {};
   }
   if (window.currentUser) {
-    const preloadedState = {
+    let preloadedState = {
       entities: {
         users: { [window.currentUser.id]: window.currentUser }
       },
       session: { id: window.currentUser.id }
     };
-    const mergedState = Object.assign({},  prevState, preloadedState,)
+
+    //deep merge so that entities with products doesn't overwrite
+    //entities with users from the preloadedState.
+    let mergedState = merge(preloadedState, prevState)
     store = configureStore(mergedState);
     delete window.currentUser;
   } else {
+    console.log("in no current user" ,prevState)
     store = configureStore(prevState);
   }
   store.subscribe(throttle(() => {

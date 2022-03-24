@@ -22,6 +22,7 @@ class ProductShow extends React.Component{
             <Link 
               to="/collections" 
               className="product-index-path"
+              onClick={() => updateFilter("category", "")}
             > coffee <span>&nbsp;&nbsp;/</span></Link>
             <span className="product-index-path last">
               {product.productName} 
