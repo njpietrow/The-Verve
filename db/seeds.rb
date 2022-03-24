@@ -22,7 +22,7 @@ first_product = Product.create(
   location: "Colombia",
   price: 21.25,
   bag_size: "12 OZ",
-  grind: "medium",
+  grind: "Whole Bean",
   description: "This is a good coffee",
   roast_level: 1,
   farm_story: "interesting farm story here"
@@ -34,7 +34,7 @@ second_product = Product.create(
   location: "Colombia",
   price: 22.00,
   bag_size: "100 OZ",
-  grind: "large",
+  grind: "Whole Bean",
   description: "coffee 2 description ...",
   roast_level: 9000,
   farm_story: "interesting farm story here"
@@ -46,7 +46,7 @@ third_product = Product.create(
   location: "Ethiopia",
   price: 21.25,
   bag_size: "12 OZ",
-  grind: "small",
+  grind: "Whole Bean",
   description: "coffee 3 descriptions.....",
   roast_level: 100,
   farm_story: "interesting farm story here"
@@ -58,7 +58,7 @@ fourth_product = Product.create(
   location: "HONDURAS",
   price: 22.75,
   bag_size: "12 OZ",
-  grind: "small",
+  grind: "Whole Bean",
   description: "coffee 4 descriptions.....",
   roast_level: 100,
   farm_story: "On the side of Mount Santa Barbara overlooking Lake Yojoa, you can find Maria Baide's small but mighty farm in Las Flores. With only 1.75 acres, Maria has created a place to wash and grow high-quality specialty coffee. She works closely with our Farmlevel partners at Benificio San Vicente, a nearby dry mill. The microclimate on the sid"
@@ -70,7 +70,7 @@ blend_product = Product.create(
   location: "SEASONAL BLEND",
   price: 32.00,
   bag_size: "12 OZ.",
-  grind: "Whole Bean",
+  grind: "none",
   description: "coffee 5 descriptions.....",
   roast_level: 3,
   farm_story: "Returning to our menu, Wilder Blend is our first seasonal blend of the year, marking a fresh start. While our single-origin offerings are roaste"
@@ -82,7 +82,7 @@ blend_product2 = Product.create(
   location: "SEASONAL BLEND",
   price: 20.75,
   bag_size: "12 OZ.",
-  grind: "Whole Bean",
+  grind: "Drip / Medium",
   description: "Juicy notes of ripe cantaloupe balanced with sweet yet tart, white cherries are the first impressions of Wilder Blend. Floral honeysuckle adds an element both light and refreshing—the perfect coffee to take you into Spring.\n\n Wilder Blend is a perfect example of mixing Colombian and Ethiopian components, highlighting elements of both natural and washed coffees. Making its return to the menu for another year, previous lovers of this blend will be happy to experience another season of Wilder Blend.",
   roast_level: 5,
   farm_story: "Returning to our menu, Wilder Blend is our first seasonal blend of the year, marking a fresh start. While our single-origin offerings are roasted to highlight the unique and seasonal characteristics that make them individually special, our blends promise balance and consistency year-in, year-out. But, sometimes. We can't help but mash up what we think are two or three of our most delicious seasonal offerings to yield something with the uniqueness of a single-origin and a blends consistency. \n\n This seasonal blend combines two very different tasting coffees from two very distinct places, Colombia and Ethiopia. With both natural and washed components, this year's Wilder blend celebrates the best of both countries."

@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import AddToCartForm from "./add_to_cart_form"
 
 class ProductShow extends React.Component{
   constructor(props){
@@ -57,14 +58,8 @@ class ProductShow extends React.Component{
               <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
               <p className="green show-page-price">{product.price.padEnd(5,'0')}</p>
 
-              {/* if product has bag size, add selector */}
-              <p>Select bag size: {product.bagSize}</p>
-              {/* if product has grind size add selector */}
-              <p>select grind: {product.grind} </p>
-              <div className="quantity-add-container">
-                <p>- [0] +</p>
-                <button className="add-cart-button">Add to Cart</button>
-              </div>
+              <AddToCartForm />
+
               <br />
               <p>{product.description}</p>
               <br />

@@ -79,7 +79,7 @@ class Header extends React.Component{
           <div className="search-container">
             <Link to="/search" className="search"><i className="fa-solid fa-magnifying-glass search-icon"></i></Link>
           </div>
-          <Link to="/"><img id="main-logo" /></Link>
+          <Link to="/"><img id="main-logo" src='https://the-verve-seeds.s3.us-west-1.amazonaws.com/logo.png' alt="main logo"  /></Link>
           <GreetingContainer />
         </div>
         <nav>
