@@ -24,7 +24,19 @@
   width: 85%;
 }
 
+.product-show-image{
+  animation: fadeIn ease-out 1s;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
 .product-show-content-body{
+  animation: fadeIn ease-out .5s;
   margin: 60px 0 40px 40px;
   height: 900px;
 }
