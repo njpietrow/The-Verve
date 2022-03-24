@@ -60,14 +60,11 @@ class ProductShow extends React.Component{
 
               <AddToCartForm />
 
-              <br />
-              <p>{product.description}</p>
-              <br />
-              <div>
+              <p className="product-show-description"> {product.description}</p>
+              <div className="product-show-roast-level">
                 this is the roast level: {product.roastLevel}
               </div>
-              <br />
-              <div>
+              <div className="product-show-farm-story">
                 {product.farmStory}
               </div>
             </div>

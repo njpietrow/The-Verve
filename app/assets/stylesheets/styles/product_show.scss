@@ -67,13 +67,13 @@
 }
 
 .add-to-cart-form{
-
+  padding: 0 0 40px 0;
 }
 
 .quantity-add-container{
   display: flex;
   align-items: center;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 0 0;
 }
 
 .quantity-add-container input[type="text"]{
@@ -102,7 +102,14 @@
 }
 
 
-.show-page-description{
-  padding: 0 0 0 0;
+.product-show-description{
+  padding: 0 0 20px 0;
 } 
 
+.product-show-roast-level{
+  padding: 0 0 20px 0;
+} 
+
+.product-show-farm-story{
+  padding: 0 0 0 0;
+} 
