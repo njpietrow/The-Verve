@@ -13,10 +13,10 @@ const receiveProduct = (product) => ({
   product
 });
 
-export const fetchProducts = (filters) => dispatch => (
-  ProductApiUtil.getProducts(filters)
+export const fetchProducts = (filters) => dispatch => {
+  return ProductApiUtil.getProducts(filters)
     .then(products => dispatch(receiveProducts(products)))
-);
+};
 
 export const fetchProduct = (productId) => dispatch => {
   return ProductApiUtil.getProduct(productId)

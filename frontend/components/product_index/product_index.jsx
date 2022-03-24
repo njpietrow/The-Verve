@@ -3,9 +3,9 @@ import ProductIndexItem from "./product_index_item"
 import { Link } from "react-router-dom"
 
 class ProductIndex extends React.Component{
-  componentDidMount(){
-    this.props.fetchProducts()
-  }
+  // componentDidMount(){
+  //   this.props.fetchProducts(this.props.category)
+  // }
 
   // scroll window back to top after changing filters for products.
   componentDidUpdate(){
