@@ -19,15 +19,39 @@ footer{
   width: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  letter-spacing: .05em;
+  font-family: 'Oswald';
+  color: #494b44;
 }
 
 .one{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.one ul{
+  list-style: none;
+  
+}
+
+.one li{
+  padding-bottom: 10px;
 }
 
 .two p{
+
   text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.three p{
+  padding-left: 40px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
 }
 
 #footer-logo{

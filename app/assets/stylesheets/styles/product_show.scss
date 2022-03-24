@@ -1,7 +1,7 @@
 .product-show-container{
   width: 100%;
   height: 100%;
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows:  auto;
   gap: 15px;
-  width: 85%;
+  width: 88%;
 }
 
 .product-show-image{
@@ -38,7 +38,7 @@
 .product-show-content-body{
   animation: fadeIn ease-out .5s;
   margin: 60px 40px 40px 40px;
-  min-height: 900px;
+  min-height: 60vh;
 }
 
 .product-show-image{
@@ -63,47 +63,14 @@
 
 .show-page-price{
   font-size: 22px;
-  padding: 0 0 22px 0;
+  padding: 0 0 26px 0;
 }
-
-.add-to-cart-form{
-  padding: 0 0 40px 0;
-}
-
-.quantity-add-container{
-  display: flex;
-  align-items: center;
-  padding: 20px 0 0 0;
-}
-
-.quantity-add-container input[type="text"]{
-  margin-bottom: 0px;
-  width: 60px;
-}
-
-.add-cart-button{
-  width: 50%;
-  height: 50px;
-  margin-left: 20px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-  background-color: rgb(222,105,50);
-  transition: all .3s ease;
-}
-
-
-
-.add-cart-button:hover{
-  background-color: #777a4d;
-}
-
 
 .product-show-description{
   padding: 0 0 20px 0;
+} 
+.product-show-description p{
+  padding: 0 0 8px 0;
 } 
 
 .product-show-roast-level{

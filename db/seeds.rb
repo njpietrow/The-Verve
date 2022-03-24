@@ -13,6 +13,11 @@ ProductCategory.destroy_all
 Product.destroy_all
 Category.destroy_all
 
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('product_categories')
+ActiveRecord::Base.connection.reset_pk_sequence!('products')
+ActiveRecord::Base.connection.reset_pk_sequence!('categories')
+
 User.create(email: "test@gmail.com", password: "password", first_name: "FirstName", last_name: "LastName")
 User.create(email: "demo@email.com", password: "password", first_name: "Coffee", last_name: "Delight")
 
@@ -69,7 +74,7 @@ blend_product = Product.create(
   ingredients: "CRAFT INSTANT · AND A · 12 OUNCE BAG",
   location: "SEASONAL BLEND",
   price: 32.00,
-  bag_size: "12 OZ.",
+  bag_size: "none",
   grind: "none",
   description: "coffee 5 descriptions.....",
   roast_level: 3,
@@ -83,9 +88,9 @@ blend_product2 = Product.create(
   price: 20.75,
   bag_size: "12 OZ.",
   grind: "Drip / Medium",
-  description: "Juicy notes of ripe cantaloupe balanced with sweet yet tart, white cherries are the first impressions of Wilder Blend. Floral honeysuckle adds an element both light and refreshing—the perfect coffee to take you into Spring.\n\n Wilder Blend is a perfect example of mixing Colombian and Ethiopian components, highlighting elements of both natural and washed coffees. Making its return to the menu for another year, previous lovers of this blend will be happy to experience another season of Wilder Blend.",
+  description: "Juicy notes of ripe cantaloupe balanced with sweet yet tart, white cherries are the first impressions of Wilder Blend. Floral honeysuckle adds an element both light and refreshing—the perfect coffee to take you into Spring.\n \n Wilder Blend is a perfect example of mixing Colombian and Ethiopian components, highlighting elements of both natural and washed coffees. Making its return to the menu for another year, previous lovers of this blend will be happy to experience another season of Wilder Blend.",
   roast_level: 5,
-  farm_story: "Returning to our menu, Wilder Blend is our first seasonal blend of the year, marking a fresh start. While our single-origin offerings are roasted to highlight the unique and seasonal characteristics that make them individually special, our blends promise balance and consistency year-in, year-out. But, sometimes. We can't help but mash up what we think are two or three of our most delicious seasonal offerings to yield something with the uniqueness of a single-origin and a blends consistency. \n\n This seasonal blend combines two very different tasting coffees from two very distinct places, Colombia and Ethiopia. With both natural and washed components, this year's Wilder blend celebrates the best of both countries."
+  farm_story: "Returning to our menu, Wilder Blend is our first seasonal blend of the year, marking a fresh start. While our single-origin offerings are roasted to highlight the unique and seasonal characteristics that make them individually special, our blends promise balance and consistency year-in, year-out. But, sometimes. We can't help but mash up what we think are two or three of our most delicious seasonal offerings to yield something with the uniqueness of a single-origin and a blends consistency. \n \n This seasonal blend combines two very different tasting coffees from two very distinct places, Colombia and Ethiopia. With both natural and washed components, this year's Wilder blend celebrates the best of both countries."
 )
 
 blend_product3 = Product.create(
@@ -95,9 +100,9 @@ blend_product3 = Product.create(
   price: 17.00,
   bag_size: "none",
   grind: "none",
-  description: "Juicy notes of ripe cantaloupe balanced with sweet yet tart, white cherries are the first impressions of Wilder Blend. Floral honeysuckle adds an element both light and refreshing—the perfect coffee to take you into Spring. \n\n Wilder Blend is a perfect example of mixing Colombian and Ethiopian components, highlighting elements of both natural and washed coffees. Making its return to the menu for another year, previous lovers of this blend will be happy to experience another season of Wilder Blend.\n\n This ain't your grandma's instant coffee. The finest coffees in the world hand-roasted, small-batch brewed, and preserved for you.\n\n Add one packet of Verve Instant Craft Coffee into your mug along with 10 ounces of hot or cold liquid (water, milk, or milk alternative), give it a stir, and drink up. \n\n Makes 6 cups of coffee.",
+  description: "Juicy notes of ripe cantaloupe balanced with sweet yet tart, white cherries are the first impressions of Wilder Blend. Floral honeysuckle adds an element both light and refreshing—the perfect coffee to take you into Spring. \n \n Wilder Blend is a perfect example of mixing Colombian and Ethiopian components, highlighting elements of both natural and washed coffees. Making its return to the menu for another year, previous lovers of this blend will be happy to experience another season of Wilder Blend.\n \n This ain't your grandma's instant coffee. The finest coffees in the world hand-roasted, small-batch brewed, and preserved for you.\n \n Add one packet of Verve Instant Craft Coffee into your mug along with 10 ounces of hot or cold liquid (water, milk, or milk alternative), give it a stir, and drink up. \n \n Makes 6 cups of coffee.",
   roast_level: 0,
-  farm_story: "Returning to our menu, Wilder Blend is our first seasonal blend of the year, marking a fresh start. While our single-origin offerings are roasted to highlight the unique and seasonal characteristics that make them individually special, our blends promise balance and consistency year-in, year-out. But, sometimes. We can't help but mash up what we think are two or three of our most delicious seasonal offerings to yield something with the uniqueness of a single-origin and a blends consistency. \n\n This seasonal blend combines two very different tasting coffees from two very distinct places, Colombia and Ethiopia. With both natural and washed components, this year's Wilder blend celebrates the best of both countries."
+  farm_story: "Returning to our menu, Wilder Blend is our first seasonal blend of the year, marking a fresh start. While our single-origin offerings are roasted to highlight the unique and seasonal characteristics that make them individually special, our blends promise balance and consistency year-in, year-out. But, sometimes. We can't help but mash up what we think are two or three of our most delicious seasonal offerings to yield something with the uniqueness of a single-origin and a blends consistency. \n \n This seasonal blend combines two very different tasting coffees from two very distinct places, Colombia and Ethiopia. With both natural and washed components, this year's Wilder blend celebrates the best of both countries."
 )
 
 file1 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Amparonewcoffee_1280x.jpg')

@@ -1,0 +1,87 @@
+.add-to-cart-form{
+  padding: 0 0 40px 0;
+}
+
+.quantity-add-container{
+  display: flex;
+  align-items: center;
+  padding: 20px 0 0 0;
+}
+
+.quantity-add-container input[type="text"]{
+  margin-bottom: 0px;
+  width: 60px;
+}
+
+.add-to-cart-form label{
+  font-weight: 600;
+  display:inline-block;
+}
+
+.add-to-cart-form select{
+  border: 1.5px solid #e7dfd2;
+  width: 100%;
+  height: 48px;
+  text-indent: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  font-family: "Oswald";
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #6c6f65;
+  background: transparent url(https://the-verve-seeds.s3.us-west-1.amazonaws.com/accordion-arrow-closed.webp) no-repeat 95%;
+  background-size: 15px 30px;
+  background-color: #f9f6f1;
+  transition: border 0.3s ease-in;
+  margin-bottom: 20px;
+  appearance: none;
+}
+
+.add-to-cart-form select:hover{
+  transition: border 0.3s ease-out;
+  border: 1.5px solid #de6932;
+}
+
+.add-to-cart-form select:focus{
+  outline: none;
+}
+
+.add-to-cart-form option{
+  color: #fff;
+}
+
+
+// the anchor tags use pseudo selector content to prevent highlighting.
+.quantity-add::before{
+  content: "+";
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.minus::before{
+  content: "-";
+  font-size: 34px;
+  font-weight: 400
+}
+
+.add-cart-button{
+  width: 50%;
+  height: 50px;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: rgb(222,105,50);
+  transition: all .3s ease;
+}
+
+.add-cart-button:hover{
+  background-color: #777a4d;
+}
+

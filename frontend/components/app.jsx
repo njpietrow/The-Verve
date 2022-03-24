@@ -6,7 +6,7 @@ import RegisterFormContainer from "./session_form/register_form_container";
 import AccountContainer from "./account/account_container";
 import ProductShowContainer from "./product_show/product_show_container";
 import ProductIndexContainer from "./product_index/product_index_container";
-import Homepage from "./homepage/homepage";
+import HomepageContainer from "./homepage/hompage_container";
 import Footer from "./footer/footer";
 import { AuthRoute, ProtectedRoute } from "../util/route_util"
 import { Route, Link, Switch } from "react-router-dom";
@@ -23,7 +23,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/register" component={RegisterFormContainer} />
         <ProtectedRoute exact path="/account" component={AccountContainer} />
-        <Route path="/"  component={Homepage}/> 
+        <Route path="/"  component={HomepageContainer}/> 
       </Switch>
     </section>
 

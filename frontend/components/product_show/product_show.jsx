@@ -58,15 +58,20 @@ class ProductShow extends React.Component{
               <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
               <p className="green show-page-price">{product.price.padEnd(5,'0')}</p>
 
-              <AddToCartForm />
+              <AddToCartForm hasBag={!(product.bagSize === "none")}/>
 
-              <p className="product-show-description"> {product.description}</p>
+              <div className="product-show-description"> 
+                {product.description?.split('\n').map((text,idx) => <p key={idx}>{text}</p>)}
+              </div>
               <div className="product-show-roast-level">
+                <h3>ROAST LEVEL</h3>
                 this is the roast level: {product.roastLevel}
               </div>
-              <div className="product-show-farm-story">
-                {product.farmStory}
-              </div>
+              {/* <div className="product-show-farm-story">
+                <p>
+                  {product.farmStory}
+                </p>
+              </div> */}
             </div>
           </div>
         </div>
