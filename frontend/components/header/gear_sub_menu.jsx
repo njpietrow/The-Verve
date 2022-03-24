@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {GEAR} from "./header"
+import GEAR from "./header"
 
 class GearSubMenu extends React.Component{
   constructor(props){
@@ -27,25 +27,25 @@ class GearSubMenu extends React.Component{
     return(
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
         <Link 
-          to="/collections/all-gear" 
+          to="/collections" 
           onClick={this.handleClick("gear")}
         > 
           ALL 
         </Link>
         <Link 
-          to="/collections/verve-merch" 
+          to="/collections" 
           onClick={this.handleClick("verve merch")}
         > 
           VERVE MERCH 
         </Link>
         <Link 
-          to="/collections/brew-gear" 
+          to="/collections" 
         onClick={this.handleClick("brew gear")}
         > 
           BREW GEAR 
         </Link>
         <Link 
-          to="/collections/mugs" 
+          to="/collections" 
           onClick={this.handleClick("mugs")}
         > 
           MUGS 

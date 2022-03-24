@@ -7,7 +7,7 @@ class ProductIndexItem extends React.Component{
     return(
       <div className="product-index-item-container">
           <Link 
-            to={`/products/${product.id}`}
+            to={`/collections/${product.id}`}
             className="product-index-item-photo"
           >
             <img
@@ -17,7 +17,7 @@ class ProductIndexItem extends React.Component{
             />
           </Link>
         <Link 
-          to={`/products/${product.id}`}
+          to={`/collections/${product.id}`}
           className="product-index-item-title"
         >
           <h4>{product.location}</h4>

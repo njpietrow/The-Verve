@@ -3,9 +3,10 @@ import { fetchProducts } from "../../actions/product_actions";
 import { updateFilter } from "../../actions/filter_actions";
 import ProductIndex from "./product_index";
 
-const mSTP = ({entities}) => {
+const mSTP = ({entities,ui}) => {
   return {
     products: Object.values(entities.products),
+    category: ui.filters.category
   }
 };
 

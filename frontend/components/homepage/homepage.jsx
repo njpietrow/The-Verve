@@ -10,7 +10,9 @@ class Homepage extends React.Component{
         <div className="splash-title-container">
           <img className="splash-title-photo" />
           <div className="splash-title-text">
-            In honor of Women's History Month, we're proudly featuring coffees produced by our women coffee partners for the month of March.
+            <p>
+              In honor of Women's History Month, we're proudly featuring coffees produced by our women coffee partners for the month of March.
+            </p>
           </div>
             <Link to="/collections/all-coffee">
               <button className="shop-now-button">SHOP NOW</button>

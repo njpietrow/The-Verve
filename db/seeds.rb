@@ -122,7 +122,7 @@ file7 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblendinst
 blend_product3.photo.attach(io: file7, filename: 'blend7.jpg')
 
 cat1 = Category.create(name: "single origin")
-cat2 = Category.create(name: "new")
+cat2 = Category.create(name: "new arrivals")
 cat3 = Category.create(name: "blends")
 cat4 = Category.create(name: "instant")
 cat5 = Category.create(name: "gear")

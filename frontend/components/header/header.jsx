@@ -3,11 +3,18 @@ import GreetingContainer from '../greeting/greeting_container'
 import CoffeeSubMenu from "./coffee_sub_menu";
 import GearSubMenu from "./gear_sub_menu";
 import LearnSubMenu from "./learn_sub_menu";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
 export const COFFEE = "coffee";
 export const GEAR = "gear";
 export const LEARN = "learn"
+
+const components = {
+  coffee: CoffeeSubMenu,
+  gear: GearSubMenu,
+  learn: LearnSubMenu,
+};
 
 class Header extends React.Component{
   constructor(props){
@@ -18,6 +25,16 @@ class Header extends React.Component{
     }
     this.toggleVisible = this.toggleVisible.bind(this);
     this.subMenu = this.subMenu.bind(this);
+  }
+
+  componentDidMount() {
+    this.unlisten = this.props.history.listen(() => {
+      this.setState({visible: false})
+    });
+  }
+
+  componentWillUnmount() {
+      this.unlisten();
   }
 
   toggleVisible(field){
@@ -33,38 +50,17 @@ class Header extends React.Component{
     }
   } 
 
-  // use instead of always rendering the coffee sub-menu.
+  // dynamically render sub-menu component based on subMenu state name
   subMenu(){
-    const {updateFilter} = this.props;
-
-    switch(this.state.subMenu){
-      case COFFEE:
-        return (
-          <CoffeeSubMenu
-            visible={this.state.visible}
-            toggleVisible={this.toggleVisible}
-            updateFilter={updateFilter}
-          />
-        )
-      case GEAR:
-        return (
-          <GearSubMenu
-            visible={this.state.visible}
-            toggleVisible={this.toggleVisible}
-            updateFilter={updateFilter}
-          />
-        )
-      case LEARN:
-        return(
-          <LearnSubMenu
-            visible={this.state.visible}
-            toggleVisible={this.toggleVisible}
-            updateFilter={updateFilter}
-          />
-        )
-      default:
-        return null;
-    }
+    if (this.state.subMenu === "none") return null
+    const SubMenu = components[this.state.subMenu];
+    return (
+      <SubMenu
+        visible={this.state.visible}
+        toggleVisible={this.toggleVisible}
+        updateFilter={this.props.updateFilter}
+      />
+    )
   }
 
   //get Classname for toggle caret
@@ -109,4 +105,4 @@ class Header extends React.Component{
   }
 }
 
-export default Header;
+export default withRouter(Header);
