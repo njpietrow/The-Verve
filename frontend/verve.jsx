@@ -14,10 +14,9 @@ import { updateFilter } from "./actions/filter_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
-  let prevState = loadState();
-  if (!prevState) {
-    prevState = {};
-  }
+  //loadState will return undefined if there is no state key in local storage
+  let localStorageState = loadState(); 
+  if (!localStorageState) localStorageState = {};
   if (window.currentUser) {
     let preloadedState = {
       entities: {
@@ -28,12 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //deep merge so that entities with products doesn't overwrite
     //entities with users from the preloadedState.
-    let mergedState = merge(preloadedState, prevState)
+    let mergedState = merge(preloadedState, localStorageState)
     store = configureStore(mergedState);
     delete window.currentUser;
   } else {
-    console.log("in no current user" ,prevState)
-    store = configureStore(prevState);
+    store = configureStore(localStorageState);
   }
   store.subscribe(throttle(() => {
     saveState({
@@ -46,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
-  }, 500));
+  }, 1000));
 
 
 

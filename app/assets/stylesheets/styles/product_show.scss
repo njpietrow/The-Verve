@@ -38,10 +38,42 @@
 .product-show-content-body{
   animation: fadeIn ease-out .5s;
   margin: 60px 40px 40px 40px;
-  height: 900px;
+  min-height: 900px;
 }
 
 .product-show-image{
   width: 100%;
+}
+
+.product-show-location{
+  padding-bottom: 8px;
+}
+
+.product-show-title{
+  padding: 0px 0 8px 0;
+}
+
+.product-show-item-ingredients{
+  font-size: 14px;
+}
+
+.product-show-stars{
+  padding: 20px 0 13px 0;
+}
+
+.show-page-price{
+  font-size: 22px;
+  padding: 0 0 20px 0;
+}
+
+
+.quantity-add-container{
+  display: flex;
+}
+
+.add-cart-button{
+  background-color: red;
+  width: 40%;
+  margin-left: 20px;
 }
 

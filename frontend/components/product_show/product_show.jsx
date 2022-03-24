@@ -11,6 +11,14 @@ class ProductShow extends React.Component{
     window.scroll({top: 0, left: 0, behavior: 'smooth' })
   }
 
+  getPathFromCategory(){
+    let filter = this.props.category;
+    if (filter === "") {
+      filter = 'all coffee'
+    }
+    return filter.replace('-', ' ');
+  }
+
   render(){
     const {product, updateFilter, category} = this.props;
     if (!product) return <span>Loading....</span>
@@ -23,7 +31,14 @@ class ProductShow extends React.Component{
               to="/collections" 
               className="product-index-path"
               onClick={() => updateFilter("category", "")}
-            > coffee <span>&nbsp;&nbsp;/</span></Link>
+            > collections <span>&nbsp;&nbsp;/</span></Link>
+            <Link 
+              to="/collections" 
+              className="product-index-path"
+              onClick={() => updateFilter("category", category)}
+             >{this.getPathFromCategory()} 
+              <span>&nbsp;&nbsp;/</span>
+            </Link>
             <span className="product-index-path last">
               {product.productName} 
             </span>
@@ -36,19 +51,20 @@ class ProductShow extends React.Component{
           </div>
           <div className="product-show-content-body-container">
             <div className="product-show-content-body">
-              <h3>{product.location}</h3>
-              <h1>{product.productName}</h1>
+              <h3 className="product-show-location">{product.location}</h3>
+              <h1 className="product-show-title">{product.productName}</h1>
               <p className="product-show-item-ingredients">{product.ingredients}</p>
-              <br />
-              <p>stars</p>
-              <br />
-              <p>Price: {product.price}</p>
+              <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
+              <p className="green show-page-price">{product.price.padEnd(5,'0')}</p>
+
+              {/* if product has bag size, add selector */}
               <p>Select bag size: {product.bagSize}</p>
-              
+              {/* if product has grind size add selector */}
               <p>select grind: {product.grind} </p>
-              <p>type/increment quantity: 0</p>
-              <br />
-              <button className="session-button">Add to Cart</button>
+              <div className="quantity-add-container">
+                <p>- [0] +</p>
+                <button className="add-cart-button">Add to Cart</button>
+              </div>
               <br />
               <p>{product.description}</p>
               <br />
