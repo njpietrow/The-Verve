@@ -15,7 +15,7 @@ class Homepage extends React.Component{
               In honor of Women's History Month, we're proudly featuring coffees produced by our women coffee partners for the month of March.
             </p>
           </div>
-            <Link to="/collections" onClick={() => updateFilter("category", "")}>
+            <Link to="/collections" onClick={() => updateFilter("category", "coffee")}>
               <button className="shop-now-button">SHOP NOW</button>
             </Link>
         </div>

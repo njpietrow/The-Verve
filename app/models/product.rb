@@ -8,7 +8,6 @@
 #  bag_size     :string           not null
 #  grind        :string           not null
 #  description  :text             not null
-#  roast_level  :integer          not null
 #  farm_story   :text             not null
 #  location     :string           not null
 #  price        :decimal(10, 3)   not null
@@ -17,10 +16,16 @@
 #
 class Product < ApplicationRecord
   validates :product_name, :ingredients, :bag_size, :grind, :description, 
-    :roast_level, :farm_story, :location, :price, presence: true
+  :location, :price, presence: true
 
   # association to grab product image
   has_one_attached :photo
+
+  # association to grad additional product images
+  # has_many_attached :supplemental_photos
+
+  # association to grab roast diagram image
+  has_one_attached :roast_level_photo
 
   # helper association to link to product_categories joins table
   has_many :product_categories,

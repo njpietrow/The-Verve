@@ -34,13 +34,13 @@ class GearSubMenu extends React.Component{
         </Link>
         <Link 
           to="/collections" 
-          onClick={this.handleClick("verve merch")}
+          onClick={this.handleClick("merch")}
         > 
           VERVE MERCH 
         </Link>
         <Link 
           to="/collections" 
-        onClick={this.handleClick("brew gear")}
+        onClick={this.handleClick("brew")}
         > 
           BREW GEAR 
         </Link>

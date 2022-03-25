@@ -1,7 +1,7 @@
 import { UPDATE_FILTER } from "../actions/filter_actions"
 
 const defaultFilters = Object.freeze({
-  category: "",
+  category: "coffee",
 });
 
 const filterReducer = (state = defaultFilters, action) => {

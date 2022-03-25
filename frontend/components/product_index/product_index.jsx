@@ -14,7 +14,7 @@ class ProductIndex extends React.Component{
   
   endOfPath(){
     let filter = this.props.category
-    if (filter === "") filter = 'all coffee'
+    if (filter === "coffee") filter = 'all coffee'
     return (
       <span className="product-index-path last">
         {filter.replace('-', ' ')} 
@@ -31,7 +31,7 @@ class ProductIndex extends React.Component{
           <Link 
             to="/collections" 
             className="product-index-path"
-            onClick={() => updateFilter("category", "")}
+            onClick={() => updateFilter("category", "coffee")}
           >Collections <span>&nbsp;&nbsp;/</span></Link>
           {this.endOfPath()}
         </div>

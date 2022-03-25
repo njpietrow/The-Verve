@@ -20,6 +20,8 @@ class ProductShow extends React.Component{
     return filter.replace('-', ' ');
   }
 
+
+  //need to treat gear and cofee products differently.
   render(){
     const {product, updateFilter, category} = this.props;
     if (!product) return <span>Loading....</span>
@@ -31,7 +33,7 @@ class ProductShow extends React.Component{
             <Link 
               to="/collections" 
               className="product-index-path"
-              onClick={() => updateFilter("category", "")}
+              onClick={() => updateFilter("category", "cofee")}
             > collections <span>&nbsp;&nbsp;/</span></Link>
             <Link 
               to="/collections" 
@@ -65,7 +67,8 @@ class ProductShow extends React.Component{
               </div>
               <div className="product-show-roast-level">
                 <h3>ROAST LEVEL</h3>
-                this is the roast level: {product.roastLevel}
+                <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/>
+                <br />
               </div>
               {/* <div className="product-show-farm-story">
                 <p>

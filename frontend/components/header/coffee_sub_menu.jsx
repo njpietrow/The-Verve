@@ -28,7 +28,7 @@ class CoffeeSubMenu extends React.Component{
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
         <Link 
           to="/collections" 
-          onClick={this.handleClick("")}
+          onClick={this.handleClick("coffee")}
         > 
           ALL 
         </Link>
