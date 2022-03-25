@@ -100,13 +100,15 @@ class SessionForm extends React.Component{
         <>
           <label htmlFor="firstName">First Name</label>
           <input 
+            placeholder="First Name"
             type="text" 
             name="firstName"
             onChange={this.update("first_name")}
             value={this.state.first_name}
           />
           <label htmlFor="lastName">Last Name</label>
-          <input 
+          <input
+            placeholder="Last Name" 
             type="text" 
             name="lastName"
             onChange={this.update("last_name")}
@@ -122,6 +124,12 @@ class SessionForm extends React.Component{
   render(){
     const {formType} = this.props
     const register = (formType === "Register");
+    let passwordPlaceholder = "Password";
+    let emailPlaceholder = "Email";
+    if (register){
+      passwordPlaceholder = "Password (required)"
+      emailPlaceholder = "Email (required)"
+    }
 
     return(
       <div className="session-form-container">
@@ -133,6 +141,7 @@ class SessionForm extends React.Component{
           {this.registrationFields()}
           <label htmlFor="email">Email</label>
           <input 
+            placeholder={emailPlaceholder}
             type="email" 
             name="email"
             onChange={this.update("email")}
@@ -140,6 +149,7 @@ class SessionForm extends React.Component{
           />
           <label htmlFor="password">Password</label>
           <input 
+            placeholder={passwordPlaceholder}
             type="password" 
             onChange={this.update("password")}
             value={this.state.password}

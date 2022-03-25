@@ -60,3 +60,11 @@ input[type="text"], input[type="password"], input[type="email"] {
 label{
   margin-bottom: 4px;
 }
+
+.required-fields{
+  padding-bottom: 12px;
+  font-size: 14px;
+  font-weight:  400;
+  position: relative;
+  bottom: 12px;
+}

@@ -17,6 +17,7 @@ class ProductIndex extends React.Component{
   endOfPath(){
     let filter = this.props.category
     if (filter === "coffee") filter = 'all coffee'
+    if (filter === "gear") filter = 'all gear'
     return (
       <span className="product-index-path last">
         {filter.replace('-', ' ')} 
@@ -26,15 +27,20 @@ class ProductIndex extends React.Component{
 
   render(){
     const {products, updateFilter, category} = this.props
+    let section = "coffee";
+    if (category === "gear" || category === "merch" || category === "brew"){
+      section = "gear"
+    }
     document.title = "Verve";
+    console.log(category)
     return(
       <div className="product-index-container">
         <div className="product-index-path-container" >
           <Link to="/" className="product-index-path">Home <span>&nbsp;&nbsp;/</span></Link>
           <Link 
-            to="/collections" 
+            to={category==="gear" ? "/collections/gear" : "/collections/coffee" }
             className="product-index-path"
-            onClick={() => updateFilter("category", "coffee")}
+            onClick={() => updateFilter("category", section)}
           >Collections <span>&nbsp;&nbsp;/</span></Link>
           {this.endOfPath()}
         </div>

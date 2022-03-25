@@ -72,7 +72,7 @@ class Header extends React.Component{
   render(){
     return(
       <header>
-        <div>cart temp</div>
+
         <div className="banner">
           <Link to="/"><p>FREE SHIPPING ON SUBSCRIPTIONS & ORDERS $35+</p></Link>
         </div>

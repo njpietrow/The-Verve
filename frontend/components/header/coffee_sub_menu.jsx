@@ -27,31 +27,31 @@ class CoffeeSubMenu extends React.Component{
     return(
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
         <Link 
-          to="/collections" 
+          to="/collections/coffee" 
           onClick={this.handleClick("coffee")}
         > 
           ALL 
         </Link>
         <Link 
-          to="/collections" 
+          to="/collections/coffee" 
           onClick={this.handleClick("new arrivals")}
         > 
           NEW 
         </Link>
         <Link 
-          to="/collections" 
+          to="/collections/coffee" 
           onClick={this.handleClick("single origin")}
         > 
           SINGLE ORIGIN 
         </Link>
         <Link 
-          to="/collections" 
+          to="/collections/coffee" 
           onClick={this.handleClick("blends")}
         > 
           BLENDS 
         </Link>
         <Link 
-          to="/collections" 
+          to="/collections/coffee" 
           onClick={this.handleClick("instant")}
         > 
           INSTANT 

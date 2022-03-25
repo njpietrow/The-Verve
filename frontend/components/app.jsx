@@ -7,6 +7,7 @@ import AccountContainer from "./account/account_container";
 import ProductShowContainer from "./product_show/product_show_container";
 import ProductIndexContainer from "./product_index/product_index_container";
 import HomepageContainer from "./homepage/hompage_container";
+import CartIndexContainer from "./cart/cart_index_container"
 import Footer from "./footer/footer";
 import { AuthRoute, ProtectedRoute } from "../util/route_util"
 import { Route, Link, Switch } from "react-router-dom";
@@ -15,11 +16,13 @@ const App = () => (
   <div className="app">
 
     <HeaderContainer />
+    {/* <CartIndexContainer /> */}
 
     <section className="main-content">
       <Switch>
+        <Route exact path="/collections/coffee" component={ProductIndexContainer}/>
+        <Route exact path="/collections/gear" component={ProductIndexContainer}/>
         <Route exact path="/collections/:productId" component={ProductShowContainer}/>
-        <Route exact path="/collections" component={ProductIndexContainer}/>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/register" component={RegisterFormContainer} />
         <ProtectedRoute exact path="/account" component={AccountContainer} />
