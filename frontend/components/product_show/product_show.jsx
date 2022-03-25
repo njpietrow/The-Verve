@@ -1,17 +1,18 @@
 import React from "react";
 import {Link} from "react-router-dom"
 import AddToCartForm from "./add_to_cart_form"
+import {titleCase} from "../../util/string_util"
 
 class ProductShow extends React.Component{
   constructor(props){
     super(props)
   }
-
+  
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)
     window.scroll({top: 0, left: 0, behavior: 'smooth' })
   }
-
+  
   getPathFromCategory(){
     let filter = this.props.category;
     if (filter === "") {
@@ -19,12 +20,13 @@ class ProductShow extends React.Component{
     }
     return filter.replace('-', ' ');
   }
-
-
+  
+  
   //need to treat gear and cofee products differently.
   render(){
     const {product, updateFilter, category} = this.props;
     if (!product) return <span>Loading....</span>
+    document.title = titleCase(product.productName);
     let gear = (product.ingredients === "-");
     return(
       <div className="product-show-container">

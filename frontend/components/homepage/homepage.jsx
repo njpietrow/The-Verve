@@ -5,6 +5,7 @@ class Homepage extends React.Component{
 
   render(){
     const updateFilter = this.props.updateFilter;
+    document.title = "Verve";
     return(
       <div className="splash-container">
         <img className="splash-photo" src="https://the-verve-seeds.s3.us-west-1.amazonaws.com/womens-history-month.png" />

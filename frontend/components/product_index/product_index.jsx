@@ -3,6 +3,8 @@ import ProductIndexItem from "./product_index_item"
 import { Link } from "react-router-dom"
 
 class ProductIndex extends React.Component{
+  // Don't need to fetch products upon mounting, because this will be handled by
+  // the update filter action upon clicking on header links.
   // componentDidMount(){
   //   this.props.fetchProducts(this.props.category)
   // }
@@ -23,7 +25,8 @@ class ProductIndex extends React.Component{
   }
 
   render(){
-    const {products, updateFilter} = this.props
+    const {products, updateFilter, category} = this.props
+    document.title = "Verve";
     return(
       <div className="product-index-container">
         <div className="product-index-path-container" >

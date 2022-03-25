@@ -6,7 +6,7 @@ class AddToCartForm extends React.Component{
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-      quantity: 0,
+      quantity: 1,
     };
   }
 
@@ -15,7 +15,7 @@ class AddToCartForm extends React.Component{
   }
 
   updateQuantity(value){
-    if (this.state.quantity <= 0 && value< 1) return
+    if (this.state.quantity <= 1 && value < 1) return
     this.setState({quantity: (parseInt(this.state.quantity) + value)})
   }
 

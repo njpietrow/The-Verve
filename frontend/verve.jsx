@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
       session: { id: window.currentUser.id }
     };
 
+    //check if preloaded state.session.id matches localSS.session.id
+      //if so merge localSS cartItems into preloaded state
+      // otherwise don't merge anything.
+
     //deep merge so that entities with products doesn't overwrite
     //entities with users from the preloadedState.
     let mergedState = merge(preloadedState, localStorageState)
@@ -42,7 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
         filters: {
           category: store.getState().ui.filters.category
         }
-      }
+      },
+      //for the purposes of saving session id to save cart to local storage
+      // session: {id: store.getState().session.id}
     });
   }, 1000));
 
