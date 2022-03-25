@@ -36,7 +36,7 @@ brew = Category.create(name: "brew")
 
 
 
-
+puts "starting coffee"
 
 nubia_loaiza = Product.create(
   product_name: "NUBIA LOAIZA",
@@ -189,6 +189,60 @@ tima_guji.photo.attach(io: tima_guji_photo, filename: 'tima_guji_photo.jpg')
 roast2 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_2.webp')
 tima_guji.roast_level_photo.attach(io: roast2, filename: 'roast2.jpg')
 
+jacinto = Product.create(
+  product_name: "JACINTO DOMINGO",
+  ingredients: "WATERMELON · CANDIED ORANGE · CACAO",
+  location: "GUATEMALA",
+  price: 22.75,
+  bag_size: "12 oz.",
+  grind: "Whole Bean",
+  description: "The lightness in this coffee is reminiscent of the feeling of biting into a juicy watermelon on a warm summer day. The versatility of this sweet and citrus-forward coffee is a lively addition to any morning. \n \n Those who remember the previous year's Petrona Perez will enjoy this coffee. Each sip is balanced and sweet. ",
+)
+
+ProductCategory.create(product_id: jacinto.id, category_id: coffee.id)
+ProductCategory.create(product_id: jacinto.id, category_id: single_origin.id)
+
+jacinto_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
+jacinto.photo.attach(io: jacinto_photo, filename: 'jacinto_photo.jpg')
+roast4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_4.webp')
+jacinto.roast_level_photo.attach(io: roast4, filename: 'roast4.jpg')
+
+leona = Product.create(
+  product_name: "LA LEONA",
+  ingredients: "GOLDEN RAISIN · DRIED APRICOT · RAW SUGAR",
+  location: "HONDURAS",
+  price: 22.00,
+  bag_size: "12 oz.",
+  grind: "Whole Bean",
+  description: "You'll notice an aromatic compound that is akin to freshly dried fruit. This coffee has familiarity layered in each sip, whether you find yourself just waking up or pushing through the day. \n \n Year after year, we get excited when Edgardo Tinoco's coffee hits our menu. This coffee has deep and full-bodied attributes. We recommend brewing this on a french press to get the most out of its characteristics.",
+)
+
+ProductCategory.create(product_id: leona.id, category_id: coffee.id)
+ProductCategory.create(product_id: leona.id, category_id: single_origin.id)
+
+leona_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
+leona.photo.attach(io: leona_photo, filename: 'leona_photo.jpg')
+roast3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_3.webp')
+leona.roast_level_photo.attach(io: roast3, filename: 'roast3.jpg')
+
+chelbesa = Product.create(
+  product_name: "CHELBESA",
+  ingredients: "JUNIPER · ROSE WATER · WHITE PEACH",
+  location: "ETHIOPIA",
+  price: 21.25,
+  bag_size: "12 oz.",
+  grind: "Whole Bean",
+  description: "The best word to describe Chelbesa is delicate. Upon the first sip, you're met with juniper and rosewater notes, blending to create a sweet and floral profile. This coffee is balanced with bright notes of white peach, and it is guaranteed to be a favorite. \n \n Filled with florals and light flavors, this coffee from Ethiopia is nothing short of amazing. Recommended for fans of Sakaro, Chelbesa is overflowing with intricate and elegant flavors.",
+)
+
+ProductCategory.create(product_id: chelbesa.id, category_id: coffee.id)
+ProductCategory.create(product_id: chelbesa.id, category_id: single_origin.id)
+
+chelbesa_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/chelbesa_2048x2048.webp')
+chelbesa.photo.attach(io: chelbesa_photo, filename: 'chelbesa_photo.jpg')
+roast2 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_2.webp')
+chelbesa.roast_level_photo.attach(io: roast2, filename: 'roast2.jpg')
+
 streetlevel = Product.create(
   product_name: "STREETLEVEL",
   ingredients: "CLEMENTINE · RED APPLE · HONEYCOMB",
@@ -224,6 +278,24 @@ sermon_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/sermon_2
 sermon.photo.attach(io: sermon_photo, filename: 'sermon_photo.jpg')
 roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
 sermon.roast_level_photo.attach(io: roast6, filename: 'roast6.jpg')
+
+seabright = Product.create(
+  product_name: "SEABRIGHT HOUSE BLEND",
+  ingredients: "HONEYDEW · APRICOT · HAZELNUT",
+  location: "BLEND",
+  price: 48.00,
+  bag_size: "none",
+  grind: "none",
+  description: "From our house to yours, Seabright House Blend is undeniably inviting. Composed of direct trade coffees from El Salvador and Guatemala. Seabright showcases apricot and honeydew flavor notes. A balanced mouthfeel. And aromatics of toasted hazelnuts. Set yourself up for a winning day with one of our easiest drinking blends.",
+)
+
+ProductCategory.create(product_id: seabright.id, category_id: coffee.id)
+ProductCategory.create(product_id: seabright.id, category_id: blend.id)
+
+seabright_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/seabright_f2f708c9-7e17-48d1-8c21-f377f37b0790_2048x2048.webp')
+seabright.photo.attach(io: seabright_photo, filename: 'seabright_photo.webp')
+roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
+seabright.roast_level_photo.attach(io: roast6, filename: 'roast6.webp')
 
 the_1950 = Product.create(
   product_name: "THE 1950 DOSE & BREW CRAFT INSTANT COFFEE",
@@ -262,6 +334,32 @@ buena_vista_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Bue
 buena_vista.photo.attach(io: buena_vista_photo, filename: 'buena_vista_photo.webp')
 roast7 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_7.webp')
 buena_vista.roast_level_photo.attach(io: roast7, filename: 'roast7.webp')
+
+bronson_instant = Product.create(
+  product_name: "BRONSON FRENCH ROAST CRAFT INSTANT COFFEE",
+  ingredients: "MOLASSES · DARK CHOCOLATE · FIG",
+  location: "BLEND",
+  price: 48.00,
+  bag_size: "none",
+  grind: "none",
+  description: "Dark chocolate and a raw sugar sweetness define our boldest roast yet. Built with dense, seasonally-harvested coffees selected for their sweetness, depth, and ability to withstand cream and sugar. Bronson is one tough coffee and more than willing to lend a hand to jumpstart your day. \n \n Amazing things come in tiny packages. Verve Craft Instant Coffee is hand-roasted, small-batch brewed and preserved for your adventures. Ready to be brewed wherever and whenever. A week’s worth of premium coffee in your pocket. \n \n Add one packet of Verve Craft Instant Coffee into your mug along with 10 ounces of hot or cold liquid (water, milk, or milk alternative), stir, and drink up. \n \n Makes 6 cups of coffee.",
+)
+
+ProductCategory.create(product_id: bronson_instant.id, category_id: coffee.id)
+ProductCategory.create(product_id: bronson_instant.id, category_id: blend.id)
+ProductCategory.create(product_id: bronson_instant.id, category_id: instant.id)
+
+bronson_instant_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Bronson_instant_2048x2048.webp')
+bronson_instant.photo.attach(io: bronson_instant_photo, filename: 'bronson_instant_photo.webp')
+roast7 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_7.webp')
+bronson_instant.roast_level_photo.attach(io: roast7, filename: 'roast7.webp')
+
+
+
+
+
+puts "starting gear"
+
 
 cap = Product.create(
   product_name: "TRAILBLAZER CAMO CAP",
@@ -361,4 +459,83 @@ ProductCategory.create(product_id: book.id, category_id: merch.id)
 book_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Cover_Shot_2048x2048.webp')
 book.photo.attach(io: book_photo, filename: 'book_photo.jpg')
 
+beanie = Product.create(
+  product_name: "VERVE CLASSIC BEANIE",
+  ingredients: "-",
+  location: "-",
+  price: 26.00,
+  bag_size: "none",
+  grind: "gear",
+  description: "Stay cozy on the daily with the Verve Classic Beanie, designed for comfy, easy-wearing use. Cuff it once, twice, or not at all, this ribbed knit beanie is sure to become an everyday essential.",
+)
 
+ProductCategory.create(product_id: beanie.id, category_id: gear.id)
+ProductCategory.create(product_id: beanie.id, category_id: merch.id)
+
+beanie_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/beanie2_2048x2048.webp')
+beanie.photo.attach(io: beanie_photo, filename: 'beanie_photo.jpg')
+
+filters = Product.create(
+  product_name: "CHEMEX COFFEE FILTERS",
+  ingredients: "-",
+  location: "-",
+  price: 10.95,
+  bag_size: "none",
+  grind: "gear",
+  description: "What makes Chemex coffee filters so special? Besides their origami-esque design, these cone-shaped filters tout a 20-30% thicker paper than the competition, resulting in a more uniform coffee extraction. Each paper filter goes through an oxidizing cleansing bath followed by a series of hot water baths to ensure that the specialty fibers catch all bitter elements, oils, and the finest grounds. No sediment and less oil mean a cleaner cup of pure coffee flavor. Lab-tested and guaranteed not to burst under the weight of the hot liquid during filtration or after brewing while lifting the spent filter and grounds out. \n \n PRO TIP: Take your Chemex brewing to the next level by pre-wetting the filter. This will help rinse away any remaining paper fibers as well as warm the carafe. Make sure to empty the water before brewing coffee and always place the three folded leaves on the spout.",
+)
+
+ProductCategory.create(product_id: filters.id, category_id: gear.id)
+ProductCategory.create(product_id: filters.id, category_id: brew.id)
+
+filters_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/chemex_filters_2048x2048.webp')
+filters.photo.attach(io: filters_photo, filename: 'filters_photo.jpg')
+
+kettle = Product.create(
+  product_name: "FELLOW STAGG EKG ELECTRIC KETTLE",
+  ingredients: "-",
+  location: "-",
+  price: 159.00,
+  bag_size: "none",
+  grind: "gear",
+  description: "Labeling this simply as an “electric kettle” would be an understatement. The Stagg EKG Electric Kettle will bring your coffee brewing into the future. A few standout features include the variable temperature control that allows you to select the desired temperature to the degree while a “hold” mode keeps it at that temperature for 60 minutes. The crisp black and blue LCD screen displays “real-time” temperature progress. The built-in brew stopwatch creates a seamless timed extraction. \n \n The kettle is the meeting point of design and functionality. The sleek modern design instantly captures the eye. Enjoy a precise pour with the fluted tip and even flow rate with the gooseneck design. The counterbalanced handle will help move the center back towards your hand for a slower-paced pour. The body is made of top-quality stainless steel. Bring the go-to kettle for barista competitions to your kitchen. ",
+)
+
+ProductCategory.create(product_id: kettle.id, category_id: gear.id)
+ProductCategory.create(product_id: kettle.id, category_id: brew.id)
+
+kettle_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Fellow_Stagg_EKG_2048x2048+(1).webp')
+kettle.photo.attach(io: kettle_photo, filename: 'kettle_photo.jpg')
+
+chemex = Product.create(
+  product_name: "CHEMEX POUROVER COFFEE MAKER",
+  ingredients: "-",
+  location: "-",
+  price: 35.00,
+  bag_size: "none",
+  grind: "gear",
+  description: "You can't say Chemex without someone's ears perking up. This cult classic has earned its priority position in the coffee brewer lineup. First created in 1941, Chemex’s groundbreaking design was the culmination of past studied methods and newly tested concepts. After repeated application, Chemex cracked the code for the absolute best cup of coffee possible. Featuring an iconic hourglass shape, this pourover coffee brewer gives you full control over the coffee brewing process. \n \n PRO TIP: Chemex filters are specially designed to absorb all excess oils which result in a clean coffee extraction with heightened aromatics.",
+)
+
+ProductCategory.create(product_id: chemex.id, category_id: gear.id)
+ProductCategory.create(product_id: chemex.id, category_id: brew.id)
+
+chemex_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Chemex_Wood_Handle_2048x2048.webp')
+chemex.photo.attach(io: chemex_photo, filename: 'chemex_photo.jpg')
+
+diner_mug = Product.create(
+  product_name: "KINTO DINER MUG",
+  ingredients: "-",
+  location: "-",
+  price: 15.00,
+  bag_size: "none",
+  grind: "gear",
+  description: "Slow coffee style. Our newest addition from Kinto balances usability and aesthetics. Their update of a classic diner mug brings thoughtful simplicity to your tableware. Kinto's designs are rooted in Japanese traditions and interpreted in a way that fits with modern lifestyles all around the world. This cup reminds us all to slow down and see the beauty of nature. ",
+)
+
+ProductCategory.create(product_id: diner_mug.id, category_id: gear.id)
+ProductCategory.create(product_id: diner_mug.id, category_id: merch.id)
+ProductCategory.create(product_id: diner_mug.id, category_id: mugs.id)
+
+diner_mug_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Kinto.Silo_2048x2048.webp')
+diner_mug.photo.attach(io: diner_mug_photo, filename: 'diner_mug_photo.webp')

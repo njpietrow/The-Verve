@@ -59,7 +59,7 @@ class SessionForm extends React.Component{
       email: "",
       password: "",
     });
-    const email = "demo@gmail.com";
+    const email = "DemoUser@gmail.com";
     const password = "password"
     let count = 0;
     this.loginDemoInterval = setInterval(() => {
@@ -68,7 +68,7 @@ class SessionForm extends React.Component{
         password: count<password.length ? (this.state.password.concat(password[count])) : password,
       });
       count++;
-      if (count === 20) {
+      if (count === 25) {
         clearInterval(this.loginDemoInterval);
         this.props.loginDemo();
       }

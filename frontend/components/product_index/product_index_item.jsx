@@ -20,12 +20,22 @@ class ProductIndexItem extends React.Component{
           to={`/collections/${product.id}`}
           className="product-index-item-title"
         >
-          <h4>{product.location}</h4>
-          —
+          {product.type === "coffee" ? ( 
+            <>
+              <h4>{product.location}</h4>
+              —
+            </>
+          ) : (
+            null
+          )}
           <h5>{product.productName}</h5>
         </Link>
-        <p className="product-index-item-ingredients">{product.ingredients}</p>
-
+        {product.type === "coffee" ? ( 
+          <p className="product-index-item-ingredients">{product.ingredients}</p>
+        ) : (
+          null
+        )}
+        <p>--stars--</p>
         {/* TODO: if product has a rating, implement stars based on avg of review rating associations */}
 
         <div>

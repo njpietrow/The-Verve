@@ -25,6 +25,7 @@ class ProductShow extends React.Component{
   render(){
     const {product, updateFilter, category} = this.props;
     if (!product) return <span>Loading....</span>
+    let gear = (product.ingredients === "-");
     return(
       <div className="product-show-container">
         <div className="product-show-path-container">
@@ -54,22 +55,34 @@ class ProductShow extends React.Component{
           </div>
           <div className="product-show-content-body-container">
             <div className="product-show-content-body">
-              <h3 className="product-show-location">{product.location}</h3>
-              <h1 className="product-show-title">{product.productName}</h1>
-              <p className="product-show-item-ingredients">{product.ingredients}</p>
+              {gear ? (
+                <h1 className="product-show-title">{product.productName}</h1>
+              ) : (
+                <div>
+                  <h3 className="product-show-location">{product.location}</h3>
+                  <h1 className="product-show-title">{product.productName}</h1>
+                  <p className="product-show-item-ingredients">{product.ingredients}</p>
+                </div>
+              )}
+
               <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
               <p className="green show-page-price">{product.price.padEnd(5,'0')}</p>
 
-              <AddToCartForm hasBag={!(product.bagSize === "none")}/>
+              <AddToCartForm hasBag={!((product.bagSize === "none") || gear)}/>
 
               <div className="product-show-description"> 
                 {product.description?.split('\n').map((text,idx) => <p key={idx}>{text}</p>)}
               </div>
-              <div className="product-show-roast-level">
-                <h3>ROAST LEVEL</h3>
-                <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/>
-                <br />
-              </div>
+              {gear ? (
+                null
+              ) : (
+                <div className="product-show-roast-level">
+                  <h3>ROAST LEVEL</h3>
+                  <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/>
+                  <br />
+                </div>
+              )}
+           
               {/* <div className="product-show-farm-story">
                 <p>
                   {product.farmStory}

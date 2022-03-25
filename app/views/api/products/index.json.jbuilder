@@ -6,5 +6,6 @@
     
     json.photoUrl url_for(product.photo)
 
+    json.type product.ingredients == "-" ? "gear" : "coffee"
   end
  end

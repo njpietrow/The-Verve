@@ -3,7 +3,7 @@ import SessionForm from "./session_form";
 import { logIn, clearSessionErrors } from "../../actions/session_actions";
 
 const demoUser = {
-  "email": "demo@email.com", "password": "password" 
+  "email": "DemoUser@gmail.com", "password": "password" 
 }
 
 const mSTP = (state) => ({
