@@ -6,24 +6,24 @@ import { checkout } from "../../actions/cart_item_actions";
 const subtotal = (cartItems) => {
   let subtotal = 0;
     for (const id in cartItems){
-      subtotal += parseFloat(cartItems[id].price);
+      subtotal += parseFloat(cartItems[id].price) * parseInt(cartItems[id].quantity);
     }
     return subtotal;
 };
 
-const quantity = cartItems => {
-    let quantity = 0;
-    for (const id in cartItems){
-      quantity += parseInt(cartItems[id].quantity);
-    }
-    return quantity;
-};
+// const quantity = cartItems => {
+//     let quantity = 0;
+//     for (const id in cartItems){
+//       quantity += parseInt(cartItems[id].quantity);
+//     }
+//     return quantity;
+// };
 
 const mSTP = state => {
   return {
     cartItems: state.entities.cartItems,
     visible: state.ui.cartModal,
-    quantity: quantity(state.entities.cartItems),
+    // quantity: quantity(state.entities.cartItems),
     subtotal: subtotal(state.entities.cartItems)
   }
 };

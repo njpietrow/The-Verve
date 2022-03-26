@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import AddToCartForm from "./add_to_cart_form"
+// import AddToCartForm from "./add_to_cart_form"
+import AddToCartFormContainer from "./add_to_cart_form_container";
 import {titleCase} from "../../util/string_util"
 
 class ProductShow extends React.Component{
@@ -71,7 +72,10 @@ class ProductShow extends React.Component{
               <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
               <p className="green show-page-price">{product.price.padEnd(5,'0')}</p>
 
-              <AddToCartForm hasBag={!((product.bagSize === "none") || gear)}/>
+              <AddToCartFormContainer 
+                hasBag={!((product.bagSize === "none") || gear)}
+                product={product}
+              />
 
               <div className="product-show-description"> 
                 {product.description?.split('\n').map((text,idx) => <p key={idx}>{text}</p>)}

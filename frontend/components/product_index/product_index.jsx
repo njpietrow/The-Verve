@@ -5,9 +5,11 @@ import { Link } from "react-router-dom"
 class ProductIndex extends React.Component{
   // Don't need to fetch products upon mounting, because this will be handled by
   // the update filter action upon clicking on header links.
-  // componentDidMount(){
-  //   this.props.fetchProducts(this.props.category)
-  // }
+  componentDidMount(){
+    console.log(this.props.category)
+    console.log(this.props)
+    // this.props.fetchProducts(this.props.category)
+  }
 
   // scroll window back to top after changing filters for products.
   componentDidUpdate(oldProps){
@@ -15,6 +17,7 @@ class ProductIndex extends React.Component{
       (JSON.stringify(oldProps.products) !== JSON.stringify(this.props.products))
       || (oldProps.location.pathname !== this.props.location.pathname)
     ){
+      // this.props.fetchProducts(this.props.category)
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
     } 
   }
@@ -42,7 +45,7 @@ class ProductIndex extends React.Component{
         <div className="product-index-path-container" >
           <Link to="/" className="product-index-path">Home <span>&nbsp;&nbsp;/</span></Link>
           <Link 
-            to={category==="gear" ? "/collections/gear" : "/collections/coffee" }
+            to={category==="gear" ? "/collections/gear/all-gear" : "/collections/coffee/all-coffee" }
             className="product-index-path"
             onClick={() => updateFilter("category", section)}
           >Collections <span>&nbsp;&nbsp;/</span></Link>

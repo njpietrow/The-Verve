@@ -20,8 +20,8 @@ const App = () => (
 
     <section className="main-content">
       <Switch>
-        <Route exact path="/collections/coffee" component={ProductIndexContainer}/>
-        <Route exact path="/collections/gear" component={ProductIndexContainer}/>
+        <Route exact path="/collections/coffee/:filter" component={ProductIndexContainer}/>
+        <Route exact path="/collections/gear/:filter" component={ProductIndexContainer}/>
         <Route exact path="/collections/:productId" component={ProductShowContainer}/>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/register" component={RegisterFormContainer} />

@@ -15,7 +15,7 @@
 
 .add-to-cart-form label{
   font-weight: 600;
-  display:inline-block;
+  display:block;
 }
 
 .add-to-cart-form select{
@@ -36,6 +36,7 @@
   transition: border 0.3s ease-in;
   margin-bottom: 20px;
   appearance: none;
+  max-width: 600px;
 }
 
 .add-to-cart-form select:hover{

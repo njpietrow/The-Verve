@@ -7,3 +7,7 @@ export const titleCase = (string) => {
 
   return words.join(" ")
 };
+
+export const amountFormat = (num) => {
+  return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+}

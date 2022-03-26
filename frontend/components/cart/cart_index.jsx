@@ -1,7 +1,7 @@
 import React from "react"
+import {amountFormat} from "../../util/string_util"
 
 class CartIndex extends React.Component{
-
   render(){
     const {cartItems, toggleCartModal, quantity, subtotal } = this.props;
     return(
@@ -32,12 +32,22 @@ class CartIndex extends React.Component{
                 <ul key={cartItem.id}>
                   <li>{cartItem.productName}</li>
                   <li>price: ${cartItem.price.padEnd(5,'0')}</li>
+                  {
+                    cartItem.hasBag ? (
+                      <>
+                        <li>bag size: {cartItem.size}</li>
+                        <li>grind: {cartItem.grind}</li>
+                      </>
+                    ) : ( 
+                      null
+                    )
+                  }
                   <li>quantity: {cartItem.quantity}</li>
                 </ul>
             ))}
             
             <div className="subtotal-container">
-              <h2>subtotal: ${subtotal}</h2>
+              <h2>subtotal: ${amountFormat(subtotal)}</h2>
 
             </div>
         </div>
