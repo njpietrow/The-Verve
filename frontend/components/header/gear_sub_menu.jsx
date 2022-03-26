@@ -28,7 +28,7 @@ class GearSubMenu extends React.Component{
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
         <Link 
           to="/collections/gear/all-gear" 
-          onClick={this.handleClick("gear")}
+          onClick={this.handleClick("all-gear")}
         > 
           ALL 
         </Link>
@@ -39,7 +39,7 @@ class GearSubMenu extends React.Component{
           VERVE MERCH 
         </Link>
         <Link 
-          to="/collections/gear/brew-gear" 
+          to="/collections/gear/brew" 
         onClick={this.handleClick("brew")}
         > 
           BREW GEAR 

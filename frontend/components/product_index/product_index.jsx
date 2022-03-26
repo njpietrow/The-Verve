@@ -1,20 +1,17 @@
 import React from "react"
 import ProductIndexItem from "./product_index_item"
 import { Link } from "react-router-dom"
+import { titleCase } from "../../util/string_util";
 
 class ProductIndex extends React.Component{
 
   componentDidMount(){
-    // this.props.fetchProducts({category: this.props.match.params.filter})
     this.props.fetchProducts({category: this.props.category})
 
     this.unlisten = this.props.history.listen((location, action) => {
-      console.log(location.pathname)
       var n = location.pathname.lastIndexOf('/');
       var result = location.pathname.substring(n + 1);
-      console.log(result)
-      // this.props.fetchProducts({category: this.props.category})
-      // this.props.fetchProducts({category: this.props.match.params.filter})
+      this.props.fetchProducts({category: result})
     });
   }
 
@@ -28,14 +25,13 @@ class ProductIndex extends React.Component{
       (JSON.stringify(oldProps.products) !== JSON.stringify(this.props.products))
       || (oldProps.location.pathname !== this.props.location.pathname)
     ){
-      // this.props.fetchProducts(this.props.category)
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
     } 
   }
   
   endOfPath(){
     let filter = this.props.category
-    if (filter === "coffee") filter = 'all coffee'
+    if (filter === "all-coffee") filter = 'all coffee'
     if (filter === "gear") filter = 'all gear'
     return (
       <span className="product-index-path last">
@@ -44,19 +40,33 @@ class ProductIndex extends React.Component{
     )
   }
 
+  endOfPathString(){
+    let filter = this.props.category
+    if (filter === "all-coffee") filter = 'all coffee'
+    if (filter === "gear") filter = 'all gear'
+    return titleCase(filter.replace('-', ' '))
+  }
+
+  getCollection(){
+    const category = this.props.category;
+    let section = "all-coffee";
+    if (category === "all-gear" || category === "merch" || category === "brew" ||category === "mugs" ){
+      section = "all-gear"
+    }
+    return section;
+  }
+  
+
   render(){
     const {products, updateFilter, category, toggleCartModal, addCartItem} = this.props
-    let section = "coffee";
-    if (category === "gear" || category === "merch" || category === "brew"){
-      section = "gear"
-    }
-    document.title = "Verve";
+    const section = this.getCollection();
+    document.title = this.endOfPathString();
     return(
       <div className="product-index-container">
         <div className="product-index-path-container" >
           <Link to="/" className="product-index-path">Home <span>&nbsp;&nbsp;/</span></Link>
           <Link 
-            to={category==="gear" ? "/collections/gear/all-gear" : "/collections/coffee/all-coffee" }
+            to={section==="all-gear" ? "/collections/gear/all-gear" : "/collections/coffee/all-coffee" }
             className="product-index-path"
             onClick={() => updateFilter("category", section)}
           >Collections <span>&nbsp;&nbsp;/</span></Link>

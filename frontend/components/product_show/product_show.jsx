@@ -17,35 +17,36 @@ class ProductShow extends React.Component{
   getPathFromCategory(){
     let filter = this.props.category;
     if (filter === "") {
-      filter = 'all coffee'
+      filter = 'all-coffee'
     }
     return filter.replace('-', ' ');
   }
-  
-  
-  //need to treat gear and cofee products differently.
+
+  getCollection(){
+    const category = this.props.category;
+    let section = "all-coffee";
+    if (category === "all-gear" || category === "merch" || category === "brew" ||category === "mugs" ){
+      section = "all-gear"
+    }
+    return section;
+  }
+
   render(){
     const {product, updateFilter, category} = this.props;
     if (!product) return <span>Loading....</span>
     document.title = titleCase(product.productName);
     let gear = (product.ingredients === "-");
+    const section = this.getCollection();
     return(
       <div className="product-show-container">
         <div className="product-show-path-container">
           <div className="product-index-path-container">
             <Link to="/" className="product-index-path">Home <span>&nbsp;&nbsp;/</span></Link>
             <Link 
-              to="/collections" 
+              to={section==="all-gear" ? "/collections/gear/all-gear" : "/collections/coffee/all-coffee" }
               className="product-index-path"
-              onClick={() => updateFilter("category", "cofee")}
-            > collections <span>&nbsp;&nbsp;/</span></Link>
-            <Link 
-              to="/collections" 
-              className="product-index-path"
-              onClick={() => updateFilter("category", category)}
-             >{this.getPathFromCategory()} 
-              <span>&nbsp;&nbsp;/</span>
-            </Link>
+              onClick={() => updateFilter("category", section)}
+            > {section} <span>&nbsp;&nbsp;/</span></Link>
             <span className="product-index-path last">
               {product.productName} 
             </span>
