@@ -33,7 +33,7 @@ class ProductShow extends React.Component{
 
   render(){
     const {product, updateFilter, category} = this.props;
-    if (!product) return <span>Loading....</span>
+    if (!product) return <div style={{height: 800}}></div>
     document.title = titleCase(product.productName);
     let gear = (product.ingredients === "-");
     const section = this.getCollection();
@@ -46,7 +46,7 @@ class ProductShow extends React.Component{
               to={section==="all-gear" ? "/collections/gear/all-gear" : "/collections/coffee/all-coffee" }
               className="product-index-path"
               onClick={() => updateFilter("category", section)}
-            > {section} <span>&nbsp;&nbsp;/</span></Link>
+            > {section.replace('all-', '')} <span>&nbsp;&nbsp;/</span></Link>
             <span className="product-index-path last">
               {product.productName} 
             </span>
