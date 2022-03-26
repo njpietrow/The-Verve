@@ -23,13 +23,13 @@ class Greeting extends React.Component{
             className="header-link"
           > Login / </Link>
         )}
-        <Link 
+        <a 
           to="/cart" 
           className="header-link cart-count"
           onClick={() => toggleCartModal()}
         > 
           <i className="fa-solid fa-cart-shopping"></i> (C) 
-        </Link>
+        </a>
       </div>
     )
   }

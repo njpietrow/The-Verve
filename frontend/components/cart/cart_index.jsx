@@ -2,13 +2,6 @@ import React from "react"
 
 class CartIndex extends React.Component{
 
-  constructor(props){
-    super(props);
-  };
-
-
-  
-  
   render(){
     const {cartItems, toggleCartModal, quantity, subtotal } = this.props;
     return(
@@ -34,10 +27,11 @@ class CartIndex extends React.Component{
               <h2> Cart </h2>
             </div>
 
+            {/* TODO: make cart item component */}
             {Object.values(cartItems).map(cartItem => (
                 <ul key={cartItem.id}>
                   <li>{cartItem.productName}</li>
-                  <li>price: ${cartItem.price}</li>
+                  <li>price: ${cartItem.price.padEnd(5,'0')}</li>
                   <li>quantity: {cartItem.quantity}</li>
                 </ul>
             ))}

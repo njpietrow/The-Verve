@@ -10,8 +10,13 @@ class ProductIndex extends React.Component{
   // }
 
   // scroll window back to top after changing filters for products.
-  componentDidUpdate(){
-    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+  componentDidUpdate(oldProps){
+    if(
+      (JSON.stringify(oldProps.products) !== JSON.stringify(this.props.products))
+      || (oldProps.location.pathname !== this.props.location.pathname)
+    ){
+      window.scroll({top: 0, left: 0, behavior: 'smooth' })
+    } 
   }
   
   endOfPath(){

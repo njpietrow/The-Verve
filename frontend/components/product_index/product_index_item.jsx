@@ -12,7 +12,8 @@ class ProductIndexItem extends React.Component{
   handleAddToCart(){
     const {toggleCartModal, addCartItem} = this.props;
     toggleCartModal();
-    addCartItem(this.props.product,1);
+    const product = Object.assign({}, this.props.product)
+    addCartItem(product,1);
   };
 
   render(){
