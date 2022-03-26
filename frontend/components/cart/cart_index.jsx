@@ -7,18 +7,23 @@ class CartIndex extends React.Component{
   };
 
 
-  // create separate component for the blurred backdrop and pass down state and toggle functions for 
-
-
+  
+  
   render(){
     const {cartItems, toggleCartModal, quantity, subtotal } = this.props;
     return(
+      <div>
+        <div 
+          className={this.props.visible ? "blurred-modal-area blur-visible" : "blurred-modal-area"}
+        >
+        </div>
         <div className={this.props.visible ? "cart-index-modal modal-visible" : "cart-index-modal"}>
           <div 
-            className={this.props.visible ? "blurred-modal-area blur-visible" : "blurred-modal-area"}
+            className="non-cart-area"
             onClick={() => toggleCartModal() }
           >
           </div>
+        </div>
           <div className={this.props.visible ? "cart-index cart-visible" : "cart-index"}>
             <a 
               onClick={() => toggleCartModal()}
@@ -41,8 +46,8 @@ class CartIndex extends React.Component{
               <h2>subtotal: ${subtotal}</h2>
 
             </div>
-          </div>
         </div>
+      </div>
     )
   };
 };
