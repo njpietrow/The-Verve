@@ -26,13 +26,12 @@ class ProductIndex extends React.Component{
   }
 
   render(){
-    const {products, updateFilter, category} = this.props
+    const {products, updateFilter, category, toggleCartModal, addCartItem} = this.props
     let section = "coffee";
     if (category === "gear" || category === "merch" || category === "brew"){
       section = "gear"
     }
     document.title = "Verve";
-    console.log(category)
     return(
       <div className="product-index-container">
         <div className="product-index-path-container" >
@@ -50,6 +49,8 @@ class ProductIndex extends React.Component{
               <ProductIndexItem 
                 key={product.id} 
                 product={product}
+                toggleCartModal={toggleCartModal}
+                addCartItem={addCartItem}
               />
           ))}
         </div>

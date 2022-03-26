@@ -16,7 +16,7 @@ const App = () => (
   <div className="app">
 
     <HeaderContainer />
-    {/* <CartIndexContainer /> */}
+    <CartIndexContainer />
 
     <section className="main-content">
       <Switch>

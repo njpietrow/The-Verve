@@ -53,7 +53,8 @@ class ProductShow extends React.Component{
 
         <div className="product-show-content">
           <div className="product-show-content-photo">
-            <img src={product.photoUrl} alt="product photo" className="product-show-image" />
+            {/* <img src={product.photoUrl} alt="product photo" className="product-show-image" /> */}
+            <img src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"} alt="product photo" className="product-show-image" />
           </div>
           <div className="product-show-content-body-container">
             <div className="product-show-content-body">

@@ -1,23 +1,61 @@
 .cart-index-modal{
-  background: none;
-  position: absolute;
+  position: fixed;
   z-index: 3;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(41, 41, 41, 73%);
   display: flex;
-  align-items: center;
   justify-content: end;
+  visibility: hidden;
 }
 
-.cart-index{
+.modal-visible{
+  visibility: visible;
+  background-color: rgba(41, 41, 41, .83);
+  transition: background-color .3s ease-in-out;
+}
+
+.cart-index {
+  position: sticky;
+  top: 0;
   background-color: #fff;
-  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 30%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-visible{
+  transform: translateX(0%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.blurred-modal-area{
+  width: 100%;
+}
+
+.blur-visble{
+}
+
+.close-cart-modal-button{
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-size: 30px;
+}
+
+.cart-title-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px 8px 8px;
+}
+
+.subtotal-container{
+  display: flex;
+  flex-direction: column;
+
 }

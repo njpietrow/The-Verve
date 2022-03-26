@@ -7,6 +7,7 @@ import throttle from 'lodash.throttle';
 import { loadState, saveState } from "./util/local_storage";
 
 //BEGIN TESTING
+import { toggleCartModal } from "./actions/cart_modal_actions";
 import { register, logIn, logOut } from "./actions/session_actions";
 import { fetchProduct, fetchProducts } from "./actions/product_actions";
 import { updateFilter } from "./actions/filter_actions"
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.fetchProducts = fetchProducts;
 
   window.updateFilter = updateFilter;
+  window.toggleCartModal = toggleCartModal;
 
   
   //END TESTING

@@ -1,5 +1,10 @@
 html{
   width: 100%;
 }
+
+body{
+  height: 100%; /* force the BODY element to match the height of the HTML element */
+  position: relative; /* position relative for modal to attach to edges */
+}
 /* give margin to the main-content class. the banner will fill the screen*/
 /* maybe add margin to the header too. */

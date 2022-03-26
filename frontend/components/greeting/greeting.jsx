@@ -7,7 +7,7 @@ class Greeting extends React.Component{
   }
 
   render(){
-    const {currentUser} = this.props;
+    const {currentUser, toggleCartModal} = this.props;
     return (
       <div className="header-container">
         {/* {currentUser ? (<span>Welcome back, {currentUser.firstName} </span>) : null} */}
@@ -26,7 +26,10 @@ class Greeting extends React.Component{
         <Link 
           to="/cart" 
           className="header-link cart-count"
-        > <i className="fa-solid fa-cart-shopping"></i> (C) </Link>
+          onClick={() => toggleCartModal()}
+        > 
+          <i className="fa-solid fa-cart-shopping"></i> (C) 
+        </Link>
       </div>
     )
   }

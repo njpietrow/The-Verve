@@ -1,7 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { addCartItem } from "../../actions/cart_item_actions";
+import { toggleCartModal } from "../../actions/cart_modal_actions";
 
 class ProductIndexItem extends React.Component{
+  constructor(props){
+    super(props);
+    this.handleAddToCart = this.handleAddToCart.bind(this);
+  };
+
+  handleAddToCart(){
+    const {toggleCartModal, addCartItem} = this.props;
+    toggleCartModal();
+    addCartItem(this.props.product,1);
+  };
+
   render(){
     const {product} = this.props;
     return(
@@ -12,7 +25,8 @@ class ProductIndexItem extends React.Component{
           >
             <img
               className="product-index-img" 
-              src={product.photoUrl} 
+              // src={product.photoUrl} 
+              src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"}
               alt={`${product.productName}-img`}   
             />
           </Link>
@@ -40,7 +54,10 @@ class ProductIndexItem extends React.Component{
 
         <div>
           <span className="green index-price">{product.price.padEnd(5,'0')} / </span>
-          <Link to="/" className="orange">Add to Cart</Link>
+          <a 
+            className="orange"
+            onClick={() => this.handleAddToCart() }
+          >Add to Cart</a>
         </div>
       </div>
     )
