@@ -3,13 +3,24 @@ import ProductIndexItem from "./product_index_item"
 import { Link } from "react-router-dom"
 
 class ProductIndex extends React.Component{
-  // Don't need to fetch products upon mounting, because this will be handled by
-  // the update filter action upon clicking on header links.
+
   componentDidMount(){
-    console.log(this.props.category)
-    console.log(this.props)
-    // this.props.fetchProducts(this.props.category)
+    // this.props.fetchProducts({category: this.props.match.params.filter})
+    this.props.fetchProducts({category: this.props.category})
+
+    this.unlisten = this.props.history.listen((location, action) => {
+      console.log(location.pathname)
+      var n = location.pathname.lastIndexOf('/');
+      var result = location.pathname.substring(n + 1);
+      console.log(result)
+      // this.props.fetchProducts({category: this.props.category})
+      // this.props.fetchProducts({category: this.props.match.params.filter})
+    });
   }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }  
 
   // scroll window back to top after changing filters for products.
   componentDidUpdate(oldProps){

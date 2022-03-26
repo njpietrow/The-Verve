@@ -14,7 +14,7 @@ const mSTP = ({entities,ui}) => {
 };
 
 const mDTP = (dispatch) => ({
-  fetchProducts: () => dispatch(fetchProducts()),
+  fetchProducts: (filter) => dispatch(fetchProducts(filter)),
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   addCartItem: (item, quantity) => dispatch(addCartItem(item, quantity)),
   toggleCartModal: () => dispatch(toggleCartModal()),
