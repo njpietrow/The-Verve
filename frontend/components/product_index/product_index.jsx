@@ -6,7 +6,7 @@ import { titleCase } from "../../util/string_util";
 class ProductIndex extends React.Component{
 
   componentDidMount(){
-    this.props.fetchProducts({category: this.props.category})
+    // this.props.fetchProducts({category: this.props.category})
 
     this.unlisten = this.props.history.listen((location, action) => {
       var n = location.pathname.lastIndexOf('/');
@@ -16,7 +16,9 @@ class ProductIndex extends React.Component{
   }
 
   componentWillUnmount() {
-    this.unlisten();
+    // this.unlisten();
+    //not ideal, but the product index needs to continue listening after 
+    //the product show pops up
   }  
 
   // scroll window back to top after changing filters for products.
