@@ -71,7 +71,7 @@ class ProductIndex extends React.Component{
             to={section==="all-gear" ? "/collections/gear/all-gear" : "/collections/coffee/all-coffee" }
             className="product-index-path"
             onClick={() => updateFilter("category", section)}
-          >Collections <span>&nbsp;&nbsp;/</span></Link>
+          > {titleCase(this.getCollection().replace('all-', ''))} <span>&nbsp;&nbsp;/</span></Link>
           {this.endOfPath()}
         </div>
          
