@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./header/header";
 import HeaderContainer from "./header/header_container";
 import LoginFormContainer from "./session_form/login_form_container";
 import RegisterFormContainer from "./session_form/register_form_container";
@@ -7,7 +6,7 @@ import AccountContainer from "./account/account_container";
 import ProductShowContainer from "./product_show/product_show_container";
 import ProductIndexContainer from "./product_index/product_index_container";
 import HomepageContainer from "./homepage/hompage_container";
-import CartIndexContainer from "./cart/cart_index_container"
+import CartContainer from "./cart/cart_container"
 import Footer from "./footer/footer";
 import { AuthRoute, ProtectedRoute } from "../util/route_util"
 import { Route, Link, Switch } from "react-router-dom";
@@ -16,7 +15,7 @@ const App = () => (
   <div className="app">
 
     <HeaderContainer />
-    <CartIndexContainer />
+    <CartContainer />
 
     <section className="main-content">
       <Switch>

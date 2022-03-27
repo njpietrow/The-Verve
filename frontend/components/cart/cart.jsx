@@ -1,7 +1,8 @@
 import React from "react"
 import {amountFormat} from "../../util/string_util"
+import CartItemContainer from "./cart_item_container";
 
-class CartIndex extends React.Component{
+class Cart extends React.Component{
   render(){
     const {cartItems, toggleCartModal, quantity, subtotal } = this.props;
     return(
@@ -26,34 +27,21 @@ class CartIndex extends React.Component{
 
               <h2> Cart </h2>
             </div>
-
-            {/* TODO: make cart item component */}
+            
+            {/* TODO: cart item component quantity is not updating.
+            it was when the text was rendered in this component though */}
             {Object.values(cartItems).map(cartItem => (
-                <ul key={cartItem.id}>
-                  <li>{cartItem.productName}</li>
-                  <li>price: ${cartItem.price.padEnd(5,'0')}</li>
-                  {
-                    cartItem.hasBag ? (
-                      <>
-                        <li>bag size: {cartItem.size}</li>
-                        <li>grind: {cartItem.grind}</li>
-                      </>
-                    ) : ( 
-                      null
-                    )
-                  }
-                  <li>quantity: {cartItem.quantity}</li>
-                </ul>
+                <CartItemContainer key={`${cartItem.id}-${cartItem.quantity}`} cartItem={cartItem}/> 
             ))}
             
             <div className="subtotal-container">
               <h2>subtotal: ${amountFormat(subtotal)}</h2>
 
-            </div>
+            </div> 
         </div>
       </div>
     )
   };
 };
 
-export default CartIndex;
+export default Cart;

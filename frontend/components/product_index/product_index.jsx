@@ -8,27 +8,30 @@ class ProductIndex extends React.Component{
   componentDidMount(){
     this.props.fetchProducts({category: this.props.category})
 
-    this.unlisten = this.props.history.listen((location, action) => {
-      var n = location.pathname.lastIndexOf('/');
-      var result = location.pathname.substring(n + 1);
-      this.props.fetchProducts({category: result})
-    });
+    // this.unlisten = this.props.history.listen((location, action) => {
+    //   var n = location.pathname.lastIndexOf('/');
+    //   var result = location.pathname.substring(n + 1);
+    //   this.props.fetchProducts({category: result})
+    // });
   }
 
   componentWillUnmount() {
-    this.unlisten();
-    //not ideal, but the product index needs to continue listening after 
-    //the product show pops up
+    // this.unlisten();
   }  
 
   // scroll window back to top after changing filters for products.
   componentDidUpdate(oldProps){
-    if(
-      (JSON.stringify(oldProps.products) !== JSON.stringify(this.props.products))
-      || (oldProps.location.pathname !== this.props.location.pathname)
-    ){
+    if (this.props.match.params.filter !== oldProps.match.params.filter ){
+      this.props.fetchProducts({category: this.props.match.params.filter})
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
-    } 
+    }
+
+    // if(
+    //   (JSON.stringify(oldProps.products) !== JSON.stringify(this.props.products))
+    //   || (oldProps.location.pathname !== this.props.location.pathname)
+    // ){
+    //   // window.scroll({top: 0, left: 0, behavior: 'smooth' })
+    // } 
   }
   
   endOfPath(){

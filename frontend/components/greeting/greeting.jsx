@@ -7,7 +7,7 @@ class Greeting extends React.Component{
   }
 
   render(){
-    const {currentUser, toggleCartModal} = this.props;
+    const {currentUser, toggleCartModal, cartItemQuantity} = this.props;
     return (
       <div className="header-container">
         {/* {currentUser ? (<span>Welcome back, {currentUser.firstName} </span>) : null} */}
@@ -27,8 +27,9 @@ class Greeting extends React.Component{
           to="/cart" 
           className="header-link cart-count"
           onClick={() => toggleCartModal()}
+          key={cartItemQuantity}
         > 
-          <i className="fa-solid fa-cart-shopping"></i> (C) 
+          <i className="fa-solid fa-cart-shopping"></i> ({cartItemQuantity}) 
         </a>
       </div>
     )

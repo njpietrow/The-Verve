@@ -11,7 +11,9 @@ class ProductIndexItem extends React.Component{
 
   handleAddToCart(){
     const {toggleCartModal, addCartItem} = this.props;
-    toggleCartModal();
+    // When adding items to the cart from the index don't update the cart modal.
+    //should only update the number next to the cart button
+    // toggleCartModal();
     const product = Object.assign({}, this.props.product)
     addCartItem(product,1);
   };

@@ -1,3 +1,14 @@
+.cart-count{
+  animation: rollout 1s;
+  width: 60px;
+}
+
+@keyframes rollout {
+  0% {  color: orange;}
+  60% {color: orange;}
+  100% { color: black; }
+}
+
 .cart-index-modal{
   position: fixed;
   z-index: 3;
@@ -25,7 +36,7 @@
   align-items: center;
   width: 40%;
   transform: translateX(100%);
-  transition: transform 0.3s ease-in;
+  transition: transform 0.25s ease-out;
   z-index: 6;
 }
 
@@ -41,7 +52,7 @@
   bottom: 0;
   left: 0;
   background-color: rgba(41, 41, 41, 0);
-  transition: background-color .4s ease-out;
+  transition: background-color .25s ease-in-out;
   z-index: 1;
   visibility: hidden;
 }
@@ -54,7 +65,7 @@
 
 //for closing the modal
 .non-cart-area{
-  width: 70%;
+  width: 100%;
 }
 
 .close-cart-modal-button{
@@ -74,5 +85,4 @@
 .subtotal-container{
   display: flex;
   flex-direction: column;
-
 }
