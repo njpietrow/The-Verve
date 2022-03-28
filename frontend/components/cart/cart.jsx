@@ -46,7 +46,8 @@ class Cart extends React.Component{
                     <h5 className="not-bold">FREE</h5>
                   </div>
                   <button 
-                    className="add-cart-button checkout"
+                    className="add-cart-button"
+                    id="checkout"
                     onClick={() => checkout()}
                   >Proceed to Checkout</button>
                 </div>
