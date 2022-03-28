@@ -34,10 +34,9 @@ const cartItemsReducer = (state = _emptyCart, action) => {
       newState[itemId].quantity = action.quantity;
       // check if item quantity is valid, if below 0, delete key
       // otherwise return state with updated quantity
-      console.log(action.quantity)
-      if (action.quantity <= 0) {
-        delete newState[itemId];
-      }
+      // if (action.quantity <= 0) {
+      //   delete newState[itemId];
+      // }
       return newState;
     case REMOVE_CART_ITEM:
       delete newState[itemId];
