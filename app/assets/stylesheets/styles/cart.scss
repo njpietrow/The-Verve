@@ -130,3 +130,25 @@
   width: 80%;
   margin-left: 0;
 }
+
+.cart-shop-now{
+  margin-top: 10px;
+  color: rgb(222,105,50);
+  border: 2px solid  rgb(222,105,50);
+  text-shadow: 1px solid rgba(255, 255, 255, 0.516);
+  border-radius: 2px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 200px;
+}
+
+.cart-shop-now:hover{
+  background-color: rgb(222,105,50);
+  color: #fff;
+  transition-property: background-color, color;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import Cart from "./cart";
 import { toggleCartModal } from "../../actions/cart_modal_actions";
 import { checkout } from "../../actions/cart_item_actions";
+import { updateFilter } from "../../actions/filter_actions";
 
 const subtotal = (cartItems) => {
   let subtotal = 0;
@@ -21,6 +22,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => ({
   toggleCartModal: () => dispatch(toggleCartModal()),
+  updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
   checkout: () => dispatch(checkout()),
 });
 

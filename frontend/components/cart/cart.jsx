@@ -1,6 +1,7 @@
 import React from "react"
 import {amountFormat} from "../../util/string_util"
 import CartItemContainer from "./cart_item_container";
+import { Link } from "react-router-dom";
 
 class Cart extends React.Component{
   render(){
@@ -27,12 +28,7 @@ class Cart extends React.Component{
               <h2>Cart</h2>
             </div>
             
-            {cartItems ? (
-              <>
-                <>Your Cart is Empty</>
-                <button>Shop Now</button>
-              </>
-            ) : (
+            {Object.values(cartItems).length !== 0 ? (
               <>
                 {Object.values(cartItems).map(cartItem => (
                     <CartItemContainer 
@@ -54,6 +50,20 @@ class Cart extends React.Component{
                     onClick={() => checkout()}
                   >Proceed to Checkout</button>
                 </div>
+              </>
+            ) : (
+              <>
+                <>Your Cart is Empty</>
+                <Link 
+                  to="/collections/coffee/all-coffee" 
+                  onClick={() => {
+                    updateFilter("category", "all-coffee")
+                    toggleCartModal()
+                  }}>
+                  <button 
+                    className="cart-shop-now"
+                  >Shop Now</button>
+                </Link>
               </>
             )
             }
