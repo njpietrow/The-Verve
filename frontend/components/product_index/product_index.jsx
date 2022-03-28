@@ -33,17 +33,6 @@ class ProductIndex extends React.Component{
     //   // window.scroll({top: 0, left: 0, behavior: 'smooth' })
     // } 
   }
-  
-  endOfPath(){
-    let filter = this.props.category
-    if (filter === "all-coffee") filter = 'all coffee'
-    if (filter === "gear") filter = 'all gear'
-    return (
-      <span className="product-index-path last">
-        {filter.replace('-', ' ')} 
-      </span>
-    )
-  }
 
   endOfPathString(){
     let filter = this.props.category
@@ -75,7 +64,9 @@ class ProductIndex extends React.Component{
             className="product-index-path"
             onClick={() => updateFilter("category", section)}
           > {titleCase(this.getCollection().replace('all-', ''))} <span>&nbsp;&nbsp;/</span></Link>
-          {this.endOfPath()}
+          <span className="product-index-path last">
+            {this.endOfPathString()} 
+          </span>
         </div>
          
         <div className="product-index-content-container">

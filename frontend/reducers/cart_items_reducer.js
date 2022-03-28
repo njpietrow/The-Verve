@@ -13,7 +13,7 @@ const cartItemsReducer = (state = _emptyCart, action) => {
   // if action.item exists, set item, itemId, item.quantity
   if (action.item) {
     item = action.item;
-    itemId = item.id;
+    itemId = `${item.id}-${item.bagSize}-${item.grind}`;
     item.quantity ||= 0;
   }
 

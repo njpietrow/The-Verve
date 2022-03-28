@@ -7,15 +7,29 @@ class ProductIndexItem extends React.Component{
   constructor(props){
     super(props);
     this.handleAddToCart = this.handleAddToCart.bind(this);
+    this.state = {
+      cartAddButtonTitle: "Add to Cart",
+      color: "#e65400"
+    };
   };
 
   handleAddToCart(){
-    const {toggleCartModal, addCartItem} = this.props;
+    const {toggleCartModal, addCartItem,product} = this.props;
+    this.setState({
+      cartAddButtonTitle: "Added to Cart ✔", 
+      color: "#b1bd76",
+    });
+
+    //if product has a bag, add attributes to the item before adding to cart
+    let hasBag = !((product.bagSize === "none") || (product.type === "gear"))
+    let bagAttr = {hasBag}
+
+
     // When adding items to the cart from the index don't update the cart modal.
     //should only update the number next to the cart button
     // toggleCartModal();
-    const product = Object.assign({}, this.props.product)
-    addCartItem(product,1);
+    const adjustedProduct = Object.assign({}, this.props.product, bagAttr)
+    addCartItem(adjustedProduct,1);
   };
 
   render(){
@@ -60,7 +74,8 @@ class ProductIndexItem extends React.Component{
           <a 
             className="orange"
             onClick={() => this.handleAddToCart() }
-          >Add to Cart</a>
+            style={{color: this.state.color}}
+          >{this.state.cartAddButtonTitle}</a>
         </div>
       </div>
     )

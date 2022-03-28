@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   store.subscribe(throttle(() => {
     saveState({
       entities: {
+        cartItems: store.getState().entities.cartItems,
         products: store.getState().entities.products
       },
       ui: {

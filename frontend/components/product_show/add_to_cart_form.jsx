@@ -9,18 +9,22 @@ class AddToCartForm extends React.Component{
       quantity: 1,
       bagSize: "12 oz.",
       grind: "Whole Bean",
+      cartAddButtonTitle: "Add to Cart",
     };
-  }
+  };
 
   handleSubmit(e){
-    e.preventDefault();  
-    const {toggleCartModal, addCartItem, hasBag} = this.props;
+    e.preventDefault();
+    this.setState({cartAddButtonTitle: "Added to Cart ✔"})  
+    const {toggleCartModal, addCartItem, hasBag, price} = this.props;
     toggleCartModal();
     let bagAttr = {hasBag}
     if (hasBag) {
       bagAttr = {
-        size: this.state.bagSize,
-        quantity: this.state.quantity, 
+        bagSize: this.state.bagSize,
+        grind: this.state.grind,
+        quantity: this.state.quantity,
+        price: price,
         hasBag
       };
     }
@@ -34,7 +38,17 @@ class AddToCartForm extends React.Component{
   };
 
   update(field){
-    return e => this.setState({[field]: e.currentTarget.value})
+    return e => {
+      this.setState({[field]: e.currentTarget.value})
+      if(field==="bagSize"){
+        const multiplier = {
+          "12 oz.": 1,
+          "1 Kilo": 2.86,
+          "5 Lbs. (Save 15%)": 5.64
+        }
+        this.props.updatePrice(multiplier[e.currentTarget.value]);
+      }
+    }
   };
 
 
@@ -80,7 +94,7 @@ class AddToCartForm extends React.Component{
             onChange={this.update("quantity")}
           />
           <a className="quantity-add" onClick={() => this.updateQuantity(1)}></a>
-          <button className="add-cart-button">Add to Cart</button>
+          <button className="add-cart-button">{this.state.cartAddButtonTitle}</button>
         </div>
       </form>
     )

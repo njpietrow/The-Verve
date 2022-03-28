@@ -5,14 +5,24 @@ import AddToCartFormContainer from "./add_to_cart_form_container";
 import {titleCase} from "../../util/string_util"
 
 class ProductShow extends React.Component{
+
   constructor(props){
     super(props)
-  }
+    this.updatePrice = this.updatePrice.bind(this);
+    this.state = {
+      price: this.props.product.price.padEnd(5,'0')
+    };
+  };
+
+  updatePrice(multiplier){
+    let price = String((Number(this.props.product.price) * multiplier).toFixed(2)).padEnd(5,'0')
+    this.setState({price})
+  };
   
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)
     window.scroll({top: 0, left: 0, behavior: 'smooth' })
-  }
+  };
   
   getPathFromCategory(){
     let filter = this.props.category;
@@ -20,7 +30,7 @@ class ProductShow extends React.Component{
       filter = 'all-coffee'
     }
     return filter.replace('-', ' ');
-  }
+  };
 
   getCollection(){
     const category = this.props.category;
@@ -29,7 +39,7 @@ class ProductShow extends React.Component{
       section = "all-gear"
     }
     return section;
-  }
+  };
 
   render(){
     const {product, updateFilter, category} = this.props;
@@ -71,11 +81,13 @@ class ProductShow extends React.Component{
               )}
 
               <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
-              <p className="green show-page-price">{product.price.padEnd(5,'0')}</p>
+              <p className="green show-page-price">{this.state.price}</p>
 
               <AddToCartFormContainer 
                 hasBag={!((product.bagSize === "none") || gear)}
                 product={product}
+                updatePrice={this.updatePrice}
+                price={this.state.price}
               />
 
               <div className="product-show-description"> 

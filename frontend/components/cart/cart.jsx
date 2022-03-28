@@ -4,7 +4,7 @@ import CartItemContainer from "./cart_item_container";
 
 class Cart extends React.Component{
   render(){
-    const {cartItems, toggleCartModal, quantity, subtotal } = this.props;
+    const {cartItems, toggleCartModal, quantity, subtotal, checkout } = this.props;
     return(
       <div>
         <div 
@@ -24,20 +24,40 @@ class Cart extends React.Component{
               className="close-cart-modal-button"
             ><i className="fa-solid fa-xmark"></i></a>
             <div className="cart-title-container">
-
-              <h2> Cart </h2>
+              <h2>Cart</h2>
             </div>
             
-            {/* TODO: cart item component quantity is not updating.
-            it was when the text was rendered in this component though */}
-            {Object.values(cartItems).map(cartItem => (
-                <CartItemContainer key={`${cartItem.id}-${cartItem.quantity}`} cartItem={cartItem}/> 
-            ))}
-            
-            <div className="subtotal-container">
-              <h2>subtotal: ${amountFormat(subtotal)}</h2>
+            {cartItems ? (
+              <>
+                <>Your Cart is Empty</>
+                <button>Shop Now</button>
+              </>
+            ) : (
+              <>
+                {Object.values(cartItems).map(cartItem => (
+                    <CartItemContainer 
+                      key={`${cartItem.id}-${cartItem.grind}-${cartItem.bagSize}-${cartItem.quantity}`} 
+                      cartItem={cartItem}/> 
+                ))}
+                
+                <div className="checkout-container">
+                  <div className="bottom-line">
+                    <h5>Subtotal:</h5>
+                    <h5 className="not-bold">${amountFormat(subtotal)}</h5>
+                  </div>
+                  <div className="bottom-line">
+                    <h5>Shipping:</h5>
+                    <h5 className="not-bold">FREE</h5>
+                  </div>
+                  <button 
+                    className="add-cart-button checkout"
+                    onClick={() => checkout()}
+                  >Proceed to Checkout</button>
+                </div>
+              </>
+            )
+            }
 
-            </div> 
         </div>
       </div>
     )

@@ -2,7 +2,8 @@
   json.set! product.id do
     
     # Eventually will add review rating to show on index
-    json.extract! product, :id, :product_name, :ingredients, :location, :price
+    json.extract! product, :id, :product_name, :ingredients, :location, 
+      :price, :bag_size, :grind
     
     json.photoUrl url_for(product.photo)
 
