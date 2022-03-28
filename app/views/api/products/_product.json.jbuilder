@@ -11,4 +11,11 @@ json.extract! product,
 
 json.type product.ingredients == "-" ? "gear" : "coffee"
 
-json.
+json.reviews do
+  product.reviews.each do |review|
+    json.set! review.id do
+      json.extract! review, :id
+    end
+  end
+end
+  
