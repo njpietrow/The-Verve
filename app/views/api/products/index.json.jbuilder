@@ -8,5 +8,15 @@
     # json.photoUrl url_for(product.photo)
 
     json.type product.ingredients == "-" ? "gear" : "coffee"
+
+    total_stars = 0.0
+    num_reviews = 0.0
+
+    product.reviews.each do |review|
+      total_stars += review.stars
+      num_reviews += 1
+    end
+
+    json.avg_rating (total_stars/num_reviews)
   end
  end

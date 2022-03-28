@@ -4,6 +4,19 @@ import CartItemContainer from "./cart_item_container";
 import { Link } from "react-router-dom";
 
 class Cart extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      buttonMesage: "Proceed to Checkout"
+    };
+    this.updateMessage= this.updateMessage.bind(this)
+  }
+
+  updateMessage(){
+    this.state.buttonMesage === "Proceed to Checkout"
+      ? this.setState({buttonMesage: "Thanks for visiting The Verve!"})
+      : this.setState({buttonMesage: "Proceed to Checkout"})
+  }
 
   render(){
     const {cartItems, toggleCartModal, updateFilter, subtotal, quantity, checkout } = this.props;
@@ -31,12 +44,13 @@ class Cart extends React.Component{
             
             {Object.values(cartItems).length !== 0 ? (
               <>
-                {Object.values(cartItems).map(cartItem => (
-                    <CartItemContainer 
-                      key={`${cartItem.id}-${cartItem.grind}-${cartItem.bagSize}-${cartItem.quantity}`} 
-                      cartItem={cartItem}/> 
-                ))}
-                
+                <div className="cart-item-list-container">
+                  {Object.values(cartItems).map(cartItem => (
+                      <CartItemContainer 
+                        key={`${cartItem.id}-${cartItem.grind}-${cartItem.bagSize}-${cartItem.quantity}`} 
+                        cartItem={cartItem}/> 
+                  ))}
+                </div>
                 <div className="checkout-container">
                   <div className="bottom-line">
                     <h5>Subtotal:</h5>
@@ -49,13 +63,15 @@ class Cart extends React.Component{
                   <button 
                     className="add-cart-button"
                     id="checkout"
-                    onClick={() => checkout()}
-                  >Proceed to Checkout</button>
+                    onClick={() => this.updateMessage()}
+                  >{this.state.buttonMesage}</button>
                 </div>
+
               </>
+
             ) : (
               <>
-                <>Your Cart is Empty</>
+                <div className="empty-cart-message">Your Cart is Empty</div>
                 <Link 
                   to="/collections/coffee/all-coffee" 
                   onClick={() => {

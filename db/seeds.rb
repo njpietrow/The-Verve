@@ -30,8 +30,6 @@ merch = Category.create(name: "merch")
 mugs = Category.create(name: "mugs")
 brew = Category.create(name: "brew")
 
-
-
 puts "starting coffee"
 
 nubia_loaiza = Product.create(

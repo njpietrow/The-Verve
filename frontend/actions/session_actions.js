@@ -1,4 +1,6 @@
 import * as SessionApiUtil from "../util/session_api_util";
+import { saveState } from "../util/local_storage";
+import { checkout } from "./cart_item_actions";
 
 // ACTION CONSTANTS
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
@@ -44,7 +46,10 @@ export const logIn = (user) => dispatch => {
 
 export const logOut = () => dispatch => {
   return SessionApiUtil.logout()
-    .then(() => dispatch(logoutCurrentUser()) )
+    .then(() => {
+      dispatch(logoutCurrentUser()); 
+      dispatch(checkout());
+    })
 };
 
 export const register = (user) => dispatch => {

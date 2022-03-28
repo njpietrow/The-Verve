@@ -2,7 +2,8 @@ import { connect } from "react-redux";
 import ReviewIndex from "./review_index";
 
 const mSTP = state => ({
-  reviews: state.entities.reviews
+  reviews: state.entities.reviews,
+  loggedIn: !!state.session.id,
 });
 
 const mDTP = dispatch => ({

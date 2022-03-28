@@ -18,6 +18,13 @@ class ProductIndexItem extends React.Component{
       color: "#b1bd76",
     });
 
+    setTimeout(() => {
+      this.setState({
+        cartAddButtonTitle: "Add to Cart", 
+        color: "#e65400",
+      });
+    }, 2000);
+
     //if product has a bag, add attributes to the item before adding to cart
     let hasBag = !((product.bagSize === "none") || (product.type === "gear"))
     let bagAttr = {hasBag}
@@ -60,7 +67,7 @@ class ProductIndexItem extends React.Component{
         ) : (
           null
         )}
-        <p>--stars--</p>
+        <p>{product.avgRating ? `${product.avgRating} stars` : null}</p>
         {/* TODO: if product has a rating, implement stars based on avg of review rating associations */}
 
         <div>

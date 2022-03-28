@@ -26,7 +26,7 @@ class ProductShow extends React.Component{
     if(this.state.price === "Loading..."){
       this.setState({price: this.props.product.price})
     }
-    // window.scroll({top: 0, left: 0, behavior: 'smooth' })
+
     if(oldProps.product.id !== this.props.product.id){
       this.props.fetchProduct(this.props.match.params.productId)
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
@@ -35,6 +35,7 @@ class ProductShow extends React.Component{
   
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
   };
   
   getPathFromCategory(){
@@ -55,7 +56,7 @@ class ProductShow extends React.Component{
   };
 
   render(){
-    const {product, updateFilter, category, rating} = this.props;
+    const {product, updateFilter, category} = this.props;
     if (!product) return <div style={{height: 800}}></div>
     document.title = titleCase(product.productName);
     let gear = (product.ingredients === "-");
@@ -97,7 +98,7 @@ class ProductShow extends React.Component{
                 smooth 
                 to={`/collections/${product.id}#review-index-container`}
               >
-                <p className="product-show-stars">Stars: --{rating}-- will add icons later</p>
+                <p className="product-show-stars">Stars: --{product.avgRating}--</p>
               </HashLink>
               <p className="green show-page-price">{this.state.price.padEnd(5,'0')}</p>
 
@@ -132,7 +133,7 @@ class ProductShow extends React.Component{
           </div>
         </div>
 
-        <ReviewIndexContainer key={product.id}/>
+        <ReviewIndexContainer key={product.id} avgRating={product.avgRating}/>
       </div>
     )
   }
