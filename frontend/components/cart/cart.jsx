@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 class Cart extends React.Component{
 
   render(){
-    const {cartItems, toggleCartModal, updateFilter, subtotal, checkout } = this.props;
+    const {cartItems, toggleCartModal, updateFilter, subtotal, quantity, checkout } = this.props;
     return(
       <div>
         <div 
@@ -26,7 +26,7 @@ class Cart extends React.Component{
               className="close-cart-modal-button"
             ><i className="fa-solid fa-xmark"></i></a>
             <div className="cart-title-container">
-              <h2>Cart</h2>
+              <h2><i className="fa-solid fa-cart-shopping"></i> ({quantity})</h2>
             </div>
             
             {Object.values(cartItems).length !== 0 ? (

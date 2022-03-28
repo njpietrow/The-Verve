@@ -14,7 +14,7 @@ export const amountFormat = (num) => {
 
 export const averageRating = (reviewsArray) => {
   let total = 0;
-  if (!reviewsArray) return "N/A"
+  if (reviewsArray.length === 0) return "No Reviews Yet"
   reviewsArray.forEach(review => {
     total += review.stars;
   })    

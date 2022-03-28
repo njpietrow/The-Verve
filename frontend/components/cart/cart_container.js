@@ -12,11 +12,20 @@ const subtotal = (cartItems) => {
     return subtotal;
 };
 
+const quantity = (cartItems) => {
+  let quantity = 0;
+    for (const id in cartItems){
+      quantity += (cartItems[id].quantity);
+    }
+    return quantity;
+};
+
 const mSTP = state => {
   return {
     cartItems: state.entities.cartItems,
     visible: state.ui.cartModal,
-    subtotal: subtotal(state.entities.cartItems)
+    subtotal: subtotal(state.entities.cartItems),
+    quantity: quantity(state.entities.cartItems)
   }
 };
 

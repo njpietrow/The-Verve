@@ -13,6 +13,18 @@ class SessionForm extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // LIFECYCLE METHODS
+  componentDidMount(){
+    this.unlisten = this.props.history.listen(() => {
+      this.props.clearSessionErrors();
+    });
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }  
+
   //CONTROLLED INPUT FORM METHODS
   handleSubmit(e){
     e.preventDefault()
@@ -24,16 +36,6 @@ class SessionForm extends React.Component{
     return e => this.setState({[field]: e.currentTarget.value})
   }
 
-  // LIFECYCLE METHODS
-  componentDidMount(){
-    this.unlisten = this.props.history.listen(() => {
-      this.props.clearSessionErrors();
-    });
-  }
-
-  componentWillUnmount() {
-    this.unlisten();
-  }  
 
   //HELPER METHODS FOR DISPLAYING INFO ON FORM
   renderErrors(){

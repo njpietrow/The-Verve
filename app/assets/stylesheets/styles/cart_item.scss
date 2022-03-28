@@ -34,9 +34,10 @@
   bottom: 8px;
   display: flex;
   align-items: flex-end;
+  z-index: 0;
 }
 
-#cart-update-box{
+.cart-update-box[type="text"]{
   height: 25px;
 }
 
