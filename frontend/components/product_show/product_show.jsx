@@ -8,13 +8,13 @@ class ProductShow extends React.Component{
 
   constructor(props){
     super(props)
+    this.updatePrice = this.updatePrice.bind(this);
     this.state = {
       price: "Loading..."
     };
     // this.state = {
     //   price: this.props.product.price.padEnd(5,'0')
     // };
-    this.updatePrice = this.updatePrice.bind(this);
   };
 
   updatePrice(multiplier){
@@ -24,8 +24,7 @@ class ProductShow extends React.Component{
 
   componentDidUpdate(){
     //set price to a dummy placeholder until component information has been fetched.
-    console
-    if(this.state.price !== this.props.product.price){
+    if(this.state.price === "Loading..."){
       this.setState({price: this.props.product.price})
     }
   }
@@ -98,7 +97,7 @@ class ProductShow extends React.Component{
                 hasBag={!((product.bagSize === "none") || gear)}
                 product={product}
                 updatePrice={this.updatePrice}
-                price={this.state.price}
+                price={this.state.price.padEnd(5,'0')}
               />
 
               <div className="product-show-description"> 
