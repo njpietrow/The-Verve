@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { addCartItem } from "../../actions/cart_item_actions";
-import { toggleCartModal } from "../../actions/cart_modal_actions";
 
 class ProductIndexItem extends React.Component{
   constructor(props){
@@ -24,10 +22,6 @@ class ProductIndexItem extends React.Component{
     let hasBag = !((product.bagSize === "none") || (product.type === "gear"))
     let bagAttr = {hasBag}
 
-
-    // When adding items to the cart from the index don't update the cart modal.
-    //should only update the number next to the cart button
-    // toggleCartModal();
     const adjustedProduct = Object.assign({}, this.props.product, bagAttr)
     addCartItem(adjustedProduct,1);
   };

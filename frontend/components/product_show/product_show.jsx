@@ -12,12 +12,10 @@ class ProductShow extends React.Component{
     this.state = {
       price: "Loading..."
     };
-    // this.state = {
-    //   price: this.props.product.price.padEnd(5,'0')
-    // };
   };
 
   updatePrice(multiplier){
+    //function to calculate and update displayed price based on size of bag.
     let price = String((Number(this.props.product.price) * multiplier).toFixed(2)).padEnd(5,'0')
     this.setState({price})
   };
