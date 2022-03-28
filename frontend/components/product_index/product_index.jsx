@@ -6,7 +6,8 @@ import { titleCase } from "../../util/string_util";
 class ProductIndex extends React.Component{
 
   componentDidMount(){
-    this.props.fetchProducts({category: this.props.category})
+    // this.props.fetchProducts({category: this.props.category})
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
   }
 
   // scroll window back to top after changing filters for products.
@@ -14,6 +15,7 @@ class ProductIndex extends React.Component{
     if (this.props.match.params.filter !== oldProps.match.params.filter ){
       this.props.updateFilter("category", this.props.match.params.filter)
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
+      // window.scroll({top: 0, left: 0})
     }
   }
 

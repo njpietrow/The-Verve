@@ -2,8 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class CartItem extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      quantity: parseInt(this.props.cartItem.quantity),
+    }
+  }
+
+  update(val){
+    if(this.state.quantity <= 0 && val === -1) return
+    this.setState({quantity: val});
+    this.props.updateCartItem(this.props.cartItem,this.state.quantity+val)
+  }
+
   render(){
-    const cartItem = this.props.cartItem;
+    const {cartItem} = this.props;
     return(
       <div className="cart-item">
         <div className="cart-item-photo-container">
@@ -38,6 +51,21 @@ class CartItem extends React.Component{
             <a onClick={() => this.props.removeCartItem(cartItem)}>
               <i  className="fa-solid fa-xmark remove-product"></i>
             </a>
+          </div>
+          <div className="quantity-adjust-container">
+            <div className="quantity-add-container ">
+              <a className="quantity-add minus" onClick={() => this.update(-1)}></a>
+              <input type="text" 
+                value={this.state.quantity}  
+                id="cart-update-box"
+                disabled
+                min={0}
+                pattern="(500|([1-4][0-9][0-9])|([1-9][0-9])|[1-9])" 
+                title="Quantity should contain only positive numerical values and be less than 500" 
+              />
+              <a className="quantity-add" onClick={() => this.update(1)}></a>
+              <button className="add-cart-button">{}</button>
+            </div>
           </div>
           <h5 className="cart-item-price">${cartItem.price.padEnd(5,'0')}</h5>
 

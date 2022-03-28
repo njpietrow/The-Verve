@@ -31,11 +31,12 @@ const cartItemsReducer = (state = _emptyCart, action) => {
       }
     case UPDATE_CART_ITEM:
       // update item quantity
-      newState[itemId].quantity += action.quantity;
+      newState[itemId].quantity = action.quantity;
       // check if item quantity is valid, if below 0, delete key
       // otherwise return state with updated quantity
-      if (newState[itemId].quantity <= 0) {
-        delete newState.itemId;
+      console.log(action.quantity)
+      if (action.quantity <= 0) {
+        delete newState[itemId];
       }
       return newState;
     case REMOVE_CART_ITEM:

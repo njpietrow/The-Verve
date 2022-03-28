@@ -29,6 +29,17 @@
   justify-content: space-between;
 }
 
+.quantity-adjust-container{
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  align-items: flex-end;
+}
+
+#cart-update-box{
+  height: 25px;
+}
+
 .fa-circle{
   position: absolute;
   left: -25px;
@@ -66,6 +77,6 @@
 
 .cart-item-price{
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   right: 10px;
 }

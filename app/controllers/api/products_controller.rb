@@ -6,7 +6,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.with_attached_photo.find_by(id: params[:id])
+    @product = Product.find_by(id: params[:id])
     render :show
   end
 

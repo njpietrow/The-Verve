@@ -10,3 +10,5 @@ json.extract! product,
 # end
 
 json.type product.ingredients == "-" ? "gear" : "coffee"
+
+json.

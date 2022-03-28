@@ -8,7 +8,6 @@
 #  bag_size     :string           not null
 #  grind        :string           not null
 #  description  :text             not null
-#  farm_story   :text             not null
 #  location     :string           not null
 #  price        :decimal(10, 3)   not null
 #  created_at   :datetime         not null

@@ -8,7 +8,6 @@
 #  bag_size     :string           not null
 #  grind        :string           not null
 #  description  :text             not null
-#  farm_story   :text             not null
 #  location     :string           not null
 #  price        :decimal(10, 3)   not null
 #  created_at   :datetime         not null
@@ -36,6 +35,10 @@ class Product < ApplicationRecord
   has_many :categories,
     through: :product_categories,
     source: :category
+
+  has_many :reviews,
+    foreign_key: :product_id,
+    class_name: 'Review'
 
   # query db for products that have associated categories that match parameter.
   def self.match_category(category)

@@ -1,8 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom"
-// import AddToCartForm from "./add_to_cart_form"
 import AddToCartFormContainer from "./add_to_cart_form_container";
 import {titleCase} from "../../util/string_util"
+import ReviewIndex from "../review_index/review_index";
+import { HashLink } from "react-router-hash-link";
 
 class ProductShow extends React.Component{
 
@@ -88,7 +89,12 @@ class ProductShow extends React.Component{
                 </div>
               )}
 
-              <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
+              <HashLink 
+                smooth 
+                to={`/collections/${product.id}#review-index-container`}
+              >
+                <p className="product-show-stars">--stars--</p>
+              </HashLink>
               <p className="green show-page-price">{this.state.price.padEnd(5,'0')}</p>
 
               <AddToCartFormContainer 
@@ -106,7 +112,9 @@ class ProductShow extends React.Component{
               ) : (
                 <div className="product-show-roast-level">
                   <h3>ROAST LEVEL</h3>
-                  <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/>
+                  {/* <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/> */}
+                  placeholder to avoid s3 charges
+                  <img src="http://www.cesix.inifap.gob.mx/js/frutalestropicales_old/map/anychart/help/docs/img/Samples/horizontal-thermometer-gauge-sample.png" alt="fake image" />
                   <br />
                 </div>
               )}
@@ -119,6 +127,8 @@ class ProductShow extends React.Component{
             </div>
           </div>
         </div>
+
+        <ReviewIndex />
       </div>
     )
   }
