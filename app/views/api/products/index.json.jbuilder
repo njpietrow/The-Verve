@@ -5,7 +5,7 @@
     json.extract! product, :id, :product_name, :ingredients, :location, 
       :price, :bag_size, :grind
     
-    json.photoUrl url_for(product.photo)
+    # json.photoUrl url_for(product.photo)
 
     json.type product.ingredients == "-" ? "gear" : "coffee"
   end
