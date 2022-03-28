@@ -4,6 +4,7 @@ import CartItemContainer from "./cart_item_container";
 import { Link } from "react-router-dom";
 
 class Cart extends React.Component{
+
   render(){
     const {cartItems, toggleCartModal, updateFilter, subtotal, checkout } = this.props;
     return(
@@ -43,7 +44,7 @@ class Cart extends React.Component{
                   </div>
                   <div className="bottom-line">
                     <h5>Shipping:</h5>
-                    <h5 className="not-bold">FREE</h5>
+                    <h5 className="not-bold">{(subtotal > 35) ? ("FREE") : ("$4.99")}</h5>
                   </div>
                   <button 
                     className="add-cart-button"
