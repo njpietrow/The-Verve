@@ -52,10 +52,10 @@ ProductCategory.create(product_id: nubia_loaiza.id, category_id: coffee.id)
 ProductCategory.create(product_id: nubia_loaiza.id, category_id: single_origin.id)
 ProductCategory.create(product_id: nubia_loaiza.id, category_id: new_arrivals.id)
 
-nubia_loaiza_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Nubianewcoffee_2048x2048.webp')
-nubia_loaiza.photo.attach(io: nubia_loaiza_photo, filename: 'nubia_loaiza_photo.jpg')
-roast3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_3.webp')
-nubia_loaiza.roast_level_photo.attach(io: roast3, filename: 'roast3.jpg')
+# nubia_loaiza_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Nubianewcoffee_2048x2048.webp')
+# nubia_loaiza.photo.attach(io: nubia_loaiza_photo, filename: 'nubia_loaiza_photo.jpg')
+# roast3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_3.webp')
+# nubia_loaiza.roast_level_photo.attach(io: roast3, filename: 'roast3.jpg')
 
 amparo_maya = Product.create(
   product_name: "AMPARO MAYA",
@@ -71,10 +71,10 @@ ProductCategory.create(product_id: amparo_maya.id, category_id: coffee.id)
 ProductCategory.create(product_id: amparo_maya.id, category_id: single_origin.id)
 ProductCategory.create(product_id: amparo_maya.id, category_id: new_arrivals.id)
 
-amparo_maya_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Amparonewcoffee_2048x2048.webp')
-amparo_maya.photo.attach(io: amparo_maya_photo, filename: 'amparo_maya_photo.jpg')
-roast4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_4.webp')
-amparo_maya.roast_level_photo.attach(io: roast4, filename: 'roast4.jpg')
+# amparo_maya_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Amparonewcoffee_2048x2048.webp')
+# amparo_maya.photo.attach(io: amparo_maya_photo, filename: 'amparo_maya_photo.jpg')
+# roast4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_4.webp')
+# amparo_maya.roast_level_photo.attach(io: roast4, filename: 'roast4.jpg')
 
 bedhatu_jibicho = Product.create(
   product_name: "BEDHATU JIBICHO",
@@ -90,10 +90,10 @@ ProductCategory.create(product_id: bedhatu_jibicho.id, category_id: coffee.id)
 ProductCategory.create(product_id: bedhatu_jibicho.id, category_id: single_origin.id)
 ProductCategory.create(product_id: bedhatu_jibicho.id, category_id: new_arrivals.id)
 
-bedhatu_jibicho_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Bedhatunewcoffee_2048x2048.webp')
-bedhatu_jibicho.photo.attach(io: bedhatu_jibicho_photo, filename: 'bedhatu_jibicho_photo.jpg')
-roast3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_3.webp')
-bedhatu_jibicho.roast_level_photo.attach(io: roast3, filename: 'roast3.jpg')
+# bedhatu_jibicho_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Bedhatunewcoffee_2048x2048.webp')
+# bedhatu_jibicho.photo.attach(io: bedhatu_jibicho_photo, filename: 'bedhatu_jibicho_photo.jpg')
+# roast3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_3.webp')
+# bedhatu_jibicho.roast_level_photo.attach(io: roast3, filename: 'roast3.jpg')
 
 maria_baide = Product.create(
   product_name: "MARIA BAIDE",
@@ -110,10 +110,10 @@ ProductCategory.create(product_id: maria_baide.id, category_id: single_origin.id
 ProductCategory.create(product_id: maria_baide.id, category_id: new_arrivals.id)
 
 
-maria_baide_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Marianewcoffee_2048x2048.webp')
-maria_baide.photo.attach(io: maria_baide_photo, filename: 'maria_baide_photo.jpg')
-roast4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_4.webp')
-maria_baide.roast_level_photo.attach(io: roast4, filename: 'roast4.jpg')
+# maria_baide_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Marianewcoffee_2048x2048.webp')
+# maria_baide.photo.attach(io: maria_baide_photo, filename: 'maria_baide_photo.jpg')
+# roast4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_4.webp')
+# maria_baide.roast_level_photo.attach(io: roast4, filename: 'roast4.jpg')
 
 wilder_seasonal_set = Product.create(
   product_name: "WILDER SEASONAL BLEND COFFEE SET",
@@ -129,10 +129,10 @@ ProductCategory.create(product_id: wilder_seasonal_set.id, category_id: coffee.i
 ProductCategory.create(product_id: wilder_seasonal_set.id, category_id: blend.id)
 ProductCategory.create(product_id: wilder_seasonal_set.id, category_id: instant.id)
 
-wilder_seasonal_set_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblendset_2048x2048.webp')
-wilder_seasonal_set.photo.attach(io: wilder_seasonal_set_photo, filename: 'wilder_seasonal_set_photo.jpg')
-roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
-wilder_seasonal_set.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
+# wilder_seasonal_set_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblendset_2048x2048.webp')
+# wilder_seasonal_set.photo.attach(io: wilder_seasonal_set_photo, filename: 'wilder_seasonal_set_photo.jpg')
+# roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
+# wilder_seasonal_set.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
 
 wilder_blend = Product.create(
   product_name: "WILDER BLEND",
@@ -147,10 +147,10 @@ wilder_blend = Product.create(
 ProductCategory.create(product_id: wilder_seasonal_set.id, category_id: coffee.id)
 ProductCategory.create(product_id: wilder_seasonal_set.id, category_id: blend.id)
 
-wilder_blend_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblend_2048x2048.webp')
-wilder_blend.photo.attach(io: wilder_blend_photo, filename: 'wilder_blend_photo.jpg')
-roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
-wilder_blend.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
+# wilder_blend_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblend_2048x2048.webp')
+# wilder_blend.photo.attach(io: wilder_blend_photo, filename: 'wilder_blend_photo.jpg')
+# roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
+# wilder_blend.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
 
 wilder_blend_instant = Product.create(
   product_name: "WILDER BLEND CRAFT INSTANT COFFEE",
@@ -166,10 +166,10 @@ ProductCategory.create(product_id: wilder_blend_instant.id, category_id: coffee.
 ProductCategory.create(product_id: wilder_blend_instant.id, category_id: blend.id)
 ProductCategory.create(product_id: wilder_blend_instant.id, category_id: instant.id)
 
-wilder_blend_instant_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblendinstant_2048x2048.webp')
-wilder_blend_instant.photo.attach(io: wilder_blend_instant_photo, filename: 'wilder_blend_instant_photo.jpg')
-roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
-wilder_blend_instant.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
+# wilder_blend_instant_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/wilderblendinstant_2048x2048.webp')
+# wilder_blend_instant.photo.attach(io: wilder_blend_instant_photo, filename: 'wilder_blend_instant_photo.jpg')
+# roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
+# wilder_blend_instant.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
 
 tima_guji = Product.create(
   product_name: "TIMA GUJI NATURAL SINGLE ORIGIN ESPRESSO",
@@ -184,10 +184,10 @@ tima_guji = Product.create(
 ProductCategory.create(product_id: tima_guji.id, category_id: coffee.id)
 ProductCategory.create(product_id: tima_guji.id, category_id: single_origin.id)
 
-tima_guji_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
-tima_guji.photo.attach(io: tima_guji_photo, filename: 'tima_guji_photo.jpg')
-roast2 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_2.webp')
-tima_guji.roast_level_photo.attach(io: roast2, filename: 'roast2.jpg')
+# tima_guji_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
+# tima_guji.photo.attach(io: tima_guji_photo, filename: 'tima_guji_photo.jpg')
+# roast2 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_2.webp')
+# tima_guji.roast_level_photo.attach(io: roast2, filename: 'roast2.jpg')
 
 jacinto = Product.create(
   product_name: "JACINTO DOMINGO",
@@ -202,10 +202,10 @@ jacinto = Product.create(
 ProductCategory.create(product_id: jacinto.id, category_id: coffee.id)
 ProductCategory.create(product_id: jacinto.id, category_id: single_origin.id)
 
-jacinto_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
-jacinto.photo.attach(io: jacinto_photo, filename: 'jacinto_photo.jpg')
-roast4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_4.webp')
-jacinto.roast_level_photo.attach(io: roast4, filename: 'roast4.jpg')
+# jacinto_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
+# jacinto.photo.attach(io: jacinto_photo, filename: 'jacinto_photo.jpg')
+# roast4 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_4.webp')
+# jacinto.roast_level_photo.attach(io: roast4, filename: 'roast4.jpg')
 
 leona = Product.create(
   product_name: "LA LEONA",
@@ -220,10 +220,10 @@ leona = Product.create(
 ProductCategory.create(product_id: leona.id, category_id: coffee.id)
 ProductCategory.create(product_id: leona.id, category_id: single_origin.id)
 
-leona_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
-leona.photo.attach(io: leona_photo, filename: 'leona_photo.jpg')
-roast3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_3.webp')
-leona.roast_level_photo.attach(io: roast3, filename: 'roast3.jpg')
+# leona_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/timaguji_2048x2048.webp')
+# leona.photo.attach(io: leona_photo, filename: 'leona_photo.jpg')
+# roast3 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_3.webp')
+# leona.roast_level_photo.attach(io: roast3, filename: 'roast3.jpg')
 
 chelbesa = Product.create(
   product_name: "CHELBESA",
@@ -238,10 +238,10 @@ chelbesa = Product.create(
 ProductCategory.create(product_id: chelbesa.id, category_id: coffee.id)
 ProductCategory.create(product_id: chelbesa.id, category_id: single_origin.id)
 
-chelbesa_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/chelbesa_2048x2048.webp')
-chelbesa.photo.attach(io: chelbesa_photo, filename: 'chelbesa_photo.jpg')
-roast2 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_2.webp')
-chelbesa.roast_level_photo.attach(io: roast2, filename: 'roast2.jpg')
+# chelbesa_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/chelbesa_2048x2048.webp')
+# chelbesa.photo.attach(io: chelbesa_photo, filename: 'chelbesa_photo.jpg')
+# roast2 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_2.webp')
+# chelbesa.roast_level_photo.attach(io: roast2, filename: 'roast2.jpg')
 
 streetlevel = Product.create(
   product_name: "STREETLEVEL",
@@ -256,10 +256,10 @@ streetlevel = Product.create(
 ProductCategory.create(product_id: streetlevel.id, category_id: coffee.id)
 ProductCategory.create(product_id: streetlevel.id, category_id: blend.id)
 
-streetlevel_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/streetlevel_2048x2048.webp')
-streetlevel.photo.attach(io: streetlevel_photo, filename: 'streetlevel_photo.jpg')
-roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
-streetlevel.roast_level_photo.attach(io: roast6, filename: 'roast6.jpg')
+# streetlevel_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/streetlevel_2048x2048.webp')
+# streetlevel.photo.attach(io: streetlevel_photo, filename: 'streetlevel_photo.jpg')
+# roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
+# streetlevel.roast_level_photo.attach(io: roast6, filename: 'roast6.jpg')
 
 sermon = Product.create(
   product_name: "SERMON",
@@ -274,10 +274,10 @@ sermon = Product.create(
 ProductCategory.create(product_id: sermon.id, category_id: coffee.id)
 ProductCategory.create(product_id: sermon.id, category_id: blend.id)
 
-sermon_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/sermon_2048x2048.webp')
-sermon.photo.attach(io: sermon_photo, filename: 'sermon_photo.jpg')
-roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
-sermon.roast_level_photo.attach(io: roast6, filename: 'roast6.jpg')
+# sermon_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/sermon_2048x2048.webp')
+# sermon.photo.attach(io: sermon_photo, filename: 'sermon_photo.jpg')
+# roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
+# sermon.roast_level_photo.attach(io: roast6, filename: 'roast6.jpg')
 
 seabright = Product.create(
   product_name: "SEABRIGHT HOUSE BLEND",
@@ -292,10 +292,10 @@ seabright = Product.create(
 ProductCategory.create(product_id: seabright.id, category_id: coffee.id)
 ProductCategory.create(product_id: seabright.id, category_id: blend.id)
 
-seabright_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/seabright_f2f708c9-7e17-48d1-8c21-f377f37b0790_2048x2048.webp')
-seabright.photo.attach(io: seabright_photo, filename: 'seabright_photo.webp')
-roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
-seabright.roast_level_photo.attach(io: roast6, filename: 'roast6.webp')
+# seabright_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/seabright_f2f708c9-7e17-48d1-8c21-f377f37b0790_2048x2048.webp')
+# seabright.photo.attach(io: seabright_photo, filename: 'seabright_photo.webp')
+# roast6 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_6.webp')
+# seabright.roast_level_photo.attach(io: roast6, filename: 'roast6.webp')
 
 the_1950 = Product.create(
   product_name: "THE 1950 DOSE & BREW CRAFT INSTANT COFFEE",
@@ -311,10 +311,10 @@ ProductCategory.create(product_id: the_1950.id, category_id: coffee.id)
 ProductCategory.create(product_id: the_1950.id, category_id: blend.id)
 ProductCategory.create(product_id: the_1950.id, category_id: instant.id)
 
-the_1950_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/The1950Front_2048x2048.webp')
-the_1950.photo.attach(io: the_1950_photo, filename: 'the_1950_photo.jpg')
-roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
-the_1950.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
+# the_1950_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/The1950Front_2048x2048.webp')
+# the_1950.photo.attach(io: the_1950_photo, filename: 'the_1950_photo.jpg')
+# roast5 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_5.webp')
+# the_1950.roast_level_photo.attach(io: roast5, filename: 'roast5.jpg')
 
 buena_vista = Product.create(
   product_name: "BUENA VISTA DOSE & BREW CRAFT INSTANT COFFEE",
@@ -330,10 +330,10 @@ ProductCategory.create(product_id: buena_vista.id, category_id: coffee.id)
 ProductCategory.create(product_id: buena_vista.id, category_id: blend.id)
 ProductCategory.create(product_id: buena_vista.id, category_id: instant.id)
 
-buena_vista_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/BuenaVistaFront_2048x2048.webp')
-buena_vista.photo.attach(io: buena_vista_photo, filename: 'buena_vista_photo.webp')
-roast7 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_7.webp')
-buena_vista.roast_level_photo.attach(io: roast7, filename: 'roast7.webp')
+# buena_vista_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/BuenaVistaFront_2048x2048.webp')
+# buena_vista.photo.attach(io: buena_vista_photo, filename: 'buena_vista_photo.webp')
+# roast7 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_7.webp')
+# buena_vista.roast_level_photo.attach(io: roast7, filename: 'roast7.webp')
 
 bronson_instant = Product.create(
   product_name: "BRONSON FRENCH ROAST CRAFT INSTANT COFFEE",
@@ -349,12 +349,10 @@ ProductCategory.create(product_id: bronson_instant.id, category_id: coffee.id)
 ProductCategory.create(product_id: bronson_instant.id, category_id: blend.id)
 ProductCategory.create(product_id: bronson_instant.id, category_id: instant.id)
 
-bronson_instant_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Bronson_instant_2048x2048.webp')
-bronson_instant.photo.attach(io: bronson_instant_photo, filename: 'bronson_instant_photo.webp')
-roast7 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_7.webp')
-bronson_instant.roast_level_photo.attach(io: roast7, filename: 'roast7.webp')
-
-
+# bronson_instant_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Bronson_instant_2048x2048.webp')
+# bronson_instant.photo.attach(io: bronson_instant_photo, filename: 'bronson_instant_photo.webp')
+# roast7 = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/roast_level_7.webp')
+# bronson_instant.roast_level_photo.attach(io: roast7, filename: 'roast7.webp')
 
 
 
@@ -374,8 +372,8 @@ cap = Product.create(
 ProductCategory.create(product_id: cap.id, category_id: gear.id)
 ProductCategory.create(product_id: cap.id, category_id: merch.id)
 
-cap_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/trailblazercamocap_2048x2048.webp')
-cap.photo.attach(io: cap_photo, filename: 'cap_photo.webp')
+# cap_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/trailblazercamocap_2048x2048.webp')
+# cap.photo.attach(io: cap_photo, filename: 'cap_photo.webp')
 
 mug = Product.create(
   product_name: "VERVE CLASSIC NOIR CAMP MUG",
@@ -391,8 +389,8 @@ ProductCategory.create(product_id: mug.id, category_id: gear.id)
 ProductCategory.create(product_id: mug.id, category_id: merch.id)
 ProductCategory.create(product_id: mug.id, category_id: mugs.id)
 
-mug_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Mug_core_black1_2048x2048.webp')
-mug.photo.attach(io: mug_photo, filename: 'mug_photo.webp')
+# mug_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Mug_core_black1_2048x2048.webp')
+# mug.photo.attach(io: mug_photo, filename: 'mug_photo.webp')
 
 water_bottle = Product.create(
   product_name: "VERVE MIIR 32 OZ WATER BOTTLE",
@@ -408,8 +406,8 @@ ProductCategory.create(product_id: water_bottle.id, category_id: gear.id)
 ProductCategory.create(product_id: water_bottle.id, category_id: merch.id)
 ProductCategory.create(product_id: water_bottle.id, category_id: mugs.id)
 
-water_bottle_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/miir-32_oz_water_bottle_1_2048x2048.jpg')
-water_bottle.photo.attach(io: water_bottle_photo, filename: 'water_bottle.jpg')
+# water_bottle_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/miir-32_oz_water_bottle_1_2048x2048.jpg')
+# water_bottle.photo.attach(io: water_bottle_photo, filename: 'water_bottle.jpg')
 
 pourover = Product.create(
   product_name: "FELLOW STAGG [ X ] POUROVER SET",
@@ -424,8 +422,8 @@ pourover = Product.create(
 ProductCategory.create(product_id: pourover.id, category_id: gear.id)
 ProductCategory.create(product_id: pourover.id, category_id: brew.id)
 
-pourover_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Stagg-_X_-Set-w-Tasting-Glass-hero_2048x2048.webp')
-pourover.photo.attach(io: pourover_photo, filename: 'pourover_photo.webp')
+# pourover_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Stagg-_X_-Set-w-Tasting-Glass-hero_2048x2048.webp')
+# pourover.photo.attach(io: pourover_photo, filename: 'pourover_photo.webp')
 
 french_press = Product.create(
   product_name: "FELLOW CLARA FRENCH PRESS - MATTE BLACK & WALNUT",
@@ -440,8 +438,8 @@ french_press = Product.create(
 ProductCategory.create(product_id: french_press.id, category_id: gear.id)
 ProductCategory.create(product_id: french_press.id, category_id: brew.id)
 
-french_press_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Clara_Matte_Black_with_Walnut_Handle_2048x2048.webp')
-french_press.photo.attach(io: french_press_photo, filename: 'french_press_photo.jpg')
+# french_press_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Clara_Matte_Black_with_Walnut_Handle_2048x2048.webp')
+# french_press.photo.attach(io: french_press_photo, filename: 'french_press_photo.jpg')
 
 book = Product.create(
   product_name: "FARMLEVEL DIGEST VOL. 2 PANAMA",
@@ -456,8 +454,8 @@ book = Product.create(
 ProductCategory.create(product_id: book.id, category_id: gear.id)
 ProductCategory.create(product_id: book.id, category_id: merch.id)
 
-book_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Cover_Shot_2048x2048.webp')
-book.photo.attach(io: book_photo, filename: 'book_photo.jpg')
+# book_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Cover_Shot_2048x2048.webp')
+# book.photo.attach(io: book_photo, filename: 'book_photo.jpg')
 
 beanie = Product.create(
   product_name: "VERVE CLASSIC BEANIE",
@@ -472,8 +470,8 @@ beanie = Product.create(
 ProductCategory.create(product_id: beanie.id, category_id: gear.id)
 ProductCategory.create(product_id: beanie.id, category_id: merch.id)
 
-beanie_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/beanie2_2048x2048.webp')
-beanie.photo.attach(io: beanie_photo, filename: 'beanie_photo.jpg')
+# beanie_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/beanie2_2048x2048.webp')
+# beanie.photo.attach(io: beanie_photo, filename: 'beanie_photo.jpg')
 
 filters = Product.create(
   product_name: "CHEMEX COFFEE FILTERS",
@@ -488,8 +486,8 @@ filters = Product.create(
 ProductCategory.create(product_id: filters.id, category_id: gear.id)
 ProductCategory.create(product_id: filters.id, category_id: brew.id)
 
-filters_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/chemex_filters_2048x2048.webp')
-filters.photo.attach(io: filters_photo, filename: 'filters_photo.jpg')
+# filters_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/chemex_filters_2048x2048.webp')
+# filters.photo.attach(io: filters_photo, filename: 'filters_photo.jpg')
 
 kettle = Product.create(
   product_name: "FELLOW STAGG EKG ELECTRIC KETTLE",
@@ -504,8 +502,8 @@ kettle = Product.create(
 ProductCategory.create(product_id: kettle.id, category_id: gear.id)
 ProductCategory.create(product_id: kettle.id, category_id: brew.id)
 
-kettle_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Fellow_Stagg_EKG_2048x2048+(1).webp')
-kettle.photo.attach(io: kettle_photo, filename: 'kettle_photo.jpg')
+# kettle_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Fellow_Stagg_EKG_2048x2048+(1).webp')
+# kettle.photo.attach(io: kettle_photo, filename: 'kettle_photo.jpg')
 
 chemex = Product.create(
   product_name: "CHEMEX POUROVER COFFEE MAKER",
@@ -520,8 +518,8 @@ chemex = Product.create(
 ProductCategory.create(product_id: chemex.id, category_id: gear.id)
 ProductCategory.create(product_id: chemex.id, category_id: brew.id)
 
-chemex_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Chemex_Wood_Handle_2048x2048.webp')
-chemex.photo.attach(io: chemex_photo, filename: 'chemex_photo.jpg')
+# chemex_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Chemex_Wood_Handle_2048x2048.webp')
+# chemex.photo.attach(io: chemex_photo, filename: 'chemex_photo.jpg')
 
 diner_mug = Product.create(
   product_name: "KINTO DINER MUG",
@@ -537,5 +535,5 @@ ProductCategory.create(product_id: diner_mug.id, category_id: gear.id)
 ProductCategory.create(product_id: diner_mug.id, category_id: merch.id)
 ProductCategory.create(product_id: diner_mug.id, category_id: mugs.id)
 
-diner_mug_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Kinto.Silo_2048x2048.webp')
-diner_mug.photo.attach(io: diner_mug_photo, filename: 'diner_mug_photo.webp')
+# diner_mug_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Kinto.Silo_2048x2048.webp')
+# diner_mug.photo.attach(io: diner_mug_photo, filename: 'diner_mug_photo.webp')
