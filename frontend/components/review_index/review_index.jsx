@@ -13,10 +13,14 @@ class ReviewIndex extends React.Component{
              <span>
                 Stars: {averageRating(Object.values(reviews))}
                 <br /> 
-                based on {Object.values(reviews).length} reviews
+                Based on {Object.values(reviews).length} reviews
              </span>
              <div className="stars-summary">
-              I am the stars summary table              
+              I am the stars summary table
+              <br />
+              5 stars: 50%
+              <br />
+              4 stars: 50%              
              </div>
           </div>
         </div>

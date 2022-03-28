@@ -26,7 +26,7 @@ class ProductShow extends React.Component{
     if(this.state.price === "Loading..."){
       this.setState({price: this.props.product.price})
     }
-    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+    // window.scroll({top: 0, left: 0, behavior: 'smooth' })
     if(oldProps.product.id !== this.props.product.id){
       this.props.fetchProduct(this.props.match.params.productId)
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
@@ -35,7 +35,6 @@ class ProductShow extends React.Component{
   
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)
-    window.scroll({top: 0, left: 0, behavior: 'smooth' })
   };
   
   getPathFromCategory(){
