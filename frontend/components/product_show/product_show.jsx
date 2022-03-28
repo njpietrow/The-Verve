@@ -24,8 +24,9 @@ class ProductShow extends React.Component{
 
   componentDidUpdate(){
     //set price to a dummy placeholder until component information has been fetched.
+    console
     if(this.state.price !== this.props.product.price){
-      this.setState({price: this.props.product.price.padEnd(5,'0')})
+      this.setState({price: this.props.product.price})
     }
   }
   
@@ -91,7 +92,7 @@ class ProductShow extends React.Component{
               )}
 
               <p className="product-show-stars">stars --should link to the reviews section of the page--</p>
-              <p className="green show-page-price">{this.state.price}</p>
+              <p className="green show-page-price">{this.state.price.padEnd(5,'0')}</p>
 
               <AddToCartFormContainer 
                 hasBag={!((product.bagSize === "none") || gear)}

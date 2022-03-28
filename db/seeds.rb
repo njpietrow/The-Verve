@@ -20,7 +20,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('categories')
 
 User.create(email: "DemoUser@gmail.com", password: "password", first_name: "Nick", last_name: "Pietrow")
 
-coffee = Category.create(name: "coffee")
+coffee = Category.create(name: "all-coffee")
 single_origin = Category.create(name: "single-origin")
 new_arrivals = Category.create(name: "new-arrivals")
 blend = Category.create(name: "blends")
@@ -29,10 +29,6 @@ gear = Category.create(name: "gear")
 merch = Category.create(name: "merch")
 mugs = Category.create(name: "mugs")
 brew = Category.create(name: "brew")
-
-
-
-
 
 
 
