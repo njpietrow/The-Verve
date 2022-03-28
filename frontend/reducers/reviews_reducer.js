@@ -5,7 +5,7 @@ const reviewsReducer = (state = {}, action) => {
   let nextState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_PRODUCT:
-      nextState = action.reviews
+      if(action.reviews) nextState = action.reviews
       return nextState
     default:
       return state;

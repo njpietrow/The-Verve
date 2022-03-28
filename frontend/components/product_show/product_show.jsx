@@ -2,8 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom"
 import AddToCartFormContainer from "./add_to_cart_form_container";
 import {titleCase} from "../../util/string_util"
-import ReviewIndex from "../review_index/review_index";
 import { HashLink } from "react-router-hash-link";
+import ReviewIndexContainer from "../review_index/review_index_container";
 
 class ProductShow extends React.Component{
 
@@ -21,10 +21,15 @@ class ProductShow extends React.Component{
     this.setState({price})
   };
 
-  componentDidUpdate(){
+  componentDidUpdate(oldProps){
     //set price to a dummy placeholder until component information has been fetched.
     if(this.state.price === "Loading..."){
       this.setState({price: this.props.product.price})
+    }
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+    if(oldProps.product.id !== this.props.product.id){
+      this.props.fetchProduct(this.props.match.params.productId)
+      window.scroll({top: 0, left: 0, behavior: 'smooth' })
     }
   }
   
@@ -51,7 +56,7 @@ class ProductShow extends React.Component{
   };
 
   render(){
-    const {product, updateFilter, category} = this.props;
+    const {product, updateFilter, category, rating} = this.props;
     if (!product) return <div style={{height: 800}}></div>
     document.title = titleCase(product.productName);
     let gear = (product.ingredients === "-");
@@ -93,7 +98,7 @@ class ProductShow extends React.Component{
                 smooth 
                 to={`/collections/${product.id}#review-index-container`}
               >
-                <p className="product-show-stars">--stars--</p>
+                <p className="product-show-stars">Stars: --{rating}-- will add icons later</p>
               </HashLink>
               <p className="green show-page-price">{this.state.price.padEnd(5,'0')}</p>
 
@@ -128,7 +133,7 @@ class ProductShow extends React.Component{
           </div>
         </div>
 
-        <ReviewIndex />
+        <ReviewIndexContainer key={product.id}/>
       </div>
     )
   }

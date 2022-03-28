@@ -11,3 +11,12 @@ export const titleCase = (string) => {
 export const amountFormat = (num) => {
   return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
 }
+
+export const averageRating = (reviewsArray) => {
+  let total = 0;
+  if (!reviewsArray) return "N/A"
+  reviewsArray.forEach(review => {
+    total += review.stars;
+  })    
+  return total/reviewsArray.length;
+}
