@@ -96,7 +96,7 @@ class ProductShow extends React.Component{
 
               <HashLink 
                 smooth 
-                to={`/collections/${product.id}#review-index-container`}
+                to={`/collections/${product.id}#review-index`}
               >
                 <p className="product-show-stars">Stars: --{product.avgRating}--</p>
               </HashLink>
@@ -112,6 +112,7 @@ class ProductShow extends React.Component{
               <div className="product-show-description"> 
                 {product.description?.split('\n').map((text,idx) => <p key={idx}>{text}</p>)}
               </div>
+              <div id="review-index"></div>
               {gear ? (
                 null
               ) : (
@@ -123,7 +124,7 @@ class ProductShow extends React.Component{
                   <br />
                 </div>
               )}
-           
+
               {/* <div className="product-show-farm-story">
                 <p>
                   {product.farmStory}
@@ -132,8 +133,11 @@ class ProductShow extends React.Component{
             </div>
           </div>
         </div>
-
-        <ReviewIndexContainer key={product.id} avgRating={product.avgRating}/>
+        <ReviewIndexContainer 
+          key={product.id} 
+          avgRating={product.avgRating} 
+          productId={product.id}
+        />
       </div>
     )
   }

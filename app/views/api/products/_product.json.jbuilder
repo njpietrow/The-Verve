@@ -24,4 +24,4 @@ json.reviews do
   end
 end
 
-json.avg_rating (total_stars/num_reviews)
+json.avg_rating (total_stars/num_reviews).round(2)

@@ -11,6 +11,7 @@ import { toggleCartModal } from "./actions/cart_modal_actions";
 import { register, logIn, logOut } from "./actions/session_actions";
 import { fetchProduct, fetchProducts } from "./actions/product_actions";
 import { updateFilter } from "./actions/filter_actions"
+import { createReview } from "./actions/review_form_actions"
 //END TESTING
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -73,6 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.updateFilter = updateFilter;
   window.toggleCartModal = toggleCartModal;
+
+  window.createReview = createReview;
 
   
   //END TESTING

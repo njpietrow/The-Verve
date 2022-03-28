@@ -1,0 +1,43 @@
+.review-form{
+  padding-top: 20px;
+  border-top: 1px solid rgba(176, 174, 174, 0.482);
+  width: 100%;
+}
+
+.review-form input[type="text"] {
+  width: 400px;
+  height: 48px;
+  padding: 0 8px 0 8px;
+  text-align: left;
+  margin-bottom:0;
+}
+
+.review-form textarea{
+  background: #f9f6f1;
+  border: 1px solid #e7dfd2;
+  padding: 8px 8px 8px 8px;
+  width: 60%;
+  height: 100px;
+  resize: none;
+}
+
+.review-submit{
+  margin: 20px 0 0 0 ;
+  padding: 0 8px 0 8px;
+  width: 400px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  background-image: url('./stars.png');
+  width: 25px;
+  height: 25px;
+}
+
+input[type="radio"]:hover {
+  background-position: 30px 60px;
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
+}

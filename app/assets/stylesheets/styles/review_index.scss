@@ -1,12 +1,14 @@
 #review-index-container{
   width: 70%;
-  padding: 24px;
+  padding: 24px 24px 24px 24px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   border: 1px solid rgba(176, 174, 174, 0.482);
   margin-bottom: 60px;
+  color: #383a34;
 }
 
 .review-summary{
@@ -15,20 +17,39 @@
 }
 
 .stars-summary{
-  border: 1px solid black;
+  border: 1px solid #383a34;
   margin-left: 20px;
 }
 
 .review-index-title{
   width: 100%;
+  color: #383a34;
 }
 
 .review-index-list{
   width: 100%;
+  height: 100%;
+  max-height: 410px;
+  overflow-y: auto;
 }
 
 .review-index-item{
   width: 100%;
   padding-top: 8px;
-  border-top: 1px solid rgba(176, 174, 174, 0.482);;
+  border-top: 1px solid rgba(176, 174, 174, 0.482);
+}
+
+.reviewer-name{
+  font-size: 12px;
+}
+
+.reviewer-title{
+  font-size: 16px;
+}
+
+.review-form-login{
+  font-family: inherit;
+  letter-spacing: inherit;
+  text-decoration: underline;
+  font-size: 16px;
 }

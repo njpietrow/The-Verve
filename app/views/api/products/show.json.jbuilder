@@ -7,8 +7,7 @@ json.reviews({})
 json.reviews do
   @product.reviews.each do |review|
     json.set! review.id do 
-      json.extract! review, :id, :title, :body, :stars, :product_id
-      json.reviewer review.reviewer.email
+      json.partial! "/api/reviews/review", review: review
     end
   end
 end

@@ -1,10 +1,11 @@
 import React from "react";
 import ReviewIndexItem from "./review_index_item";
 import ReviewFormContainer from "./review_form_container";
+import { Link } from "react-router-dom";
 
 class ReviewIndex extends React.Component{
   render(){
-    const {reviews, avgRating, loggedIn} = this.props;
+    const {reviews, avgRating, loggedIn, productId} = this.props;
     return(
       <div id="review-index-container">
         <div className="review-index-title">
@@ -21,19 +22,20 @@ class ReviewIndex extends React.Component{
           </div>
         </div>
         <div className="review-index-list">
-          {
-            Object.values(reviews).map(review => (
+          {Object.values(reviews).map(review => (
               <ReviewIndexItem key={review.id} review={review} />
-            ))
-          }
+          ))}
         </div>
-        {
-            loggedIn ? (
-            <ReviewFormContainer />
-          ) : (
-            null
-          )
-        }
+        {loggedIn ? (
+          <ReviewFormContainer productId={productId} />
+        ) : (
+          <div>
+            <Link 
+              to="/login" 
+              className="review-form-login"
+            > Log in</Link>
+            <span> to leave a review ☕️</span>
+          </div>)}
       </div>
     )
   };

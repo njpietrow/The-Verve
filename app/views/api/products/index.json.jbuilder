@@ -17,6 +17,6 @@
       num_reviews += 1
     end
 
-    json.avg_rating (total_stars/num_reviews)
+    json.avg_rating (total_stars/num_reviews).round(2)
   end
  end
