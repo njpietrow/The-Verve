@@ -8,16 +8,26 @@ class ProductShow extends React.Component{
 
   constructor(props){
     super(props)
-    this.updatePrice = this.updatePrice.bind(this);
     this.state = {
-      price: this.props.product.price.padEnd(5,'0')
+      price: "Loading..."
     };
+    // this.state = {
+    //   price: this.props.product.price.padEnd(5,'0')
+    // };
+    this.updatePrice = this.updatePrice.bind(this);
   };
 
   updatePrice(multiplier){
     let price = String((Number(this.props.product.price) * multiplier).toFixed(2)).padEnd(5,'0')
     this.setState({price})
   };
+
+  componentDidUpdate(){
+    //set price to a dummy placeholder until component information has been fetched.
+    if(this.state.price !== this.props.product.price){
+      this.setState({price: this.props.product.price.padEnd(5,'0')})
+    }
+  }
   
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)

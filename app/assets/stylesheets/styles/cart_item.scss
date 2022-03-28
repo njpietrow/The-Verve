@@ -6,18 +6,22 @@
 }
 
 .cart-item-photo-container{
-  width: 130px;
-  height: 130px;
+  width: 30%;
+  height: auto;
   position: relative;
   display: flex;
   align-items: center;
 }
 
 .cart-item-description-container{
-  width: 80%;
-  margin-right: 20px;
+  width:69%;
+  // margin-right: 20px;
   padding-top: 10px;
   position: relative;
+}
+
+.cart-item-title:hover{
+  color: #383a34;
 }
 
 .description-inner-content{

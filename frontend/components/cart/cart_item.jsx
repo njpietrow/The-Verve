@@ -19,15 +19,21 @@ class CartItem extends React.Component{
               alt={`${cartItem.productName}-img`}   
             />
             <div className="circle">
-              {cartItem.quantity}
+              Qty:{cartItem.quantity}
             </div>
           </Link>
         </div>
         <div className="cart-item-description-container">  
           <div className="description-inner-content">
             <div>
-              <h5>{cartItem.productName} </h5>
-              {cartItem.hasBag ? ( <h6>{cartItem.bagSize} — {cartItem.grind}</h6>):(null)}
+              <Link 
+                to={`/collections/${cartItem.id}`}
+                className="cart-item-title"
+                onClick={() => this.props.toggleCartModal()}
+              >
+                <h5>{cartItem.productName} </h5>  
+                {cartItem.hasBag ? ( <h6>{cartItem.bagSize} — {cartItem.grind}</h6>):(null)}
+              </Link>
             </div>
             <a onClick={() => this.props.removeCartItem(cartItem)}>
               <i  className="fa-solid fa-xmark remove-product"></i>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 class Cart extends React.Component{
   render(){
-    const {cartItems, toggleCartModal, quantity, subtotal, checkout } = this.props;
+    const {cartItems, toggleCartModal, updateFilter, subtotal, checkout } = this.props;
     return(
       <div>
         <div 
