@@ -17,7 +17,7 @@
 
 .review-summary{
   display: flex;
-  padding-bottom: 8px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #de6932;
   z-index: 4;
 }
@@ -39,7 +39,7 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   border: 1px solid rgba(176, 174, 174, 0.482);
   border-bottom: 1px solid rgba(176, 174, 174, 0.482);
@@ -51,7 +51,7 @@
 }
 
 .review-index-item{
-  width: 97%;
+  width: 96%;
   padding: 8px 10px 8px 10px;
   border-top: 1px solid rgba(176, 174, 174, 0.482);
   scroll-margin: 300px;
@@ -114,6 +114,23 @@
   letter-spacing: inherit;
   text-decoration: underline;
   font-size: 16px;
+}
+
+.review-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-content{
+  width: 85%;
+}
+
+.like-button-container{
+  width: 15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color:rgba(74, 73, 73, 0.803)
 }
 
 .stars{

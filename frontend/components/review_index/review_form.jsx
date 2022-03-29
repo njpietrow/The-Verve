@@ -82,7 +82,7 @@ class ReviewForm extends React.Component{
           value={this.state.title}
           onChange={this.update("title")}
         /> <br /> <br />
-        <label htmlFor="body">Body:</label>
+        <label htmlFor="body">Review:</label>
         <textarea
           maxLength = "350"
           className="review-body"

@@ -21,9 +21,16 @@ class ReviewIndexItem extends React.Component{
             </div>
           </div>
         </div>
-        <div className="review-content">
-          <h5 className="reviewer-title">{review.title}</h5>
-          <p>{review.body}</p>
+        <div className="review-section">
+          <div className="review-content">
+            <h5 className="reviewer-title">{review.title}</h5>
+            <p>{review.body}</p>
+          </div>
+          <div className="like-button-container">
+            1<span>&nbsp;</span><i className="fa-solid fa-thumbs-up"></i>
+            <span>&nbsp; &nbsp;</span>
+            2<span>&nbsp;</span><i className="fa-solid fa-thumbs-down"></i>
+          </div>
         </div>
     </div>
     )
