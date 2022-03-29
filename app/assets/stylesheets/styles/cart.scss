@@ -9,8 +9,8 @@
     0 0 5px #fff,
     0 0 10px rgb(255, 183, 75),
     0 0 20px rgb(255, 183, 75),
-    0 0 60px rgb(238, 160, 43),
     0 0 100px rgb(238, 160, 43),
+    0 0 200px rgb(238, 160, 43)
   }
   30% {
     color: #e65400;
@@ -18,8 +18,8 @@
     0 0 5px #fff,
     0 0 10px rgb(255, 183, 75),
     0 0 20px rgb(255, 183, 75),
-    0 0 60px rgb(238, 160, 43),
     0 0 100px rgb(238, 160, 43),
+    0 0 200px rgb(238, 160, 43)
   }
   100% { 
     color: black; 
@@ -59,7 +59,7 @@
   transform: translateX(100%);
   transition: transform 0.25s ease-out;
   z-index: 6;
-
+  border-radius: 5px;
   border-left: 1px solid #e7dfd2;
 }
 

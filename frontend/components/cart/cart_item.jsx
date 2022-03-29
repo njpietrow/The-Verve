@@ -50,7 +50,8 @@ class CartItem extends React.Component{
               </Link>
             </div>
             <a onClick={() => this.props.removeCartItem(cartItem)}>
-              <i  className="fa-solid fa-xmark remove-product"></i>
+              {/* <i  className="fa-solid fa-xmark remove-product"></i> */}
+              <i className="fa fa-trash remove-product" aria-hidden="true"></i>
             </a>
           </div>
           <div className="quantity-adjust-container">
