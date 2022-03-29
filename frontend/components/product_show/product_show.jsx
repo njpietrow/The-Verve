@@ -123,7 +123,7 @@ class ProductShow extends React.Component{
                   <div id="review-index"></div>
                   {/* <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/> */}
                   placeholder to avoid s3 charges
-                  <img src="http://www.cesix.inifap.gob.mx/js/frutalestropicales_old/map/anychart/help/docs/img/Samples/horizontal-thermometer-gauge-sample.png" alt="fake image" />
+                  <img src="https://www.cesix.inifap.gob.mx/js/frutalestropicales_old/map/anychart/help/docs/img/Samples/horizontal-thermometer-gauge-sample.png" alt="fake image" />
                   <br />
                 </div>
               )}
