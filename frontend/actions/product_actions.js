@@ -8,7 +8,7 @@ const receiveProducts = (products) => ({
   products
 });
 
-const receiveProduct = (payload) => ({
+export const receiveProduct = (payload) => ({
   type: RECEIVE_PRODUCT,
   product: payload.product,
   reviews: payload.reviews

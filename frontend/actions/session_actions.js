@@ -1,5 +1,4 @@
 import * as SessionApiUtil from "../util/session_api_util";
-import { saveState } from "../util/local_storage";
 import { checkout } from "./cart_item_actions";
 
 // ACTION CONSTANTS

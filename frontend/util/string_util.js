@@ -18,5 +18,5 @@ export const averageRating = (reviewsArray) => {
   reviewsArray.forEach(review => {
     total += review.stars;
   })    
-  return total/reviewsArray.length;
+  return (total/reviewsArray.length).toFixed(2) ;
 }

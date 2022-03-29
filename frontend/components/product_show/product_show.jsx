@@ -56,7 +56,7 @@ class ProductShow extends React.Component{
   };
 
   render(){
-    const {product, updateFilter, category} = this.props;
+    const {product, updateFilter, category, averageRating} = this.props;
     if (!product) return <div style={{height: 800}}></div>
     document.title = titleCase(product.productName);
     let gear = (product.ingredients === "-");
@@ -98,7 +98,8 @@ class ProductShow extends React.Component{
                 smooth 
                 to={`/collections/${product.id}#review-index`}
               >
-                <p className="product-show-stars">Stars: --{product.avgRating}--</p>
+                {/* <p className="product-show-stars">Stars: --{product.avgRating}--</p> */}
+                <p className="product-show-stars">Stars: --{averageRating}--</p>
               </HashLink>
               <p className="green show-page-price">{this.state.price.padEnd(5,'0')}</p>
 

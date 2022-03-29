@@ -4,6 +4,24 @@
   width: 100%;
 }
 
+.leave-review-title{
+  font-size: 26px;
+}
+
+.review-errors{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  padding-bottom: 12px;
+}
+
+.review-errors li{
+  list-style: none;
+  color: rgb(167, 67, 49);
+}
+
 .review-form input[type="text"] {
   width: 400px;
   height: 48px;
