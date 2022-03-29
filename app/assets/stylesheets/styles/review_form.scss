@@ -1,7 +1,8 @@
 .review-form{
-  padding-top: 20px;
-  border-top: 1px solid rgba(176, 174, 174, 0.482);
-  width: 100%;
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid rgba(176, 174, 174, 0.482);
+  width: 95%;
 }
 
 .leave-review-title{
@@ -45,17 +46,14 @@
   width: 400px;
 }
 
-input[type="radio"] {
-  -webkit-appearance: none;
-  background-image: url('./stars.png');
-  width: 25px;
-  height: 25px;
+.star-button {
+  font-size: 20px;
+  padding: 0 4px 0 4px;
 }
 
-input[type="radio"]:hover {
-  background-position: 30px 60px;
+.on {
+  color: orange;
 }
-
-input[type="radio"]:checked {
-  background-position: 30px 30px;
+.off {
+  color: #e7dfd2;
 }

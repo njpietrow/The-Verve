@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
 
 class ReviewForm extends React.Component{
   constructor(props){
@@ -11,6 +12,7 @@ class ReviewForm extends React.Component{
       stars: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   };
 
   handleSubmit(e){
@@ -24,6 +26,16 @@ class ReviewForm extends React.Component{
         })
       });
   }
+
+  componentDidMount(){
+    this.unlisten = this.props.history.listen(() => {
+      this.props.clearReviewErrors();
+    });
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }  
 
   update(field){
     return e => this.setState({[field]: e.currentTarget.value})
@@ -49,7 +61,6 @@ class ReviewForm extends React.Component{
   }
 
   render(){
-    console.log(this.state.stars)
     return(
       <form className="review-form" onSubmit={this.handleSubmit}>
         <h4 className="leave-review-title">Leave a Review</h4>
@@ -69,13 +80,25 @@ class ReviewForm extends React.Component{
           value={this.state.body}
           onChange={this.update("body")}
         /><br /> <br />
-        <label htmlFor="stars">Rating:</label> <br />
-        <input checked={1 == this.state.stars} type="radio" name="stars" value={1} onChange={this.update("stars")}/>
-        <input checked={2 == this.state.stars} type="radio" name="stars" value={2} onChange={this.update("stars")}/>
-        <input checked={3 == this.state.stars} type="radio" name="stars" value={3} onChange={this.update("stars")}/>
-        <input checked={4 == this.state.stars} type="radio" name="stars" value={4} onChange={this.update("stars")}/>
-        <input checked={5 == this.state.stars} type="radio" name="stars" value={5} onChange={this.update("stars")}/>
-        <br /><br />
+
+        <label htmlFor="rating">Rating:</label> <br /> 
+        <div className="rating-select" name="rating">
+          {[...Array(5)].map((_, idx) => {
+            idx += 1;
+            return (
+              <button
+                type="button"
+                key={idx}
+                value={idx}
+                className={idx <= this.state.stars ? "star-button on" : "star-button off"}
+                onClick={this.update("stars")}
+              >
+                <span className="star">&#9733;</span>
+              </button>
+            );
+          })}
+        </div><br />
+
         <input
           type="submit" 
           className="add-cart-button review-submit"

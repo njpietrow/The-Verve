@@ -1,4 +1,5 @@
 json.extract! review, :id, :title, :body, :stars, :user_id, :product_id
+json.date Time.at(review.created_at.to_i).strftime("%B %e, %Y")
 
 last_name = ""
 unless (review.reviewer.last_name.empty?)

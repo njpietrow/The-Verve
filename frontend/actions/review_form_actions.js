@@ -3,7 +3,7 @@ import * as FormApiUtil from "../util/review_form_api_util";
 //ACTION CONSTANTS
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
-// export const CLEAR_REVIEW_ERRORS = "CLEAR_REVIEW_ERRORS";
+export const CLEAR_REVIEW_ERRORS = "CLEAR_REVIEW_ERRORS";
 
 
 // ACTION CREATORS
@@ -17,9 +17,9 @@ export const receiveReviewErrors = (errors) => ({
   errors,
 });
 
-// export const clearReviewErrors = () => ({
-//   type: CLEAR_REVIEW_ERRORS
-// });
+export const clearReviewErrors = () => ({
+  type: CLEAR_REVIEW_ERRORS
+});
 
 // THUNK ACTION CREATORS
 export const createReview = (review) => dispatch => {
