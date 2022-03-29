@@ -11,6 +11,13 @@ class ProductIndexItem extends React.Component{
     };
   };
 
+  componentWillUnmount(){
+    if (this.timer) {                          
+      clearTimeout(this.timer);      
+      this.timer = 0;               
+    }   
+  }
+
   handleAddToCart(){
     const {toggleCartModal, addCartItem,product} = this.props;
     this.setState({
@@ -18,7 +25,7 @@ class ProductIndexItem extends React.Component{
       color: "#b1bd76",
     });
 
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       this.setState({
         cartAddButtonTitle: "Add to Cart", 
         color: "#e65400",

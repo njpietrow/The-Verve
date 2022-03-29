@@ -12,7 +12,11 @@
 #  updated_at :datetime         not null
 #
 class Review < ApplicationRecord
-  validates :title, :body, :stars, :user_id, :product_id, presence: true
+  validates :title, presence: {message: "Title can't be blank"}
+  validates :body, presence: {message: "Body can't be blank"}
+  validates :stars, presence: {message: "Rating can't be blank"}
+  validates :product_id, presence: true
+  validates :user_id, presence: true, uniqueness: { scope: :product_id, message: "Account has already left a review for this product" }
 
   belongs_to :reviewer,
     foreign_key: :user_id,

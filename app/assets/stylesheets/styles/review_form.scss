@@ -5,6 +5,12 @@
   width: 95%;
 }
 
+.review-form label{
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
 .leave-review-title{
   font-size: 26px;
 }
@@ -14,7 +20,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  width: 400px;
+  width: 450px;
   padding-bottom: 12px;
 }
 

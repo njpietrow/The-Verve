@@ -65,7 +65,7 @@ class ReviewForm extends React.Component{
       <form className="review-form" onSubmit={this.handleSubmit}>
         <h4 className="leave-review-title">Leave a Review</h4>
         {this.renderErrors()}
-        <label htmlFor="title">Title:</label><br />
+        <label htmlFor="title">Title:</label>
         <input
           maxLength = "55"
           className="review-title"
@@ -73,7 +73,7 @@ class ReviewForm extends React.Component{
           value={this.state.title}
           onChange={this.update("title")}
         /> <br /> <br />
-        <label htmlFor="body">Body:</label><br />
+        <label htmlFor="body">Body:</label>
         <textarea
           maxLength = "350"
           className="review-body"
@@ -81,7 +81,7 @@ class ReviewForm extends React.Component{
           onChange={this.update("body")}
         /><br /> <br />
 
-        <label htmlFor="rating">Rating:</label> <br /> 
+        <label htmlFor="rating">Rating:</label>
         <div className="rating-select" name="rating">
           {[...Array(5)].map((_, idx) => {
             idx += 1;
