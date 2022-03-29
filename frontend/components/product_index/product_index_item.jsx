@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Stars from "../review_index/stars";
 
 class ProductIndexItem extends React.Component{
   constructor(props){
@@ -12,7 +13,7 @@ class ProductIndexItem extends React.Component{
   };
 
   componentWillUnmount(){
-    if (this.timer) {                          
+    if (this.timer) {          
       clearTimeout(this.timer);      
       this.timer = 0;               
     }   
@@ -74,8 +75,7 @@ class ProductIndexItem extends React.Component{
         ) : (
           null
         )}
-        <p>{product.avgRating ? `${product.avgRating} stars` : null}</p>
-        {/* TODO: if product has a rating, implement stars based on avg of review rating associations */}
+        <p>{product.avgRating ? <Stars averageRating={product.avgRating} /> : null}</p>
 
         <div>
           <span className="green index-price">{product.price.padEnd(5,'0')} / </span>

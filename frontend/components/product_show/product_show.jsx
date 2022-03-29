@@ -4,6 +4,7 @@ import AddToCartFormContainer from "./add_to_cart_form_container";
 import {titleCase} from "../../util/string_util"
 import { HashLink } from "react-router-hash-link";
 import ReviewIndexContainer from "../review_index/review_index_container";
+import Stars from "../review_index/stars";
 
 class ProductShow extends React.Component{
 
@@ -100,7 +101,7 @@ class ProductShow extends React.Component{
                 to={`/collections/${product.id}#review-index`}
               >
                 {/* <p className="product-show-stars">Stars: --{product.avgRating}--</p> */}
-                <p className="product-show-stars">Stars: --{averageRating}--</p>
+                <p className="product-show-stars"><Stars averageRating={averageRating}/> </p>
               </HashLink>
               <p className="green show-page-price">{this.state.price.padEnd(5,'0')}</p>
 
@@ -114,12 +115,12 @@ class ProductShow extends React.Component{
               <div className="product-show-description"> 
                 {product.description?.split('\n').map((text,idx) => <p key={idx}>{text}</p>)}
               </div>
-              <div id="review-index"></div>
               {gear ? (
-                null
+                <div id="review-index"></div>
               ) : (
                 <div className="product-show-roast-level">
                   <h3>ROAST LEVEL</h3>
+                  <div id="review-index"></div>
                   {/* <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/> */}
                   placeholder to avoid s3 charges
                   <img src="http://www.cesix.inifap.gob.mx/js/frutalestropicales_old/map/anychart/help/docs/img/Samples/horizontal-thermometer-gauge-sample.png" alt="fake image" />

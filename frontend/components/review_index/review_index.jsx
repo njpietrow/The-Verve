@@ -2,6 +2,7 @@ import React from "react";
 import ReviewIndexItem from "./review_index_item";
 import ReviewFormContainer from "./review_form_container";
 import { Link } from "react-router-dom";
+import Stars from "./stars";
 
 class ReviewIndex extends React.Component{
   render(){
@@ -12,13 +13,14 @@ class ReviewIndex extends React.Component{
           <h1>Customer Reviews</h1>
           <div className="review-summary">
              <span>
-                Stars: {averageRating}
+                <Stars averageRating={averageRating} />
                 <br /> 
-                Based on {Object.values(reviews).length} reviews
+                {(Object.values(reviews).length !== 0) ? (
+                  <span>Based on {Object.values(reviews).length} reviews</span> 
+                ) : (
+                  <span>This product has not yet received any reviews</span>
+                )}
              </span>
-             {/* <div className="stars-summary">
-              I am the stars summary table        
-             </div> */}
           </div>
         </div>
         <div className="review-index-list">

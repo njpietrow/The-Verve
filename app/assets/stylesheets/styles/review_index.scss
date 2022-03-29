@@ -49,10 +49,29 @@
   border-top: 1px solid rgba(176, 174, 174, 0.482);
 }
 
+.profile-container{
+  display: flex;
+}
+
+.prof-pic{
+  background: rgba(176, 174, 174, 0.482);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .reviewer-name{
   font-size: 14px;
   padding: 4px 6px 2px 6px;
   font-weight: 600;
+}
+
+.review-content{
+  padding-left: 12px;
 }
 
 .verified-tag::before{
@@ -78,6 +97,8 @@
 .reviewer-title{
   font-size: 16px;
   color: #383a34;
+  padding-top: 2px;
+  padding-bottom: 0px;
 }
 
 .review-form-login{
@@ -85,4 +106,14 @@
   letter-spacing: inherit;
   text-decoration: underline;
   font-size: 16px;
+}
+
+.stars{
+  color: orange;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
 }

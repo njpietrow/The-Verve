@@ -1,5 +1,4 @@
-// import React from "react";
-import React, { useState } from "react";
+import React from "react";
 
 class ReviewForm extends React.Component{
   constructor(props){
@@ -63,7 +62,7 @@ class ReviewForm extends React.Component{
   render(){
     return(
       <form className="review-form" onSubmit={this.handleSubmit}>
-        <h4 className="leave-review-title">Leave a Review</h4>
+        <h4 className="leave-review-title">Love your order? <br /> Please leave a review! </h4>
         {this.renderErrors()}
         <label htmlFor="title">Title:</label>
         <input
