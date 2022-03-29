@@ -17,11 +17,12 @@ class CartItem extends React.Component{
 
   render(){
     const {cartItem} = this.props;
+    const id = cartItem.id;
     return(
       <div className="cart-item">
         <div className="cart-item-photo-container">
           <Link 
-            to={`/collections/${cartItem.id}`}
+            to={`/collections/${id}`}
             className="cart-item-photo"
             onClick={() => this.props.toggleCartModal()}
           >
@@ -40,7 +41,7 @@ class CartItem extends React.Component{
           <div className="description-inner-content">
             <div>
               <Link 
-                to={`/collections/${cartItem.id}`}
+                to={`/collections/${id}`}
                 className="cart-item-title"
                 onClick={() => this.props.toggleCartModal()}
               >
