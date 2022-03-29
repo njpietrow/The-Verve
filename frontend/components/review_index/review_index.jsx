@@ -5,8 +5,20 @@ import { Link } from "react-router-dom";
 import Stars from "./stars";
 
 class ReviewIndex extends React.Component{
+  getReviewMessage(reviews){
+    const numReviews = Object.values(reviews).length;
+    if (numReviews === 0) {
+      return <span>This product has not yet received any reviews</span>
+    } else if (numReviews === 1) {
+      return <span>Based on 1 review</span> 
+    } else {
+      return <span>Based on {Object.values(reviews).length} reviews</span> 
+    }
+  }
+
   render(){
     const {reviews, averageRating, loggedIn, productId} = this.props;
+
     return(
       <div id="review-index-container">
         <div className="review-index-title">
@@ -15,11 +27,7 @@ class ReviewIndex extends React.Component{
              <span>
                 <Stars averageRating={averageRating} />
                 <br /> 
-                {(Object.values(reviews).length !== 0) ? (
-                  <span>Based on {Object.values(reviews).length} reviews</span> 
-                ) : (
-                  <span>This product has not yet received any reviews</span>
-                )}
+                {this.getReviewMessage(reviews)}
              </span>
           </div>
         </div>
