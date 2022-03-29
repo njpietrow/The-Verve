@@ -24,6 +24,15 @@ class User < ApplicationRecord
     through: :reviews,
     source: :product
 
+  has_many :likes,
+    foreign_key: :user_id,
+    class_name: 'Like'
+
+  has_many :liked_reviews,
+    through: :likes,
+    source: :review
+  
+
   attr_reader :password
   after_initialize :ensure_session_token!
 

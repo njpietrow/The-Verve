@@ -25,4 +25,24 @@ class Review < ApplicationRecord
   belongs_to :product,
     foreign_key: :product_id,
     class_name: 'Product'
+
+  has_many :likes,
+    foreign_key: :review_id,
+    class_name: 'Like'
+
+  def self.num_likes(review_id)
+    (self
+      .joins(:likes)
+      .where("review_id = ?", review_id.to_i)
+      .where("dislike = FALSE")
+    ).length
+  end
+
+  def self.num_dislikes(review_id)
+    (self
+      .joins(:likes)
+      .where("review_id = ?", review_id.to_i)
+      .where("dislike = TRUE")
+    ).length
+  end
 end
