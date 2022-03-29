@@ -30,7 +30,7 @@ class ProductShow extends React.Component{
 
     if(!oldProps){
       this.props.fetchProduct(this.props.match.params.productId)
-    } else if(oldProps.product.id !== this.props.product.id){
+    } else if(JSON.stringify(oldProps) !== JSON.stringify(this.props)){
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
     }
   }
