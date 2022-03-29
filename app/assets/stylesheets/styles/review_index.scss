@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   border: 1px solid rgba(176, 174, 174, 0.482);
   margin-bottom: 60px;
   color: #383a34;
@@ -35,8 +35,15 @@
   // margin-top: 25px;
   width: 100%;
   height: 100%;
-  max-height: 450px;
-  overflow-y: scroll;
+  max-height: 510px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid rgba(176, 174, 174, 0.482);
+  border-bottom: 1px solid rgba(176, 174, 174, 0.482);
+  border-right: 1px solid rgba(176, 174, 174, 0.482);
 }
 
 .review-index-item:first-child{
@@ -44,9 +51,10 @@
 }
 
 .review-index-item{
-  width: 100%;
+  width: 97%;
   padding: 8px 10px 8px 10px;
   border-top: 1px solid rgba(176, 174, 174, 0.482);
+  scroll-margin: 300px;
 }
 
 .profile-container{

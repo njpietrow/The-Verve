@@ -16,12 +16,12 @@ class Greeting extends React.Component{
           <Link 
             to="/account" 
             className="header-link"
-          > Account /</Link>
+          ><i className="fa-solid fa-circle-user"></i> Account /</Link>
         ) : ( 
           <Link 
             to="/login" 
             className="header-link"
-          > Login / </Link>
+          ><i className="fa-solid fa-arrow-right-to-bracket"></i> Login / </Link>
         )}
         <a 
           to="/cart" 

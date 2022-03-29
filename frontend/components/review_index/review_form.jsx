@@ -9,6 +9,7 @@ class ReviewForm extends React.Component{
       title: "",
       body: "",
       stars: "",
+      submitButtonTitle: "Publish Review"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -22,7 +23,9 @@ class ReviewForm extends React.Component{
           title: "",
           body: "",
           stars: "",
+          submitButtonTitle: "Published Review ✔",
         })
+        document.querySelector(".review-index-list").lastChild.scrollIntoView({behavior: 'smooth'});
       });
   }
 
@@ -42,6 +45,13 @@ class ReviewForm extends React.Component{
 
   renderErrors(){
     const {errors} = this.props
+    if(errors.find(ele =>  ele[0] === "Account has already left a review for this product")){
+      return(
+        <ul className="review-errors">
+          <li>Account has already left a review for this product</li>
+        </ul>
+      )
+    }
     return(
       <div>
         <ul className="review-errors">
@@ -101,7 +111,7 @@ class ReviewForm extends React.Component{
         <input
           type="submit" 
           className="add-cart-button review-submit"
-          value="Publish Review"
+          value={this.state.submitButtonTitle}
         />
       </form>
     )

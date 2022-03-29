@@ -3,6 +3,7 @@ import React from "react";
 class Stars extends React.Component{
 
   getStars(){
+    // const totalStars = 5;
     if (this.props.averageRating === "No Reviews Yet"){
       return "☆☆☆☆☆";
     }
