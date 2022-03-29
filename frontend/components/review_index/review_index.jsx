@@ -29,7 +29,7 @@ class ReviewIndex extends React.Component{
         {loggedIn ? (
           <ReviewFormContainer productId={productId} />
         ) : (
-          <div>
+          <div className="login-for-review">
             <Link 
               to="/login" 
               className="review-form-login"

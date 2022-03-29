@@ -22,11 +22,6 @@ class ReviewForm extends React.Component{
           body: "",
           stars: "",
         })
-        const nodeList = document.querySelectorAll("input[type=radio]");
-        for (let i = 0; i < nodeList.length; i++) {
-          console.log(nodeList[i])
-          nodeList[i].removeAttribute("checked");
-        }
       });
   }
 

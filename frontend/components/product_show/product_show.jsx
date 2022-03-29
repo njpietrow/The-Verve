@@ -27,8 +27,9 @@ class ProductShow extends React.Component{
       this.setState({price: this.props.product.price})
     }
 
-    if(oldProps.product.id !== this.props.product.id){
+    if(!oldProps){
       this.props.fetchProduct(this.props.match.params.productId)
+    } else if(oldProps.product.id !== this.props.product.id){
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
     }
   }
