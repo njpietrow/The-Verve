@@ -9,7 +9,6 @@ class Api::ProductsController < ApplicationController
     else
       @products = Product.all
     end
-
     render :index
   end
 

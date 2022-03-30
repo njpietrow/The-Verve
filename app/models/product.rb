@@ -47,6 +47,7 @@ class Product < ApplicationRecord
       .where("name LIKE ?", "%#{category}%")
   end
 
+  # query db for products that have similar names that match parameter.
   def self.match_search(query)
     Product
       .joins(:categories)

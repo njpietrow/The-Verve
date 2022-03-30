@@ -41,9 +41,12 @@ header {
 
 .header-container{
   padding-top: 20px;
-  width: 200px;
+  width: 50%;
   display: flex;
   justify-content: end;
+}
+
+.inline-block{
   display: inline-block;
 }
 
@@ -55,14 +58,14 @@ header {
   display: flex;
   display: inline-block;
   position: relative;
-  width: 200px;
+  width: 50%;
 }
 
-.search-input{
+.search-container input[type="text"]{
   position: absolute;
   top:8px;
   left: 10px;
-  width: 30%;
+  width: 50%;
   height: 42px;
   padding-left: 36px;
   text-align: left;

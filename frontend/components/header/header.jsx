@@ -52,6 +52,11 @@ class Header extends React.Component{
     }
   } 
 
+  updateSearch(e){
+    e.preventDefault();
+    this.setState({query: e.currentTarget.value})
+  }
+
   // dynamically render sub-menu component based on subMenu state
   subMenu(){
     if (this.state.subMenu === "none") return null
@@ -84,10 +89,11 @@ class Header extends React.Component{
               <i className="fa-solid fa-magnifying-glass search-icon"></i>
             </a>
             <input
-              className={this.state.search ? ("search-input") : "search-input collapse-search" }
+              id="search-input"
+              className={this.state.search ? "" : "collapse-search" }
               type="text" 
               value={this.state.query}
-              onChange={this.update("query")}
+              onChange={(e) => this.updateSearch(e)}
             />
           </div>
           <Link to="/"><img className="logo"/></Link>
