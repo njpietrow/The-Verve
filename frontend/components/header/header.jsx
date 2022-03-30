@@ -90,7 +90,8 @@ class Header extends React.Component{
               onChange={this.update("query")}
             />
           </div>
-          <img className="logo"/>
+          <Link to="/"><img className="logo"/></Link>
+          
           {/* <Link to="/"><img id="main-logo" src='https://the-verve-seeds.s3.us-west-1.amazonaws.com/logo.png' alt="main logo"  /></Link> */}
           <GreetingContainer />
         </div>
