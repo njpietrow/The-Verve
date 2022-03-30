@@ -556,7 +556,7 @@ puts "starting reviews"
     Review.create(
       user_id: user_i,
       product_id: prod_i,
-      stars: rand(3...5),
+      stars: rand(3...6),
       title: Faker::Company.bs,
       body: Faker::Coffee.notes
     )
