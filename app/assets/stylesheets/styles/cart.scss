@@ -1,5 +1,6 @@
 .cart-count{
   animation: update 1.5s;
+  padding-right: 10px;
 }
 
 @keyframes update {
@@ -9,7 +10,7 @@
     0 0 5px #fff,
     0 0 10px rgb(255, 183, 75),
     0 0 20px rgb(255, 183, 75),
-    0 0 100px rgb(238, 160, 43),
+    0 0 60px rgb(238, 160, 43),
     0 0 200px rgb(238, 160, 43)
   }
   30% {
@@ -118,7 +119,7 @@
 }
 
 .checkout-container{
-  border-top: 2px solid rgb(222,105,50);
+  border-top: 1px solid rgb(126, 126, 126);
   padding: 8px 8px 8px 8px;
   margin-top: -1px;
   z-index: 10;

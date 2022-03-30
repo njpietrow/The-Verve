@@ -13,6 +13,8 @@
 
 .login-for-review{
   padding-top: 15px;
+  width: 100%;
+  text-align: center;
 }
 
 .review-summary{
@@ -20,6 +22,7 @@
   margin-bottom: 20px;
   border-bottom: 2px solid #de6932;
   z-index: 4;
+  justify-content: space-between;
 }
 
 .stars-summary{
@@ -50,88 +53,7 @@
   border-top: none;
 }
 
-.review-index-item{
-  width: 96%;
-  padding: 8px 10px 8px 10px;
-  border-top: 1px solid rgba(176, 174, 174, 0.482);
-  scroll-margin: 300px;
-}
 
-.profile-container{
-  display: flex;
-}
-
-.prof-pic{
-  background: rgba(176, 174, 174, 0.482);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  margin-right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.reviewer-name{
-  font-size: 14px;
-  padding: 4px 6px 2px 6px;
-  font-weight: 600;
-}
-
-.review-content{
-  padding-left: 12px;
-}
-
-.verified-tag::before{
-  content: "Verified";
-  background-color: #383a34;
-  color: #fff;
-  font-size: 10px;
-  padding: 2px 6px 2px 6px;
-  line-height: 12px;
-}
-
-.name-container{
-  padding-bottom: 6px;
-  display: flex;
-  align-items: center;
-  line-height: 12px;
-}
-
-.date{
-  font-size: 14px;
-}
-
-.reviewer-title{
-  font-size: 16px;
-  color: #383a34;
-  padding-top: 2px;
-  padding-bottom: 0px;
-}
-
-.review-form-login{
-  font-family: inherit;
-  letter-spacing: inherit;
-  text-decoration: underline;
-  font-size: 16px;
-}
-
-.review-section{
-  display: flex;
-  justify-content: space-between;
-}
-
-.review-content{
-  width: 85%;
-}
-
-.like-button-container{
-  width: 15%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  color:rgba(74, 73, 73, 0.803)
-}
 
 .stars{
   color: orange;

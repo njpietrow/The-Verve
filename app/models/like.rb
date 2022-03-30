@@ -11,7 +11,7 @@
 #
 class Like < ApplicationRecord
   validates :dislike, inclusion: { in: [ true, false ] }
-  validates :user_id, presence: true, uniqueness: { scope: :review_id, message: "Account has already voted on this review" }
+  validates :user_id, presence: true, uniqueness: { scope: :review_id, message: "Account previously voted on this review, try another" }
 
   belongs_to :liker,
     foreign_key: :user_id,

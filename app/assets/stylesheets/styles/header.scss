@@ -9,6 +9,7 @@ header {
 .layout-header{
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .header-content{
@@ -21,8 +22,8 @@ header {
   justify-content: center;
   align-items: center;
   height: 22px;
-  width: auto;
-  padding: 8px 14px;
+  width: 100%;
+  padding: 8px 0 6px 0;
 }
 
 #main-logo{
@@ -32,17 +33,17 @@ header {
 }
 
 .header-container{
-  padding-top: 10px;
+  padding-top: 12px;
   width: 200px;
   display: flex;
   justify-content: end;
 }
 
 .search{
+  padding-top: 12px;
   padding-left: 20px;
   font-size: 20px;
   overflow: visible;
-  padding-top: 12px;
   width: 200px;
   display: flex;
 }

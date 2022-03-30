@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :products, only: [:index, :show]
     resource :session, only: [:create, :destroy]
     resource :reviews, only: [:create]
+    resource :likes, only: [:create]
   end
 end

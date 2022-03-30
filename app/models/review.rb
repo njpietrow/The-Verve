@@ -30,18 +30,18 @@ class Review < ApplicationRecord
     foreign_key: :review_id,
     class_name: 'Like'
 
-  def self.num_likes(review_id)
-    (self
+  def num_likes
+    (Review
       .joins(:likes)
-      .where("review_id = ?", review_id.to_i)
+      .where("review_id = ?", self.id)
       .where("dislike = FALSE")
     ).length
   end
 
-  def self.num_dislikes(review_id)
-    (self
+  def num_dislikes
+    (Review
       .joins(:likes)
-      .where("review_id = ?", review_id.to_i)
+      .where("review_id = ?", self.id)
       .where("dislike = TRUE")
     ).length
   end

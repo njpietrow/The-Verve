@@ -17,7 +17,7 @@ class ReviewIndex extends React.Component{
   }
 
   render(){
-    const {reviews, averageRating, loggedIn, productId} = this.props;
+    const {reviews, averageRating, currentUserId, productId, createLike, likeErrors} = this.props;
 
     return(
       <div id="review-index-container">
@@ -29,21 +29,26 @@ class ReviewIndex extends React.Component{
                 <br /> 
                 {this.getReviewMessage(reviews)}
              </span>
+             <div className="like-errors">
+              {likeErrors.map((err,idx) => (<span key={idx}>{err}</span>))}
+            </div>
           </div>
         </div>
         <div className="review-index-list">
           {Object.values(reviews).map(review => (
-              <ReviewIndexItem key={review.id} review={review} />
+            <ReviewIndexItem
+              key={review.id} 
+              review={review} 
+              createLike={createLike}
+              currentUserId={currentUserId}
+            />
           ))}
         </div>
-        {loggedIn ? (
+        {currentUserId ? (
           <ReviewFormContainer productId={productId} />
         ) : (
           <div className="login-for-review">
-            <Link 
-              to="/login" 
-              className="review-form-login"
-            > Log in</Link>
+            <Link to="/login" className="review-form-login">Log in</Link>
             <span> to leave a review ☕️</span>
           </div>)}
       </div>

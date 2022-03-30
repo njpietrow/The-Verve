@@ -12,6 +12,7 @@ import { register, logIn, logOut } from "./actions/session_actions";
 import { fetchProduct, fetchProducts } from "./actions/product_actions";
 import { updateFilter } from "./actions/filter_actions"
 import { createReview } from "./actions/review_form_actions"
+import { createLike } from "./actions/like_actions"
 //END TESTING
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -77,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.createReview = createReview;
 
+  window.createLike = createLike;
   
   //END TESTING
 });
