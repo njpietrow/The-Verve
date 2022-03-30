@@ -19,7 +19,7 @@ class ReviewIndexItem extends React.Component{
     else this.setState({status: "up"})
 
     if (!this.state.user_id) {
-      this.setState({loggedInError: "Only logged in users may vote on reviews"})
+      this.setState({loggedInError: "Please log in before voting on reviews"})
     } else {
       this.setState({loggedInError: ""})
       this.state.dislike = dislike;

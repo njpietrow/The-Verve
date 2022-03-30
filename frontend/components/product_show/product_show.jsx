@@ -30,13 +30,13 @@ class ProductShow extends React.Component{
     
     if(oldProps.product?.id !== this.props.product?.id){
       this.props.fetchProduct(this.props.match.params.productId)
-      window.scroll({top: 0, left: 0, behavior: 'smooth' })
+      window.scroll({top: 0, left: 0})
     }
   }
   
   componentDidMount(){
     this.props.fetchProduct(this.props.match.params.productId)
-    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+    window.scroll({top: 0, left: 0})
   };
   
   getPathFromCategory(){

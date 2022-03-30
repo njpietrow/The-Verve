@@ -7,18 +7,35 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'open-uri'
+require 'faker'
 
 User.destroy_all
 ProductCategory.destroy_all
 Product.destroy_all
 Category.destroy_all
+Like.destroy_all
+Review.destroy_all
 
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
 ActiveRecord::Base.connection.reset_pk_sequence!('product_categories')
 ActiveRecord::Base.connection.reset_pk_sequence!('products')
 ActiveRecord::Base.connection.reset_pk_sequence!('categories')
+ActiveRecord::Base.connection.reset_pk_sequence!('likes')
+ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
+
+puts "starting users"
 
 User.create(email: "DemoUser@gmail.com", password: "password", first_name: "Nick", last_name: "Pietrow")
+(1...20).each do |i|
+  User.create(
+    email: Faker::Internet.email,
+    password: Faker::Alphanumeric.alphanumeric(number: 10),
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+  )
+end
+
+puts "starting categories"
 
 coffee = Category.create(name: "all-coffee")
 single_origin = Category.create(name: "single-origin")
@@ -531,3 +548,29 @@ ProductCategory.create(product_id: diner_mug.id, category_id: mugs.id)
 
 # diner_mug_photo = open('https://the-verve-seeds.s3.us-west-1.amazonaws.com/Kinto.Silo_2048x2048.webp')
 # diner_mug.photo.attach(io: diner_mug_photo, filename: 'diner_mug_photo.webp')
+
+puts "starting reviews"
+
+(1...29).each do |prod_i|
+  (2...5).each do |user_i|
+    Review.create(
+      user_id: user_i,
+      product_id: prod_i,
+      stars: rand(3...5),
+      title: Faker::Company.bs,
+      body: Faker::Coffee.notes
+    )
+  end
+end
+
+puts "starting likes"
+
+(1...87).each do |rev_i|
+  (2...8).each do |user_i|
+    Like.create(
+      user_id: user_i,
+      review_id: rev_i,
+      dislike: [true, false].sample
+    )
+  end
+end

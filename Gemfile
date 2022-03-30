@@ -53,6 +53,10 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
+
+  # seeding
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -66,6 +70,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'faker'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome

@@ -16,9 +16,18 @@ class ReviewIndex extends React.Component{
     }
   }
 
+  componentDidMount(){
+    this.unlisten = this.props.history.listen(() => {
+      this.props.clearLikeErrors();
+    });
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }  
+
   render(){
     const {reviews, averageRating, currentUserId, productId, createLike, likeErrors} = this.props;
-
     return(
       <div id="review-index-container">
         <div className="review-index-title">

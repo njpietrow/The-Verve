@@ -2,6 +2,8 @@ import { connect } from "react-redux";
 import ReviewIndex from "./review_index";
 import { averageRating } from "../../util/string_util";
 import { createLike } from "../../actions/like_actions";
+import { clearLikeErrors } from "../../actions/like_actions";
+import { withRouter } from "react-router";
 
 const mSTP = state => ({
   reviews: state.entities.reviews,
@@ -12,7 +14,8 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  createLike: (like) => dispatch(createLike(like))
+  createLike: (like) => dispatch(createLike(like)),
+  clearLikeErrors: () => dispatch(clearLikeErrors()),
 });
 
-export default connect(mSTP, mDTP)(ReviewIndex);
+export default withRouter(connect(mSTP, mDTP)(ReviewIndex));
