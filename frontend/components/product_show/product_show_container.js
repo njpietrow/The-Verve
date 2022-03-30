@@ -8,6 +8,7 @@ const mSTP = (state, ownProps) => ({
   product: state.entities.products[ownProps.match.params.productId],
   category: state.ui.filters.category,
   averageRating: averageRating(Object.values(state.entities.reviews)),
+  numRatings: Object.values(state.entities.reviews).length
 });
 
 const mDTP = (dispatch) => ({

@@ -554,7 +554,7 @@ puts "starting reviews"
 (1...29).each do |prod_i|
   (2...5).each do |user_i|
     Review.create(
-      user_id: user_i,
+      user_id: rand(2...20),
       product_id: prod_i,
       stars: rand(3...6),
       title: Faker::Company.bs,

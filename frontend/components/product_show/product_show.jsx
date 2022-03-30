@@ -99,8 +99,11 @@ class ProductShow extends React.Component{
                 smooth 
                 to={`/collections/${product.id}#review-index`}
               >
-                {/* <p className="product-show-stars">Stars: --{product.avgRating}--</p> */}
-                <p className="product-show-stars"><Stars averageRating={averageRating}/> </p>
+                <p className="product-show-stars">
+                  <Stars averageRating={averageRating}/>
+                  <span>&nbsp;</span>
+                  <span className="num-ratings">({this.props.numRatings})</span>
+                  </p>
               </HashLink>
               <p className="green show-page-price">{this.state.price.padEnd(5,'0')}</p>
 

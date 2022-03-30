@@ -16,4 +16,10 @@ class Api::ProductsController < ApplicationController
       params[:filters][:category]
     end
   end
+
+  def search
+    if params[:filters]
+      params[:filters][:search]
+    end
+  end
 end

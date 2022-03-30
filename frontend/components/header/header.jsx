@@ -78,7 +78,9 @@ class Header extends React.Component{
         </div>
         <div className="layout-header">
           <div className="search-container">
-            <Link to="/search" className="search"><i className="fa-solid fa-magnifying-glass search-icon"></i></Link>
+            <a className="search">
+              <i className="fa-solid fa-magnifying-glass search-icon"></i>
+            </a>
           </div>
           {/* <Link to="/"><img id="main-logo" src='https://the-verve-seeds.s3.us-west-1.amazonaws.com/logo.png' alt="main logo"  /></Link> */}
           <GreetingContainer />
