@@ -3,6 +3,7 @@ import GreetingContainer from '../greeting/greeting_container'
 import CoffeeSubMenu from "./coffee_sub_menu";
 import GearSubMenu from "./gear_sub_menu";
 import LearnSubMenu from "./learn_sub_menu";
+import ResultsIndex from "./results_index";
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
@@ -23,7 +24,8 @@ class Header extends React.Component{
       visible: false,
       subMenu: "none",
       search: false,
-      query: ""
+      query: "",
+      searchResults: {},
     }
     this.toggleVisible = this.toggleVisible.bind(this);
     this.subMenu = this.subMenu.bind(this);
@@ -31,7 +33,20 @@ class Header extends React.Component{
 
   componentDidMount() {
     this.unlisten = this.props.history.listen(() => {
-      this.setState({visible: false})
+      this.setState({visible: false, search: false})
+    });
+
+    //add event listener to show to search bar + focus and to close/clear it
+    window.addEventListener('click', (e) => {  
+      if (document.querySelector('.search').contains(e.target)) {
+        this.setState({search: !this.state.search, query: ""})
+        const input = document.getElementById('search-input');
+        input.setSelectionRange(0, 0);
+        input.focus();
+      }
+      else if (!document.getElementById('dropdown-container').contains(e.target)){
+        this.setState({search: false, query: ""})
+      }
     });
   }
 
@@ -55,6 +70,7 @@ class Header extends React.Component{
   updateSearch(e){
     e.preventDefault();
     this.setState({query: e.currentTarget.value})
+    // run api call to search db bas on query string
   }
 
   // dynamically render sub-menu component based on subMenu state
@@ -85,20 +101,23 @@ class Header extends React.Component{
         </div>
         <div className="layout-header">
           <div className="search-container">
-            <a className="search" onClick={() => this.setState({search: !this.state.search})}>
-              <i className="fa-solid fa-magnifying-glass search-icon"></i>
-            </a>
-            <input
-              id="search-input"
-              className={this.state.search ? "" : "collapse-search" }
-              type="text" 
-              value={this.state.query}
-              onChange={(e) => this.updateSearch(e)}
-            />
+            <div className="auto">
+              <a className="search" >
+                <i className="fa-solid fa-magnifying-glass search-icon"></i>
+              </a>
+            </div>
+            <div id="dropdown-container" className={this.state.search ? "" : "collapse-search" }>
+              <input
+                id="search-input"
+                className={this.state.search ? "" : "collapse-search" }
+                type="text" 
+                value={this.state.query}
+                onChange={(e) => this.updateSearch(e)}
+              />
+              <ResultsIndex />
+            </div>
           </div>
           <Link to="/"><img className="logo"/></Link>
-          
-          {/* <Link to="/"><img id="main-logo" src='https://the-verve-seeds.s3.us-west-1.amazonaws.com/logo.png' alt="main logo"  /></Link> */}
           <GreetingContainer />
         </div>
         <nav>

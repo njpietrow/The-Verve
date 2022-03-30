@@ -87,7 +87,8 @@ class AddToCartForm extends React.Component{
         
         <div className="quantity-add-container">
           <a className="quantity-add minus" onClick={() => this.updateQuantity(-1)}></a>
-          <input type="text" 
+          <input type="text"
+            className="input-box" 
             value={this.state.quantity}  
             pattern="(500|([1-4][0-9][0-9])|([1-9][0-9])|[1-9])" 
             title="Quantity should contain only positive numerical values and be less than 500" 

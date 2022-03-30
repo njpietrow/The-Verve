@@ -53,5 +53,6 @@ class Product < ApplicationRecord
       .joins(:categories)
       .where("name LIKE ?", "%#{category}%")
       .where("product_name LIKE ?", "%#{category}%")
+      .limit(10)
   end
 end

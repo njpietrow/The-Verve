@@ -23,6 +23,9 @@ class SessionForm extends React.Component{
 
   componentWillUnmount() {
     this.unlisten();
+    if (this.loginDemoInterval) {          
+      clearTimeout(this.loginDemoInterval);                  
+    }   
   }  
 
   //CONTROLLED INPUT FORM METHODS
@@ -101,7 +104,8 @@ class SessionForm extends React.Component{
       this.props.formType === "Register" ? (
         <>
           <label htmlFor="firstName">First Name</label>
-          <input 
+          <input
+            className="input-box"  
             placeholder="First Name"
             type="text" 
             name="firstName"
@@ -110,6 +114,7 @@ class SessionForm extends React.Component{
           />
           <label htmlFor="lastName">Last Name</label>
           <input
+            className="input-box" 
             placeholder="Last Name" 
             type="text" 
             name="lastName"
@@ -142,7 +147,8 @@ class SessionForm extends React.Component{
         <form onSubmit={this.handleSubmit} className="session-form">
           {this.registrationFields()}
           <label htmlFor="email">Email</label>
-          <input 
+          <input
+            className="input-box" 
             placeholder={emailPlaceholder}
             type="email" 
             name="email"
@@ -150,7 +156,8 @@ class SessionForm extends React.Component{
             value={this.state.email}
           />
           <label htmlFor="password">Password</label>
-          <input 
+          <input
+            className="input-box"  
             placeholder={passwordPlaceholder}
             type="password" 
             onChange={this.update("password")}
