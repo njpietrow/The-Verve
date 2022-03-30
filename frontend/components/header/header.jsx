@@ -21,7 +21,9 @@ class Header extends React.Component{
     super(props);
     this.state = {
       visible: false,
-      subMenu: "none"
+      subMenu: "none",
+      search: false,
+      query: ""
     }
     this.toggleVisible = this.toggleVisible.bind(this);
     this.subMenu = this.subMenu.bind(this);
@@ -78,10 +80,17 @@ class Header extends React.Component{
         </div>
         <div className="layout-header">
           <div className="search-container">
-            <a className="search">
+            <a className="search" onClick={() => this.setState({search: !this.state.search})}>
               <i className="fa-solid fa-magnifying-glass search-icon"></i>
             </a>
+            <input
+              className={this.state.search ? ("search-input") : "search-input collapse-search" }
+              type="text" 
+              value={this.state.query}
+              onChange={this.update("query")}
+            />
           </div>
+          <img className="logo"/>
           {/* <Link to="/"><img id="main-logo" src='https://the-verve-seeds.s3.us-west-1.amazonaws.com/logo.png' alt="main logo"  /></Link> */}
           <GreetingContainer />
         </div>

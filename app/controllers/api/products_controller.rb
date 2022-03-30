@@ -1,7 +1,15 @@
 class Api::ProductsController < ApplicationController
   def index
     # conditionally return all products unless there is a query params.
-    @products =  category ? Product.match_category(category) : Product.all
+    # first see if there is a search param, then filter by category
+    if search
+      @products = Product.match_search(search)
+    elsif category
+      @products = Product.match_category(category)
+    else
+      @products = Product.all
+    end
+
     render :index
   end
 

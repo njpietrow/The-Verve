@@ -46,4 +46,11 @@ class Product < ApplicationRecord
       .joins(:categories)
       .where("name LIKE ?", "%#{category}%")
   end
+
+  def self.match_search(query)
+    Product
+      .joins(:categories)
+      .where("name LIKE ?", "%#{category}%")
+      .where("product_name LIKE ?", "%#{category}%")
+  end
 end

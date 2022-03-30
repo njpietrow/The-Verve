@@ -10,8 +10,6 @@ class Greeting extends React.Component{
     const {currentUser, toggleCartModal, cartItemQuantity} = this.props;
     return (
       <div className="header-container">
-        {/* {currentUser ? (<span>Welcome back, {currentUser.firstName} </span>) : null} */}
-        
         {currentUser ? (
           <Link 
             to="/account" 

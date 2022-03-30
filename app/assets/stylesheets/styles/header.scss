@@ -32,20 +32,63 @@ header {
   padding-bottom: 30px;
 }
 
+.logo{
+  height: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  content: image-url('logo-dark.svg');
+}
+
 .header-container{
-  padding-top: 12px;
+  padding-top: 20px;
   width: 200px;
   display: flex;
   justify-content: end;
+  display: inline-block;
+}
+
+.header-link a{
+  display: inline-block;
+}
+
+.search-container{
+  display: flex;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+}
+
+.search-input{
+  position: absolute;
+  top:8px;
+  left: 10px;
+  width: 30%;
+  height: 42px;
+  padding-left: 36px;
+  text-align: left;
+  transition:transform 0.5s ease-out;
+  transform:scaleX(1);
+  transform-origin:left;
+}
+
+.collapse-search{
+transform:scaleX(0);
+}
+
+.search-icon{
+  line-height: 20px;
+  height: auto;
+  z-index: 10;
 }
 
 .search{
-  padding-top: 12px;
+  display: inline-block;
+  padding-top: 20px;
   padding-left: 20px;
   font-size: 20px;
   overflow: visible;
-  width: 200px;
   display: flex;
+  z-index: 10;
 }
 
 nav{
