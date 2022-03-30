@@ -1,11 +1,13 @@
 .results-container{
   width: calc(100% + 36px);
   border-radius: 2px;
-  background: #f9f6f1e9;
+  background: #f9f6f1;
   border: 1px solid #e7dfd2;
   transition: transform 0.5s ease-out;
   transform:scaleY(1);
   transform-origin:top;
+  z-index: 6;
+  position: absolute;
 }
 
 .hide{
@@ -22,11 +24,13 @@
   // background: #fff;
   transition: background .2s ease-out;
   overflow: hidden;
+
 }
 
 
 .result-item:hover{
   background: #ceccc8;
+  font-weight: 600;
 }
 
 .result-item-content{
