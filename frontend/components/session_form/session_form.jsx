@@ -17,6 +17,7 @@ class SessionForm extends React.Component{
   componentDidMount(){
     this.unlisten = this.props.history.listen(() => {
       this.props.clearSessionErrors();
+      window.scroll({top: 0, left: 0})
     });
     window.scroll({top: 0, left: 0})
   }

@@ -77,7 +77,7 @@ class ReviewForm extends React.Component{
         <label htmlFor="title">Title:</label>
         <input
           maxLength = "55"
-          className="review-title"
+          className="review-title input-box"
           type="text" 
           value={this.state.title}
           onChange={this.update("title")}

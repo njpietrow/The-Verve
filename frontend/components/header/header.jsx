@@ -117,7 +117,7 @@ class Header extends React.Component{
         <div className="layout-header">
           <div className="search-container">
             <div className="auto">
-              <a className="search" >
+              <a className="search">
                 <i className="fa-solid fa-magnifying-glass search-icon"></i>
               </a>
             </div>

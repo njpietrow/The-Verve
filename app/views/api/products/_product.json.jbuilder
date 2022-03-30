@@ -13,15 +13,17 @@ json.type product.ingredients == "-" ? "gear" : "coffee"
 
 total_stars = 0.0
 num_reviews = 0.0
+arr = []
 
-json.reviews do
-  product.reviews.each do |review|
-    total_stars += review.stars
-    num_reviews += 1
-    json.set! review.id do
-      json.extract! review, :id
-    end
-  end
+product.reviews.each do |review|
+  total_stars += review.stars
+  num_reviews += 1
+  arr << review.id
 end
+
+# json.reviews do 
+#   json.array! arr
+# end
+
 
 json.avg_rating (total_stars/num_reviews).round(2)

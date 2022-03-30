@@ -63,7 +63,7 @@
   z-index: 6;
   border-radius: 5px;
   border-left: 1px solid #e7dfd2;
-  background: #f9f6f1;
+  background: #faf9f6;
 }
 
 .cart-item-list-container{
@@ -72,7 +72,7 @@
   align-items: center;
   height: auto;
   max-height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .cart-visible{

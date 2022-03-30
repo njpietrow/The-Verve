@@ -40,6 +40,10 @@ class Product < ApplicationRecord
     foreign_key: :product_id,
     class_name: 'Review'
 
+  has_many :review_likes,
+    through: :reviews,
+    source: :likes
+
   # query db for products that have associated categories that match parameter.
   def self.match_category(category)
     Product
