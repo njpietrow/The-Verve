@@ -48,6 +48,7 @@
 }
 
 .cart-index {
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -62,6 +63,7 @@
   z-index: 6;
   border-radius: 5px;
   border-left: 1px solid #e7dfd2;
+  background: #f9f6f1;
 }
 
 .cart-item-list-container{

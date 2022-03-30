@@ -2,8 +2,8 @@ class Api::ProductsController < ApplicationController
   def index
     # conditionally return all products unless there is a query params.
     # first see if there is a search param, then filter by category
-    if search
-      @products = Product.match_search(search)
+    if query
+      @products = query.empty? ? Product.all.limit(15) : Product.match_search(query)
     elsif category
       @products = Product.match_category(category)
     else
@@ -24,9 +24,9 @@ class Api::ProductsController < ApplicationController
     end
   end
 
-  def search
+  def query
     if params[:filters]
-      params[:filters][:search]
+      params[:filters][:query]
     end
   end
 end

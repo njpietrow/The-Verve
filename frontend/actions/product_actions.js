@@ -26,3 +26,8 @@ export const fetchProduct = (productId) => dispatch => {
       dispatch(receiveProduct(payload))
     })
 };
+
+//for search bar
+export const searchProducts = (filters) => {
+  return ProductApiUtil.getProducts(filters)
+};

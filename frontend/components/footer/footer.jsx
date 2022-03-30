@@ -4,7 +4,7 @@ const Footer = () => (
   <footer>
     <div className="footer-content-container">
       <div className="footer-image-container">
-        {/* <img id="footer-logo" src='https://the-verve-seeds.s3.us-west-1.amazonaws.com/footer_logo.png' alt='footer logo' /> */}
+        <img id="footer-logo" src='https://the-verve-seeds.s3.us-west-1.amazonaws.com/footer_logo.png' alt='footer logo' />
       </div>
       <div className="footer-column-container">
         <div className="one">

@@ -59,7 +59,7 @@ class CartItem extends React.Component{
               <a className="quantity-add minus" onClick={() => this.update(-1)}></a>
               <input type="text" 
                 value={this.state.quantity}  
-                className="cart-update-box"
+                className="cart-update-box input-box"
                 disabled
                 min={0}
                 pattern="(500|([1-4][0-9][0-9])|([1-9][0-9])|[1-9])" 
