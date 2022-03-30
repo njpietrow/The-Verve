@@ -27,7 +27,7 @@ class CartItem extends React.Component{
             onClick={() => this.props.toggleCartModal()}
           >
             <img
-              className="product-index-img" 
+              className="product-cart-img" 
               // src={product.photoUrl} 
               src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"}
               alt={`${cartItem.productName}-img`}   
@@ -59,7 +59,7 @@ class CartItem extends React.Component{
               <a className="quantity-add minus" onClick={() => this.update(-1)}></a>
               <input type="text" 
                 value={this.state.quantity}  
-                className="cart-update-box input-box"
+                className="input-box cart-update-box"
                 disabled
                 min={0}
                 pattern="(500|([1-4][0-9][0-9])|([1-9][0-9])|[1-9])" 
