@@ -54,6 +54,9 @@ const Footer = () => (
           Los Angeles, CA
         </div>
         <div className="block align-right">
+          <div className="space-header">
+            &nbsp;
+          </div>
           PROUDLY CRAFTED IN LOS ANGELES, CA
         </div>
       </div>  
