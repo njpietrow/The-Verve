@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <footer>
@@ -9,17 +10,23 @@ const Footer = () => (
       <div className="footer-column-container">
         <div className="one">
           <ul>
-            <li>SHOP COFFEE</li>
-            <li>SUBSCRIBE</li>
-            <li>GET $5</li>
-            <li>STORY</li>
-            <li>FARMLEVEL</li>
+            <Link to="/collections/coffee/all-coffee" onClick={() => updateFilter("category", "all-coffee")}>
+              <li>SHOP COFFEE</li>
+            </Link>
+            <Link to="/collections/gear/all-gear" onClick={() => updateFilter("category", "all-gear")}>
+              <li>SHOP GEAR</li>
+            </Link>
+            <a href="https://www.vervecoffee.com/">REAL VERVE WEBSITE</a>
           </ul>
           <ul>
-            <li>JOBS</li>
-            <li>LOGIN</li>
-            <li>CONTACT</li>
+            <Link to="/login">
+              <li>LOGIN</li>  
+            </Link>
+            <li><a href="https://angel.co/u/nick-pietrow">ABOUT THE CREATOR</a></li>
+            <li><a href="mailto:njpietrow@gmail.com" target="_blank">CONTACT</a></li>
           </ul>
+
+          {/* add space between footer contents */}
           <ul></ul>
         </div>
         <div className="two">
@@ -32,7 +39,7 @@ const Footer = () => (
           <p> 
             <a href="https://github.com/njpietrow/The-Verve"><i className="fa-brands fa-github"></i></a>
             <a href="https://angel.co/u/nick-pietrow"><i className="fa-brands fa-angellist"></i></a>
-            <a href="https://twitter.com/njpietrow"><i className="fa-brands fa-twitter"></i></a>
+            <a href="https://twitter.com/njpietrow" ><i className="fa-brands fa-twitter"></i></a>
           </p>
         </div>
         <div className="three">
@@ -40,6 +47,10 @@ const Footer = () => (
             <p>
               BE THE FIRST TO KNOW! SUBSCRIBERS WILL RECEIVE FIRST ACCESS TO SPECIAL OFFERS AND LIMITED RELEASES.
             </p>
+          </div>
+          <div>
+            <input type="text" className="newsletter-email" placeholder="example@email.com" />
+            <button className="newsletter">Sign up</button>
           </div>
         </div>
       </div>
@@ -57,7 +68,7 @@ const Footer = () => (
           <div className="space-header">
             &nbsp;
           </div>
-          PROUDLY CRAFTED IN LOS ANGELES, CA
+          PROUDLY CRAFTED IN <br /> LOS ANGELES, CA
         </div>
       </div>  
     </div>
