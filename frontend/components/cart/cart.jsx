@@ -7,15 +7,24 @@ class Cart extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      buttonMesage: "Proceed to Checkout"
+      buttonMesage: "Proceed to Checkout",
+      checkoutMessage: ""
     };
     this.updateMessage= this.updateMessage.bind(this)
   }
 
   updateMessage(){
-    this.state.buttonMesage === "Proceed to Checkout"
-      ? this.setState({buttonMesage: "Thanks for visiting The Verve!"})
-      : this.setState({buttonMesage: "Proceed to Checkout"})
+    if (this.state.buttonMesage === "Proceed to Checkout"){
+      this.setState({
+        buttonMesage: "Thanks for visiting The Verve!",
+        checkoutMessage: "Nothing for sale here" 
+      })
+    } else {
+      this.setState({
+        buttonMesage: "Proceed to Checkout",
+        checkoutMessage: "" 
+      })
+    }
   }
 
   render(){
@@ -65,6 +74,7 @@ class Cart extends React.Component{
                     id="checkout"
                     onClick={() => this.updateMessage()}
                   >{this.state.buttonMesage}</button>
+                  <p>&nbsp;{this.state.checkoutMessage}</p>
                 </div>
 
               </>

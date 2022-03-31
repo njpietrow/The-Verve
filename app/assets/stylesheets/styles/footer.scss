@@ -79,23 +79,32 @@ p a:first-of-type{
   color: #494b44;
 }
 
+.three div div {
+  padding-left: 40px;
+}
+
 .newsletter-email{
   padding: 10px 15px 10px 15px;
-  width: 150px;
-  margin-left: 40px;
+  width: 40%;
+  // margin-left: 40px;
   border: 1px solid #c9ccbc;
   border-radius: 2px;
   background-color: antiquewhite;
+  font-weight: 300;
 }
 
 .newsletter{
   text-transform: uppercase;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 8px 8px 8px;
   border: 2px solid #de6932;
   border-radius: 2px;
+  white-space:nowrap;
   color:  #fff;
   background-color: #de6932;
   transition: all .3s ease;
+  text-align: center;
+  overflow: hidden;
+  width: auto;
 }
 
 .newsletter:hover{
