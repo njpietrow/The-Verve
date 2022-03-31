@@ -49,7 +49,7 @@ class Homepage extends React.Component{
           <img className="blends-photo" alt="blends-splash-image" />
           <div className="blends-text">
             <div className="splash-title-text">
-          x    <p>
+              <p>
                 Discover our most popular blends
               </p>
             </div>
