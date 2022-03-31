@@ -1,6 +1,7 @@
 footer{
   background-image: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/footer_background.jpg');
-  height: 400px;
+  height: 100%;
+  background-size: cover;
 }
 
 .footer-content-container{
@@ -17,6 +18,7 @@ footer{
 .footer-column-container{
   padding-top: 20px;
   width: 90%;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   letter-spacing: .05em;
@@ -39,12 +41,32 @@ footer{
   padding-bottom: 10px;
 }
 
-.two p{
+.two{
+  height: auto;
+}
 
+p a{
+  font-size: 26px;
+  padding-left: 20px;
+}
+
+p a:first-of-type{
+  padding-left: 0;
+}
+
+.two p{
   text-align: center;
   font-size: 13px;
   font-weight: 500;
   line-height: 22px;
+  padding-bottom: 16px;
+}
+
+.social-icons{
+  display: inline-block;
+  padding-top: 10px;
+  height: 20px;
+  width: 20px;
 }
 
 .three p{
@@ -56,4 +78,44 @@ footer{
 
 #footer-logo{
   width: 75px;
+}
+
+.margin-spacer{
+  width: 90%;
+  border-top: 2px solid #383a34;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+.footer-address-blocks{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.block{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  border-left: 2px solid #383a34;
+  font-family: 'Oswald';
+  font-size: 12px;
+  line-height: 1.375;
+}
+
+.footer-address-blocks div:first-of-type{
+  border: none;
+}
+
+.align-right{
+  justify-content: end;
+  text-align: right;
+}
+
+.align-left{
+  justify-content: start;
+  text-align: left;
 }

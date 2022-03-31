@@ -55,6 +55,16 @@ header {
   display: flex;
   justify-content: end;
   overflow: hidden;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-justify-content: end; 
+  justify-content: end; 
 }
 
 .inline-block{
@@ -131,6 +141,19 @@ header {
 .auto{
   width: 20px;
 }
+
+// .search-container:hover #dropdown-container.collapse-search{
+//   transform:scaleX(1);
+//   opacity: 1;
+// }
+
+// .search-container:hover .hide{
+//   transform:scaleY(1);
+// }
+
+// #dropdown-container:hover  .hide{
+//   transform:scaleY(1);
+// }
 
 nav{
   min-height: 20px;
