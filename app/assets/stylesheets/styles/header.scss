@@ -55,20 +55,13 @@ header {
   display: flex;
   justify-content: end;
   overflow: hidden;
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-justify-content: end; 
-  justify-content: end; 
 }
 
 .inline-block{
   display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: end;
 }
 
 .header-link{
