@@ -26,6 +26,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
 puts "starting users"
 
 User.create(email: "DemoUser@gmail.com", password: "password", first_name: "Nick", last_name: "Pietrow")
+
 (1...20).each do |i|
   User.create(
     email: Faker::Internet.email,
@@ -557,8 +558,8 @@ puts "starting reviews"
       user_id: rand(2...20),
       product_id: prod_i,
       stars: rand(3...6),
-      title: Faker::Company.bs,
-      body: Faker::Coffee.notes
+      title: Faker::Coffee.notes,
+      body: Faker::Hipster.sentence
     )
   end
 end
