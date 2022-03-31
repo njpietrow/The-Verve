@@ -67,7 +67,7 @@ class Homepage extends React.Component{
                 Questions about how this website was made? The creator is just an email or chat away. Send him a line.
               </p>
             </div>
-            <a href="mailto:njpietrow@gmail.com" target="_blank">
+            <a href="mailto:njpietrow@gmail.com" target="_blank" rel="noopener noreferrer">
               <button className="shop-now-button blends-button">Contact</button>
             </a>
           </div>

@@ -26,7 +26,7 @@ const Footer = () => {
             <ul>
               <li><a href="https://www.vervecoffee.com/">REAL VERVE WEBSITE</a></li>
               <li><a href="https://angel.co/u/nick-pietrow">ABOUT THE CREATOR</a></li>
-              <li><a href="mailto:njpietrow@gmail.com" target="_blank">CONTACT</a></li>
+              <li><a href="mailto:njpietrow@gmail.com" target="_blank" rel="noopener noreferrer">CONTACT</a></li>
             </ul>
 
             {/* add space between footer contents */}
