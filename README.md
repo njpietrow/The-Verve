@@ -4,6 +4,8 @@
 
 Welcome to The Verve. This full-stack, single-page app is intended to be a clone of the <a href="https://www.vervecoffee.com/" target="_blank" rel="noopener noreferrer">Verve Coffee Roasters</a> website. I intentionally chose to clone this Shopify site so I could connect relevant ecommerce backend logic with a clean and seamless front end experience. 
 
+insert product show page here
+
 <h2 id="table-of-contents">Table of Contents</h2>
 
 - [Key Features](#features)
@@ -13,7 +15,9 @@ Welcome to The Verve. This full-stack, single-page app is intended to be a clone
 #
 <h2 id="features">Key Features</h2>
 
-- TBD
+- Filtering product
+- adding items to the cart
+- -searching for products
 
 #
 <h2 id="technologies-used">Technologies used</h2>
