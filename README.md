@@ -18,6 +18,19 @@ insert product show page here
 - Filtering product
 - adding items to the cart
 - -searching for products
+```Ruby
+class Product < ApplicationRecord
+...
+  def self.match_search(query)
+    Product.joins(:categories)
+      .where(
+        "products.product_name LIKE ? 
+        OR categories.name LIKE ? 
+        OR products.ingredients LIKE ?", 
+        "%#{query.upcase}%", "%#{query.downcase}%", "%#{query.upcase}%"
+      ).limit(15)
+  end
+```
 
 #
 <h2 id="technologies-used">Technologies used</h2>
