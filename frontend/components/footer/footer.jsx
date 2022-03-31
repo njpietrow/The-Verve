@@ -60,7 +60,7 @@ const Footer = () => {
                   className="newsletter" 
                   onClick={() => {message === "" ? setMessage("Don't worry, I won't email you") : setMessage("")}}
                 >Subscribe</button>
-                <p>{message}</p>
+                <p>{message}&nbsp;</p>
               </div>
             </div>
           </div>
