@@ -39,7 +39,8 @@ footer{
 }
 
 .one li{
-  padding-bottom: 10px;
+  padding-bottom: 6px;
+  text-align: center;
 }
 
 .two{
@@ -84,13 +85,16 @@ p a:first-of-type{
 }
 
 .newsletter-email{
-  padding: 10px 15px 10px 15px;
-  width: 40%;
+  padding: 10px 0px 10px 15px;
+  width: 100%;
   // margin-left: 40px;
-  border: 1px solid #c9ccbc;
-  border-radius: 2px;
-  background-color: antiquewhite;
-  font-weight: 300;
+  border-bottom: 1px solid black;
+  font-family: 'Mulish';
+}
+
+.newsletter-email::placeholder{
+  color: #383a34;
+  font-weight: 400;
 }
 
 .newsletter{
@@ -104,7 +108,7 @@ p a:first-of-type{
   transition: all .3s ease;
   text-align: center;
   overflow: hidden;
-  width: auto;
+  width: 100%;
 }
 
 .newsletter:hover{

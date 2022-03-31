@@ -19,12 +19,12 @@ const Footer = () => {
               <Link to="/collections/gear/all-gear" onClick={() => updateFilter("category", "all-gear")}>
                 <li>SHOP GEAR</li>
               </Link>
-              <a href="https://www.vervecoffee.com/">REAL VERVE WEBSITE</a>
-            </ul>
-            <ul>
               <Link to="/login">
                 <li>LOGIN</li>  
               </Link>
+            </ul>
+            <ul>
+              <li><a href="https://www.vervecoffee.com/">REAL VERVE WEBSITE</a></li>
               <li><a href="https://angel.co/u/nick-pietrow">ABOUT THE CREATOR</a></li>
               <li><a href="mailto:njpietrow@gmail.com" target="_blank">CONTACT</a></li>
             </ul>
@@ -53,7 +53,9 @@ const Footer = () => {
             </div>
             <div>
               <div>
-                <input type="text" className="newsletter-email" placeholder="example@email.com" />
+                <input type="email" className="newsletter-email" placeholder="Enter your email here" />
+                <br />
+                <br />
                 <button 
                   className="newsletter" 
                   onClick={() => {message === "" ? setMessage("Don't worry, I won't email you") : setMessage("")}}

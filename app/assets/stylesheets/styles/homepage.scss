@@ -63,3 +63,128 @@
   transition-duration: .2s;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+.coffee-selection{
+  display: flex;
+  margin-top: 20px;
+}
+
+.coffee-selection-item{
+  width: 100%;
+  background-color: white;
+}
+
+// Preload the :hover product images so they don't blink the first time they load
+body:after {
+  display: none;
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/amparocoff.webp') 
+  url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/behatucoff.webp') 
+  url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/nubiacoff.webp');
+}
+
+.coffee-1{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/amparohead.webp');
+  float: left;
+  width: 100%;
+  object-fit: cover;
+}
+.coffee-1:hover{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/amparocoff.webp');
+}
+
+.coffee-2{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/nubiahead.webp');
+  float: left;
+  width: 100%;
+  object-fit: cover;
+}
+.coffee-2:hover{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/nubiacoff.webp');
+}
+
+.coffee-3{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/bedhatuhead.webp');
+  float: left;
+  width: 100%;
+  object-fit: cover;
+}
+.coffee-3:hover {
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/behatucoff.webp');
+}
+
+.blends-content{
+  padding-top: 20px;
+  max-height: 600px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.blends-photo{
+  content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/download+(7).webp');
+  max-width: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.blends-text{
+  position: absolute;
+  color: #fff;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blends-text .splash-title-text{
+  width: 100%;
+}
+
+.blends-text .splash-title-text p{
+  font-size: 32px;
+  font-family: 'Oswald';
+  font-weight: 300;
+  // white-space:nowrap;
+}
+
+.blends-button{
+  border: 1px solid #ffcc73;
+  color: black;
+  background-color: #fff;
+  border-radius: 1px;
+}
+
+.blends-button:hover{
+  background-color: #ffcc73;
+}
+
+.coffee-talk{
+  margin-top: 20px;
+  height: 500px;
+  background-color: #7e876d;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.coffee-talk p {
+  width: 55%;
+}
+
+.coffee-talk .splash-title-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-icon i{
+  padding-bottom: 8px;
+  font-size: 60px;
+}
+
+.chat{
+  top:20%;
+}
+
