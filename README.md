@@ -8,7 +8,7 @@ Welcome to The Verve. This full-stack, single-page app is intended to be a clone
 
 - [Key Features](#features)
 - [Technologies Used](#technologies-used)
-- [Future Plans](#future-plans)
+- [Planned Features](#future-plans)
 
 #
 <h2 id="features">Key Features</h2>
@@ -21,13 +21,11 @@ Welcome to The Verve. This full-stack, single-page app is intended to be a clone
 - __Front End__: React.js, Redux
   - Supports front-end handling of cart, rendering of pages, and navigation.
   - Persists cart to `localStorage` to maintain cart information through page refresh
-- __Back End__: Ruby on Rails, with PostgreSQL database
-  - Supports back-end server access, and acts as a middleware for the PostgreSQL database, manipulating the database where needed.
-  - Handles User Authentication via session tokens which are then bootstrapped to the window and sent forward to the front-end.
-- __Other__: Google Maps JavaScript API, Google Places API, Amazon AWS S3, JavaScript
-  - Google Maps and Google Places were used to get accurate information about local restaurants, like name, address, review-count, rating, and pricing.
-  - The Google Maps JavaScript API is also used to render the map with appropriate markers and infowindows on the Pickup page.
-  - AWS S3 handles image hosting to allow for a more lightweight and modular implementation of the app. Images changed on the buckets will reflect on the site with no need to change the code.
+- __Back End__: Ruby on Rails, Jbuilder, Active Storage, and PostgreSQL database
+  - The Back end was implemented using the Rails MVC framework along with Jbuilder to formate JSON responses for API endpoints
+  - Active Storage blobs were use to create associations between products and images stored on S3
+- __Other__: Amazon AWS S3, JavaScript
+  - AWS S3 handles image hosting to allow for a more lightweight and modular implementation of the app.
   - Webpack and Babel.js transpile the code
 - __Hosting__: The Verve is hosted on heroku.
 
