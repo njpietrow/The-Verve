@@ -10,6 +10,9 @@ class Greeting extends React.Component{
     const {currentUser, toggleCartModal, cartItemQuantity} = this.props;
     return (
       <div className="header-container">
+        <dir className="space-header">
+          &nbsp;
+        </dir>
         <div className="inline-block">
           {currentUser ? (
             <Link 

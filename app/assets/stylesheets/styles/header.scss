@@ -57,14 +57,17 @@ header {
   overflow: hidden;
 }
 
+.space-header{
+  width: 100%;
+}
 .inline-block{
   display: inline-block;
-  width: 100%;
-  display: flex;
   justify-content: end;
+  white-space:nowrap;
 }
 
 .header-link{
+  width: auto;
   overflow: hidden;
 }
 
