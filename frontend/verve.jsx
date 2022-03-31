@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     saveState({
       entities: {
         cartItems: store.getState().entities.cartItems,
-        products: store.getState().entities.products
+        // products: store.getState().entities.products
       },
       ui: {
         filters: {

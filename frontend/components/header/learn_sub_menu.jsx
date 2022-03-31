@@ -26,30 +26,9 @@ class CoffeeSubMenu extends React.Component{
   render(){
     return(
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
-        <Link 
-          to="/pages/story" 
-          onClick={this.handleClick()}
-        > 
-          STORY 
-        </Link>
-        <Link 
-          to="/pages/this-is-farmlevel"
-          onClick={this.handleClick()}
-        > 
-          FARMLEVEL 
-        </Link>
-        <Link 
-          to="/pages/nursery" 
-          onClick={this.handleClick()}
-        > 
-          NURSERY PROJECT 
-        </Link>
-        <Link 
-          to="/pages/contact" 
-          onClick={this.handleClick()}
-        > 
-          CONTACT 
-        </Link>
+        <a href="https://github.com/njpietrow/The-Verve">GITHUB</a>
+        <a href="https://angel.co/u/nick-pietrow">ANGELLIST</a>
+        <a href="https://twitter.com/njpietrow" >TWITTER</a>
       </ul>
     )
   }
