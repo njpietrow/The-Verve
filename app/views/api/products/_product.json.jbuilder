@@ -13,12 +13,12 @@ json.type product.ingredients == "-" ? "gear" : "coffee"
 
 total_stars = 0.0
 num_reviews = 0.0
-arr = []
+# arr = []
 
 product.reviews.each do |review|
   total_stars += review.stars
   num_reviews += 1
-  arr << review.id
+  # arr << review.id
 end
 
 # json.reviews do 

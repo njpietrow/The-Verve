@@ -22,9 +22,6 @@ class ResultsIndex extends React.Component{
                   <div className="result-item-text">
                     {result.productName}
                   </div>
-                  {/* <div>
-                    {result.location}
-                  </div> */}
                 </div>
               </Link>
 
