@@ -38,8 +38,16 @@
   max-width: 600px;
 }
 
+.quantity-product{
+  transition: border 0.3s ease-in;
+  border: 1.5px solid #e7dfd2;
+}
+
+.quantity-product:hover{
+  border: 1px solid #de6932;
+}
+
 .add-to-cart-form select:hover{
-  transition: border 0.3s ease-out;
   border: 1.5px solid #de6932;
 }
 
