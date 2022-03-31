@@ -33,7 +33,7 @@ class ReviewIndexItem extends React.Component{
       <div className="review-index-item">
         <div className="profile-container">
           <div className="flex">
-            <div className="prof-pic">
+            <div className="prof-pic select-none">
               {review.reviewer[0]}
             </div>
             <div>

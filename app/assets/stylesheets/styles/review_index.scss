@@ -1,12 +1,12 @@
 #review-index-container{
-  width: 70%;
+  width: 80%;
   padding: 24px 24px 24px 24px;
   margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid rgba(176, 174, 174, 0.482);
+  // border: 1px solid rgba(176, 174, 174, 0.482);
   margin-bottom: 60px;
   color: #383a34;
 }
@@ -44,9 +44,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  border: 1px solid rgba(176, 174, 174, 0.482);
-  border-bottom: 1px solid rgba(176, 174, 174, 0.482);
-  border-right: 1px solid rgba(176, 174, 174, 0.482);
+  // border: 1px solid rgba(176, 174, 174, 0.482);
+  // border-bottom: 1px solid rgba(176, 174, 174, 0.482);
+  // border-right: 1px solid rgba(176, 174, 174, 0.482);
 }
 
 .review-index-item:first-child{

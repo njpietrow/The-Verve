@@ -133,7 +133,7 @@ class Header extends React.Component{
               <ResultsIndex search={this.state.search} searchResults={this.state.searchResults}/>
             </div>
           </div>
-          <Link to="/"><img className="logo"/></Link>
+          <Link to="/"><img className="logo select-none"/></Link>
           <GreetingContainer />
         </div>
         <nav>
