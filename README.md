@@ -29,7 +29,7 @@ class Product < ApplicationRecord
         "products.product_name LIKE ? 
         OR categories.name LIKE ? 
         OR products.ingredients LIKE ?", 
-        "%#{query.upcase}%", "%#{query.downcase}%", "%#{query.upcase}%"
+        "%#{query}%", "%#{query}%", "%#{query}%"
       ).limit(15)
   end
 ```
