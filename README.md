@@ -39,6 +39,9 @@ store.subscribe(throttle(() => {
 
 
 ### Searching for Products
+<p align="center">
+  <img src="https://media.giphy.com/media/4XYGnn0hgnIWNbUyF1/giphy.gif" alt="cart-add-gif"></img>
+</p>
 
 Typing into the search bar calls a debounced function to request all products from the database that match the query string. Results are queries from the database based on the product names, categories, and ingredient lists. The API is only sent after 600ms have elapsed since the last keypress. Once the results are received back, they are dislayed in the search bar result dropdown and each result links to the individual product pages. Clicking outside of the result dropdown hides the searchbar.
 
