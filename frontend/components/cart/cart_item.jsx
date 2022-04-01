@@ -28,7 +28,7 @@ class CartItem extends React.Component{
           >
             <img
               className="product-cart-img" 
-              src={product.photoUrl} 
+              src={cartItem.photoUrl} 
               // src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"}
               alt={`${cartItem.productName}-img`}   
             />
