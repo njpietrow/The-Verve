@@ -8,10 +8,10 @@ class ProductIndex extends React.Component{
   componentDidMount(){
     this.props.updateFilter("category", this.props.match.params.filter)
     this.unlisten = this.props.history.listen(() => {
-      this.props.updateFilter("category", this.props.match.params.filter)
+      // this.props.updateFilter("category", this.props.match.params.filter)
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
     });
-    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+    // window.scroll({top: 0, left: 0, behavior: 'smooth' })
   }
 
   componentWillUnmount(){
