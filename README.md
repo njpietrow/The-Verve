@@ -40,7 +40,7 @@ store.subscribe(throttle(() => {
   });
 }, 1000));
 ```
-#
+
 
 ### Searching for Products
 
@@ -60,7 +60,7 @@ class Product < ApplicationRecord
       ).limit(15)
   end
 ```
-#
+
 
 ### Review and Like action error handling
 
@@ -85,8 +85,9 @@ class Product < ApplicationRecord
 - Add transaction table to database to persist transations for a user account and view order history in the account page
 - Add ReCaptcha for user verfication during account creation
 - Allows users to delete reviews thaat they have posted
-#
+
 
 ### Credit
+#
 - Images are property of Verve Coffee Roasters
 - The Verve does not sell any products or merchandise and is intended for display purposes only
