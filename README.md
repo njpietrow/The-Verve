@@ -60,7 +60,11 @@ class Product < ApplicationRecord
 
 ### Review and Like action error handling
 
-- video snippets of like and review errors.
+<p align="center">
+  <img src="https://media.giphy.com/media/2b8x8TifiH8fLJt0e2/giphy.gif" alt="cart-add-gif"></img>
+</p>
+
+Users are only permitted to writee reviews and vote on other users' reviews when logged in. Error messages will be displayed if they are not logged in. Similarly, users will also receive an error message after attempting to cast more than one vote on a review.
 
 <h2 id="technologies-used">Technologies used</h2>
 
