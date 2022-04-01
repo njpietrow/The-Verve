@@ -16,7 +16,7 @@ insert product show page here
 <h2 id="features">Key Features</h2>
 
 ### Adding Items to the Cart
-Cart items are stored in local storage and will be persisted when the page is refreshed. This is done using the Redux store subscribe method. Upon page refresh, the cart and filters will be loaded from local storage and used to reload the page state as if it never changed. Another notable cart feature is that both logged in and logged out users can add items to the cart, but when a user logs out it will clear the cart for privacy purposes.
+Cart items are stored in local storage and will be persisted upon page refresh via the Redux store subscribe method. After a page refresh, the cart and filters will be loaded from local storage and then used to render the page as if it never changed. Another notable cart feature is that both logged in and logged out users can add items to the cart, but when a user logs out it will clear the cart for privacy purposes.
 ```Javascript
 store.subscribe(throttle(() => {
   saveState({
@@ -35,10 +35,8 @@ store.subscribe(throttle(() => {
 
 ### Searching for Products
 
-Typing into the search bar calls a debounced function to request all products from the database that match the query string. The API is only sent after 600ms have elapsed since the last keypress. Once the results are received back, they are dislayed in the search bar result dropdown. These results are links that lead to the individual product pages. Clicking outside of the result dropdown hides the results.
+Typing into the search bar calls a debounced function to request all products from the database that match the query string. Results are queries from the database based on the product names, categories, and ingredient lists. The API is only sent after 600ms have elapsed since the last keypress. Once the results are received back, they are dislayed in the search bar result dropdown and each result links to the individual product pages. Clicking outside of the result dropdown hides the searchbar.
 
-
-Results are queries from the database based on the product names, categories, and ingredient lists.
 ```Ruby
 class Product < ApplicationRecord
   def self.match_search(query)
@@ -51,7 +49,6 @@ class Product < ApplicationRecord
       ).limit(15)
   end
 ```
-
 
 ### Review and Like action error handling
 
