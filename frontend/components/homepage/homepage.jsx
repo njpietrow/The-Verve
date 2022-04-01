@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 class Homepage extends React.Component{
 
   componentDidMount(){
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
     this.unlisten = this.props.history.listen(() => {
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
     });
