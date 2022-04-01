@@ -20,7 +20,7 @@ Welcome to The Verve. This full-stack, single-page app is intended to be a clone
   <img src="https://media.giphy.com/media/pluSLzxAajQd6vytlt/giphy.gif" alt="cart-add-gif"></img>
 </p>
 
-Cart items are stored in local storage and will be persisted upon page refresh via the Redux store subscribe method. After a page refresh, the cart and filters will be loaded from local storage and then used to render the page as if it never changed. Another notable cart feature is that both logged in and logged out users can add items to the cart, but when a user logs out it will clear the cart for privacy purposes.
+The cart is stored in both in the Redux state and in local storage to persist it across a page refresh. After a page refreshes, the cart will be loaded from local storage and then that info will be rendered on the page as if it never changed. Another notable cart feature is that both logged in and logged out users can add items to the cart, but when a user logs out it will clear the cart for privacy purposes.
 
 ```Javascript
 store.subscribe(throttle(() => {
@@ -64,7 +64,7 @@ class Product < ApplicationRecord
   <img src="https://media.giphy.com/media/2b8x8TifiH8fLJt0e2/giphy.gif" alt="cart-add-gif"></img>
 </p>
 
-Users are only permitted to writee reviews and vote on other users' reviews when logged in. Error messages will be displayed if they are not logged in. Similarly, users will also receive an error message after attempting to cast more than one vote on a review.
+To replicate some validations that a real ecommerce site might have, users of The Verve are only permitted to publish reviews and vote on other users' reviews when logged in and error messages will be displayed if they are not. Similarly, users will also receive an error message after attempting to cast more than one vote on a review. I try to provide clear feedback to the user to explain the cause of the error and next steps.
 
 <h2 id="technologies-used">Technologies used</h2>
 
@@ -84,7 +84,7 @@ Users are only permitted to writee reviews and vote on other users' reviews when
 
 - Add transaction table to database to persist transations for a user account and view order history in the account page
 - Add ReCaptcha for user verfication during account creation
-- Allows users to delete reviews thaat they have posted
+- Allow users to delete reviews that they have posted
 
 
 ### Credit
