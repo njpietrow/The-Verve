@@ -19,7 +19,9 @@ Welcome to The Verve. This full-stack, single-page app is intended to be a clone
 <p align="center">
   <img src="https://media.giphy.com/media/pluSLzxAajQd6vytlt/giphy.gif" alt="cart-add-gif"></img>
 </p>
+
 Cart items are stored in local storage and will be persisted upon page refresh via the Redux store subscribe method. After a page refresh, the cart and filters will be loaded from local storage and then used to render the page as if it never changed. Another notable cart feature is that both logged in and logged out users can add items to the cart, but when a user logs out it will clear the cart for privacy purposes.
+
 ```Javascript
 store.subscribe(throttle(() => {
   saveState({
