@@ -15,12 +15,14 @@ insert product show page here
 #
 <h2 id="features">Key Features</h2>
 
-- Filtering product
-- adding items to the cart
-- -searching for products
+### Filtering Products by Category
+
+### Adding Items to the Cart
+
+
+### Searching for Products
 ```Ruby
 class Product < ApplicationRecord
-...
   def self.match_search(query)
     Product.joins(:categories)
       .where(
