@@ -2,7 +2,7 @@
 
 <a href="https://the-verve.herokuapp.com/#/">Live Link</a>
 
-Welcome to The Verve. This full-stack, single-page app is intended to be a clone of the <a href="https://www.vervecoffee.com/" target="_blank" rel="noopener noreferrer">Verve Coffee Roasters</a> website. I intentionally chose to clone this Shopify site so I could connect relevant ecommerce backend logic with a clean and seamless front end experience. 
+Welcome to The Verve. This full-stack, single-page app is intended to be a clone of the <a href="https://www.vervecoffee.com/" target="_blank" rel="noopener noreferrer">Verve Coffee Roasters</a> website. I intentionally chose to clone this Shopify site so I could connect relevant ecom server logic with a clean and seamless front end experience. 
 
 insert product show page here
 
