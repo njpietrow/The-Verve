@@ -16,9 +16,6 @@ class Api::UsersController < ApplicationController
       params[:user][:email],
       params[:user][:password],
     )
-    # if credentials are valid
-    # pull out new_password
-    # try to update/save the new password
     if @user.save
       login!(@user)
       render :show

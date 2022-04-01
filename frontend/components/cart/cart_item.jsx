@@ -28,8 +28,8 @@ class CartItem extends React.Component{
           >
             <img
               className="product-cart-img" 
-              // src={product.photoUrl} 
-              src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"}
+              src={product.photoUrl} 
+              // src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"}
               alt={`${cartItem.productName}-img`}   
             />
             <div className="circle">
@@ -50,7 +50,6 @@ class CartItem extends React.Component{
               </Link>
             </div>
             <a onClick={() => this.props.removeCartItem(cartItem)}>
-              {/* <i  className="fa-solid fa-xmark remove-product"></i> */}
               <i className="fa fa-trash remove-product" aria-hidden="true"></i>
             </a>
           </div>

@@ -4,9 +4,7 @@ import { removeCartItem } from "../../actions/cart_item_actions";
 import { toggleCartModal } from "../../actions/cart_modal_actions";
 import { updateCartItem } from "../../actions/cart_item_actions";
 
-const mSTP = state => ({
-
-});
+const mSTP = state => ({});
 
 const mDTP = dispatch => ({
   removeCartItem: (item) => dispatch(removeCartItem(item)),

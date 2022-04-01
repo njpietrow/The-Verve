@@ -80,8 +80,8 @@ class ProductShow extends React.Component{
 
         <div className="product-show-content">
           <div className="product-show-content-photo">
-            {/* <img src={product.photoUrl} alt="product photo" className="product-show-image" /> */}
-            <img src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"} alt="product photo" className="product-show-image" />
+            <img src={product.photoUrl} alt="product photo" className="product-show-image" />
+            {/* <img src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"} alt="product photo" className="product-show-image" /> */}
           </div>
           <div className="product-show-content-body-container">
             <div className="product-show-content-body">
@@ -123,9 +123,8 @@ class ProductShow extends React.Component{
                 <div className="product-show-roast-level">
                   <h3>ROAST LEVEL</h3>
                   <div id="review-index"></div>
-                  {/* <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/> */}
-                  placeholder to avoid s3 charges
-                  <img src="https://www.cesix.inifap.gob.mx/js/frutalestropicales_old/map/anychart/help/docs/img/Samples/horizontal-thermometer-gauge-sample.png" alt="fake image" />
+                  <img src={product.roastPhotoUrl} alt="roast level diagram" className="roast-photo"/>
+                  {/* <img src="https://www.cesix.inifap.gob.mx/js/frutalestropicales_old/map/anychart/help/docs/img/Samples/horizontal-thermometer-gauge-sample.png" alt="fake image" /> */}
                   <br />
                 </div>
               )}

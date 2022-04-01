@@ -76,13 +76,13 @@ class Header extends React.Component{
     const query = e.currentTarget.value;
     this.setState({query})
 
-    
+    // the timeout is reset with every keypress
     clearTimeout(this.timeout)
-    // searchProducts will only be executed if the user has stopped typing.
+
+    // once 600ms have elapsed without a keypress, the API request will be made
     this.timeout = setTimeout(() => {
       searchProducts({query})
         .then(searchResults => {
-          console.log(searchResults)
           this.setState({searchResults}) 
         })
     }, 600)

@@ -44,15 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
     saveState({
       entities: {
         cartItems: store.getState().entities.cartItems,
-        // products: store.getState().entities.products
       },
       ui: {
         filters: {
           category: store.getState().ui.filters.category
         }
       },
-      //for the purposes of saving session id to save cart to local storage
-      // session: {id: store.getState().session.id}
     });
   }, 1000));
 

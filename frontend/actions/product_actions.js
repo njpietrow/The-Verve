@@ -21,10 +21,7 @@ export const fetchProducts = (filters) => dispatch => {
 
 export const fetchProduct = (productId) => dispatch => {
   return ProductApiUtil.getProduct(productId)
-    .then(payload => {
-      // console.log(payload)
-      dispatch(receiveProduct(payload))
-    })
+    .then(payload => dispatch(receiveProduct(payload)))
 };
 
 //for search bar

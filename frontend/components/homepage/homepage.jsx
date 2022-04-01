@@ -9,6 +9,10 @@ class Homepage extends React.Component{
     });
   }
 
+  componentWillUnmount(){
+    this.unlisten()
+  }
+
   render(){
     const updateFilter = this.props.updateFilter;
     document.title = "Verve";

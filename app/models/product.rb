@@ -54,10 +54,11 @@ class Product < ApplicationRecord
   # query db for products that have similar names that match parameter.
   def self.match_search(query)
     Product.joins(:categories)
-      .where("products.product_name LIKE ? 
-            OR categories.name LIKE ? 
-            OR products.ingredients LIKE ?", 
-            "%#{query.upcase}%", "%#{query.downcase}%", "%#{query.upcase}%")
-      .limit(15)
+      .where(
+        "products.product_name LIKE ? 
+        OR categories.name LIKE ? 
+        OR products.ingredients LIKE ?", 
+        "%#{query.upcase}%", "%#{query.downcase}%", "%#{query.upcase}%"
+      ).limit(15)
   end
 end

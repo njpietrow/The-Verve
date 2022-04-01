@@ -17,7 +17,8 @@ class ResultsIndex extends React.Component{
                 <div className="result-item-content">
                   <img
                     className="result-image" 
-                    src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"} 
+                    src={result.photoUrl} 
+                    // src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"} 
                   />
                   <div className="result-item-text">
                     {result.productName}

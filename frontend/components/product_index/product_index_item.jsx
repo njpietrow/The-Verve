@@ -51,8 +51,8 @@ class ProductIndexItem extends React.Component{
           >
             <img
               className="product-index-img" 
-              // src={product.photoUrl} 
-              src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"}
+              src={product.photoUrl} 
+              // src={"https://cdn.shopify.com/s/files/1/0035/9372/products/Nubianewcoffee_2048x2048.png?v=1645143809"}
               alt={`${product.productName}-img`}   
             />
           </Link>
