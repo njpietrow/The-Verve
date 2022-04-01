@@ -88,6 +88,5 @@ class Product < ApplicationRecord
 
 
 ### Credit
-#
 - Images are property of Verve Coffee Roasters
 - The Verve does not sell any products or merchandise and is intended for display purposes only
