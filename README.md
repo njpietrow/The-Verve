@@ -69,14 +69,17 @@ To replicate some validations that a real ecommerce site might have, users of Th
 <h2 id="technologies-used">Technologies used</h2>
 
 - __Front End__: React.js, Redux
-  - Supports front-end handling of cart, rendering of pages, and navigation.
+  - Supports front-end handling of cart, rendering of pages, and navigation
+  - The frontend routes conditionally render components based on the url path and if a user is logged in
   - Persists cart to `localStorage` to maintain cart information through page refresh
 - __Back End__: Ruby on Rails, Jbuilder, Active Storage, and PostgreSQL database
-  - The Back end was implemented using the Rails MVC framework along with Jbuilder to formate JSON responses for API endpoints
+  - The back end was implemented using the Rails MVC framework along with Jbuilder to formulate JSON responses for the API endpoints
   - Active Storage blobs were use to create associations between products and images stored on S3
 - __Other__: Amazon AWS S3, JavaScript
   - AWS S3 handles image hosting to allow for a more lightweight and modular implementation of the app.
-  - Webpack and Babel.js transpile the code
+  - Webpack was used for bundling and Babel.js for transpiling
+  - The Faker gem was used to seed usernames and review content
+  - Autoprefixer gem was used to automatically add vendor prefixes to CSS 
 - __Hosting__: The Verve is hosted on heroku.
 
 
