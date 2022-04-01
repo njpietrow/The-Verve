@@ -3,11 +3,11 @@ json.extract! product,
   :grind, :description,
   :location, :price
 
-# json.photoUrl url_for(product.photo)
+json.photoUrl url_for(product.photo)
 
-# if (product.roast_level_photo.attached?) 
-#   json.roastPhotoUrl url_for(product.roast_level_photo) 
-# end
+if (product.roast_level_photo.attached?) 
+  json.roastPhotoUrl url_for(product.roast_level_photo) 
+end
 
 json.type product.ingredients == "-" ? "gear" : "coffee"
 
