@@ -19,8 +19,26 @@ insert product show page here
 
 ### Adding Items to the Cart
 
-
 ### Searching for Products
+```Javascript
+updateSearch(e){
+  const query = e.currentTarget.value;
+  
+  // set query value in state for react controlled inputs
+  this.setState({query})
+
+  // the timeout attribute set in the constructor is reset with every keypress
+  clearTimeout(this.timeout)
+
+  // once 600ms have elapsed without a keypress, the API request will be made
+  this.timeout = setTimeout(() => {
+    searchProducts({query})
+      .then(searchResults => {
+        this.setState({searchResults}) 
+      })
+  }, 600)
+}
+```
 ```Ruby
 class Product < ApplicationRecord
   def self.match_search(query)
