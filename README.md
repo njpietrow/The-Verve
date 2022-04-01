@@ -12,7 +12,7 @@ insert product show page here
 - [Technologies Used](#technologies-used)
 - [Planned Features](#future-plans)
 
-#
+
 <h2 id="features">Key Features</h2>
 
 ### Filtering Products by Category
@@ -40,7 +40,7 @@ store.subscribe(throttle(() => {
   });
 }, 1000));
 ```
-
+#
 
 ### Searching for Products
 
@@ -60,12 +60,12 @@ class Product < ApplicationRecord
       ).limit(15)
   end
 ```
+#
 
 ### Review and Like action error handling
 
 - video snippets of like and review errors.
 
-#
 <h2 id="technologies-used">Technologies used</h2>
 
 - __Front End__: React.js, Redux
@@ -79,14 +79,14 @@ class Product < ApplicationRecord
   - Webpack and Babel.js transpile the code
 - __Hosting__: The Verve is hosted on heroku.
 
-#
+
 <h2 id="future-plans">Planned Features</h2>
 
 - Add transaction table to database to persist transations for a user account and view order history in the account page
 - Add ReCaptcha for user verfication during account creation
 - Allows users to delete reviews thaat they have posted
-
 #
+
 ### Credit
 - Images are property of Verve Coffee Roasters
 - The Verve does not sell any products or merchandise and is intended for display purposes only
