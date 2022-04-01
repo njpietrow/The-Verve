@@ -33,3 +33,5 @@ Gemfile.lock
 /public/assets
 .byebug_history
 /config/master.key
+.vscode
+
