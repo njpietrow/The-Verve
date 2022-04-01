@@ -53,6 +53,7 @@ class Product < ApplicationRecord
 
 - Add transaction table to database to persist transations for a user account and view order history in the account page
 - Add ReCaptcha for user verfication during account creation
+- Allows users to delete reviews thaat they have posted
 
 #
 ### Credit
