@@ -48,7 +48,7 @@ class ProductIndex extends React.Component{
             onClick={() => updateFilter("category", section)}
           > {titleCase(this.getCollection().replace('all-', ''))} <span>&nbsp;&nbsp;/</span></Link>
           <span className="product-index-path last">
-            {this.endOfPathString()} 
+            {this.props.match.params.filter} 
           </span>
         </div>
          
