@@ -15,15 +15,6 @@ insert product show page here
 
 <h2 id="features">Key Features</h2>
 
-### Filtering Products by Category
-Clicking on the header dropdowns in the application updates the category in the app and fetches all products from the database that match the chosen category. The category is stored in the Redux state under the ui/filters slice of state before making a API request. I later added more specific frontend routes with a :filter wildcard so that components could access the current filter from either the url or the redux state. If I could restart, I would use the url method for all use cases.
-```javascript
-export const updateFilter = (filter, value) => (dispatch, getState) => {
-  dispatch(changeFilter(filter, value));
-  return fetchProducts(getState().ui.filters)(dispatch);
-};
-```
-
 ### Adding Items to the Cart
 Cart items are stored in local storage and will be persisted when the page is refreshed. This is done using the Redux store subscribe method. Upon page refresh, the cart and filters will be loaded from local storage and used to reload the page state as if it never changed. Another notable cart feature is that both logged in and logged out users can add items to the cart, but when a user logs out it will clear the cart for privacy purposes.
 ```Javascript
