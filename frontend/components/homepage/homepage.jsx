@@ -37,16 +37,19 @@ class Homepage extends React.Component{
           <div className="coffee-selection-item img1">
             <Link to="/collections/2">
               <img className="coffee-1" alt="amparo"/>
+              <img className="coffee-1-bag" alt="amparo-coffee"/>
             </Link>
           </div>
           <div className="coffee-selection-item img2">
             <Link to="/collections/1">
               <img className="coffee-2" alt="nubia"/>
+              <img className="coffee-2-bag" alt="nubia-coffee"/>
             </Link>
           </div>
           <div className="coffee-selection-item img3">
             <Link to="/collections/3"> 
               <img className="coffee-3" alt="bedhatu"/>
+              <img className="coffee-3-bag" alt="bedhatu-coffee"/>
             </Link>
           </div>
         </div>
