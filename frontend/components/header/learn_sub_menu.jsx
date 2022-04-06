@@ -26,9 +26,9 @@ class CoffeeSubMenu extends React.Component{
   render(){
     return(
       <ul className={this.state.visible ? 'visible' : 'hidden'}>
-        <a href="https://github.com/njpietrow/The-Verve">GITHUB</a>
-        <a href="https://angel.co/u/nick-pietrow">ANGELLIST</a>
-        <a href="https://twitter.com/njpietrow" >TWITTER</a>
+        <a href="https://github.com/njpietrow/The-Verve" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="https://angel.co/u/nick-pietrow" target="_blank" rel="noopener noreferrer">ANGELLIST</a>
+        <a href="https://twitter.com/njpietrow" target="_blank" rel="noopener noreferrer">TWITTER</a>
       </ul>
     )
   }

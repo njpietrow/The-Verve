@@ -24,8 +24,8 @@ const Footer = () => {
               </Link>
             </ul>
             <ul>
-              <li><a href="https://www.vervecoffee.com/">REAL VERVE WEBSITE</a></li>
-              <li><a href="https://angel.co/u/nick-pietrow">ABOUT THE CREATOR</a></li>
+              <li><a href="https://www.vervecoffee.com/" target="_blank" rel="noopener noreferrer">REAL VERVE WEBSITE</a></li>
+              <li><a href="https://angel.co/u/nick-pietrow" target="_blank" rel="noopener noreferrer">ABOUT THE CREATOR</a></li>
               <li><a href="mailto:njpietrow@gmail.com" target="_blank" rel="noopener noreferrer">CONTACT</a></li>
             </ul>
 
@@ -40,9 +40,9 @@ const Footer = () => {
               WE ARE VERVE. MADE IN SANTA CRUZ.
             </p>
             <p> 
-              <a href="https://github.com/njpietrow/The-Verve"><i className="fa-brands fa-github"></i></a>
-              <a href="https://angel.co/u/nick-pietrow"><i className="fa-brands fa-angellist"></i></a>
-              <a href="https://twitter.com/njpietrow" ><i className="fa-brands fa-twitter"></i></a>
+              <a href="https://github.com/njpietrow/The-Verve" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a>
+              <a href="https://angel.co/u/nick-pietrow" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-angellist"></i></a>
+              <a href="https://twitter.com/njpietrow" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-twitter"></i></a>
             </p>
           </div>
           <div className="three">
