@@ -75,10 +75,18 @@
   position: relative;
 }
 
-// Preload the :hover product images so they don't blink the first time they load
-.coffee-selection:after {
-  display: none;
+.front{
+  position: relative;
+  z-index: 4;
 }
+
+.behind{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
 
 .coffee-1{
   content: url('https://the-verve-seeds.s3.us-west-1.amazonaws.com/amparohead.webp');
