@@ -29,9 +29,14 @@
   
 }
 
+.relative{
+  // position: relative;
+  z-index: 100;
+}
+
 .cart-index-modal{
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   top: 0;
   right: 0;
   bottom: 0;
@@ -89,7 +94,7 @@
   left: 0;
   background-color: rgba(41, 41, 41, 0);
   transition: background-color .25s ease-in-out;
-  z-index: 1;
+  z-index: 5;
   visibility: hidden;
 }
 

@@ -30,7 +30,7 @@ class Cart extends React.Component{
   render(){
     const {cartItems, toggleCartModal, updateFilter, subtotal, quantity, checkout } = this.props;
     return(
-      <div>
+      <div className="relative">
         <div 
           className={this.props.visible ? "blurred-modal-area blur-visible" : "blurred-modal-area"}
         >
