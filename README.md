@@ -4,7 +4,9 @@
 
 Welcome to The Verve. This full-stack, single-page app is intended to be a clone of the <a href="https://www.vervecoffee.com/" target="_blank" rel="noopener noreferrer">Verve Coffee Roasters</a> website. I intentionally chose to clone this Shopify site so I could connect relevant ecom server logic with a clean and seamless front end experience. 
 
-<img width="500px" src="https://github.com/njpietrow/The-Verve/blob/main/readme_images/main_page.png"></img>
+<p align="center">
+  <img width="500px" src="https://github.com/njpietrow/The-Verve/blob/main/readme_images/main_page.png"></img>
+</p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
 
