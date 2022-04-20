@@ -34,6 +34,5 @@ Gemfile.lock
 .byebug_history
 /config/master.key
 .vscode
-Gemfile.lock
-package-lock.json
+
 
