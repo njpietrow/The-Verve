@@ -25,7 +25,7 @@ const Footer = () => {
             </ul>
             <ul>
               <li><a href="https://www.vervecoffee.com/" target="_blank" rel="noopener noreferrer">REAL VERVE WEBSITE</a></li>
-              <li><a href="https://angel.co/u/nick-pietrow" target="_blank" rel="noopener noreferrer">ABOUT THE CREATOR</a></li>
+              <li><a href="https://www.nickpietrow.com/" target="_blank" rel="noopener noreferrer">ABOUT THE CREATOR</a></li>
               <li><a href="mailto:njpietrow@gmail.com" target="_blank" rel="noopener noreferrer">CONTACT</a></li>
             </ul>
 
@@ -42,7 +42,7 @@ const Footer = () => {
             <p> 
               <a href="https://github.com/njpietrow/The-Verve" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a>
               <a href="https://angel.co/u/nick-pietrow" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-angellist"></i></a>
-              <a href="https://twitter.com/njpietrow" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/nickpietrow/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i></a>
             </p>
           </div>
           <div className="three">
