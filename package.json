@@ -22,7 +22,8 @@
     "redux-thunk": "^2.4.1",
     "uuid": "^8.3.2",
     "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "minimist": ">=1.2.6"
   },
   "description": "The Verve, a clone of the Verve Coffee Roasters website, is an e-commerce website that allows users to browse coffee selections, manage their cart inventory, and leave comments and reviews.",
   "version": "1.0.0",
