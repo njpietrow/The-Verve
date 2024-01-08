@@ -34,5 +34,5 @@ Gemfile.lock
 .byebug_history
 /config/master.key
 .vscode
-
+.ruby-version
 
