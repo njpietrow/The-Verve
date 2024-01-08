@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let store;
   //loadState will return undefined if there is no state key in local storage
   let localStorageState = loadState(); 
-  if (!localStorageState) localStorageState = {};
+  if (localStorageState === undefined) localStorageState = {};
   if (window.currentUser) {
     let preloadedState = {
       entities: {
